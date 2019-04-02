@@ -16,10 +16,12 @@
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
+#include <cmath>
+#include <iostream>
 
 // Here is a small helper for you! Have a look.
-#include "ResourcePath.hpp"
-#include "Collision.hpp"
+#include "../include/Collision.hpp"
+
 
 bool isCollide(sf::Sprite s1, sf::Sprite s2){
     return s1.getGlobalBounds().intersects(s2.getGlobalBounds());
@@ -38,7 +40,7 @@ int main(int, char const**)
 
     // Set the Icon
     sf::Image icon;
-    if (!icon.loadFromFile(resourcePath() + "icon.png")) {
+    if (!icon.loadFromFile("resources/icon.png")) {
         return EXIT_FAILURE;
     }
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
@@ -51,11 +53,11 @@ int main(int, char const**)
     bool whoHit = 0;
     
     sf::Texture tBlock, tPaddle1, tPaddle2, tBackground, tBall;
-    tBlock.loadFromFile(resourcePath() + "block01.png");
-    tPaddle1.loadFromFile(resourcePath() + "paddle.png");
-    tPaddle2.loadFromFile(resourcePath() + "paddle2.png");
+    tBlock.loadFromFile("resources/block01.png");
+    tPaddle1.loadFromFile("resources/paddle.png");
+    tPaddle2.loadFromFile("resources/paddle2.png");
     //tBackground.loadFromFile(resourcePath( )+ "cute_image.jpg");
-    tBall.loadFromFile(resourcePath() + "ball.png");
+    tBall.loadFromFile("resources/ball.png");
     
     sf::Sprite sBackground(tBackground), sBall(tBall), sPaddle1(tPaddle1), sPaddle2(tPaddle2);
     sPaddle1.setPosition(355, 500);
@@ -75,7 +77,7 @@ int main(int, char const**)
     }
     
     sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
+    if (!font.loadFromFile("resources/sansation.ttf")) {
         return EXIT_FAILURE;
     }
     
