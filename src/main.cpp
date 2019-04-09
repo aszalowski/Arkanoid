@@ -37,6 +37,7 @@ int main(int, char const**)
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Arkanoid");
     window.setFramerateLimit(60);
+    window.setVerticalSyncEnabled(false);
 
     // Set the Icon
     sf::Image icon;
