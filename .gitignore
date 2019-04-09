@@ -1,1 +1,5 @@
 .vscode
+.DS_Store
+*.o
+*.out
+Info.plist
