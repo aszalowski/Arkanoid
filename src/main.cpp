@@ -163,7 +163,7 @@ int main(int, char const**)
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && paddle1Position.x > 0) sPaddle1.move(-10,0);
         
         if (Collision::PixelPerfectTest(sBall, sPaddle1)) {
-            dx<=0 ? dx = -float(rand()%5000*1.0/1000) : dx=float(rand()%5000*1.0/1000);
+            dx<=0 ? dx = -float( rand() % 5000 * 1.0 / 1000 ) : dx = float( rand() % 5000 * 1.0 / 1000 );
             dy = -sqrt(ballSpeed - dx*dx);
             //std::cout<<dx<<" "<<dy<<" "<<ballSpeed<<std::endl;
             whoHit = 0;
