@@ -6,8 +6,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-#include "GameState.hpp"
-
+class GameState;
 
 class GameEngine
 {

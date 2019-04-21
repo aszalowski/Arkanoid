@@ -1,4 +1,5 @@
 #include "../include/GameEngine.hpp"
+#include "../include/GameState.hpp"
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -11,8 +12,8 @@ GameEngine::GameEngine(int width, int height, std::string title, std::string ico
     this->window.setVerticalSyncEnabled(vsync);
 
     // Set the icon
-    sf::
-    if (this->icon.loadFromFile("../resources/icon.png")) {
+    sf::Image icon;
+    if(icon.loadFromFile("../resources/icon.png")) {
         this->window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
     }
     else{
