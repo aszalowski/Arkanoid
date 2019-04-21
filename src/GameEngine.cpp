@@ -13,7 +13,7 @@ GameEngine::GameEngine(int width, int height, std::string title, std::string ico
 
     // Set the icon
     sf::Image icon;
-    if(icon.loadFromFile("../resources/icon.png")) {
+    if(icon.loadFromFile(iconPath)) {
         this->window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
     }
     else{
