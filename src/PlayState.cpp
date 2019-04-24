@@ -15,6 +15,10 @@ void PlayState::pause(){
 
 }
 
+void PlayState::resume()
+{
+}
+
 void PlayState::handleEvents(GameEngine* game){
 
 }
