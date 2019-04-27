@@ -16,14 +16,13 @@ class PlayState : public GameState {
         void update(GameEngine*);
         void render(GameEngine*);
 
-        inline static PlayState* instance(){ return &PlayStateInstance; }
+        static PlayState* instance(){
+            static PlayState PlayStateInstance;
+            return &PlayStateInstance;
+        }
     
     protected:
         PlayState(){}
-    
-    private:
-        static PlayState PlayStateInstance;
-
 
 };
 
