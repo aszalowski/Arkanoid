@@ -1,5 +1,5 @@
 CC=g++
-FLAGS=-Wall -pedantic
+FLAGS=-Wall -pedantic -std=c++11
 SFML_FLAGS=-lsfml-graphics -lsfml-window -lsfml-system
 
 HEADERS_DIR=include
