@@ -7,7 +7,7 @@
 GameEngine::GameEngine(int width, int height, std::string title, std::string iconPath, int frameLimit, bool vsync)
 {
     // Create and setup the main window
-    this->window.create(sf::VideoMode(800, 600), title);
+    this->window.create(sf::VideoMode(800, 600), title); //TODO move to init list
     this->window.setFramerateLimit(frameLimit);
     this->window.setVerticalSyncEnabled(vsync);
 
@@ -19,6 +19,8 @@ GameEngine::GameEngine(int width, int height, std::string title, std::string ico
     else{
         // Fallback to default icon
     }
+
+    m_running = true;
 }
 
 

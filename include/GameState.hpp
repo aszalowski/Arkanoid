@@ -20,7 +20,7 @@ class GameState{
         }
     
     protected:
-        GameState(){  }
+        GameState(){}
 
 };
 
