@@ -21,7 +21,9 @@
 
 #include "../include/Collision.hpp"
 #include "../include/GameEngine.hpp"
-#include "../include/GameState.hpp"
+#include "../include/PlayState.hpp"
+#include "../include/MainMenuState.hpp"
+
 
 
 bool isCollide(sf::Sprite s1, sf::Sprite s2){
@@ -32,6 +34,16 @@ const float XChangeSpeed = 0.08, YChangeSpeed = 0.08;
 int main(int, char const**)
 {
     GameEngine game(800, 600, "Arkanoid", "resources/icon.png", 60, false);
+    
+
+    game.changeState(MainMenuState::instance());
+
+    while( game.running() ){
+        game.handleEvents();
+        game.update();
+        game.render();
+    }
+
     
     // srand(time(0));
     
