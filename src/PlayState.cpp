@@ -31,9 +31,11 @@ void PlayState::update(GameEngine* game){
 
 void PlayState::render(GameEngine* game){
     
+    int v_width = 640;
+    int v_height = 360;
     std::cout << "PlayState::render()" << std::endl;
     sf::Texture t;
-    t.loadFromFile("resources/paddle.png");
+    t.loadFromFile("resources/breakout_pieces.png", sf::IntRect(8,8,32,16));
     sf::Sprite s;
     s.setTexture(t);
     s.setPosition(355, 200);

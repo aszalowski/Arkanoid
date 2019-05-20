@@ -33,8 +33,8 @@ bool isCollide(sf::Sprite s1, sf::Sprite s2){
 const float XChangeSpeed = 0.08, YChangeSpeed = 0.08;
 int main(int, char const**)
 {
-    GameEngine game(800, 600, "Arkanoid", "resources/icon.png", 60, false);
-    
+    GameEngine game(640, 360, "Arkanoid", "resources/icon.png", 60, false);
+    game.window.setSize(sf::Vector2u(1920,1080));
 
     game.changeState(MainMenuState::instance());
 
