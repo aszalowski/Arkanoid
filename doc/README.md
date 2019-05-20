@@ -7,3 +7,5 @@
 |                 |              |                |
 +-----------------+              +----------------+
 ```
+
+![Flowchart](doc/ArkanoidStateFlow.png)
