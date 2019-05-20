@@ -8,4 +8,4 @@
 +-----------------+              +----------------+
 ```
 
-![Flowchart](doc/ArkanoidStateFlow.png)
+![Flowchart](ArkanoidStateFlow.png)
