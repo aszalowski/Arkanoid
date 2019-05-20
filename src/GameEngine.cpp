@@ -65,7 +65,18 @@ void GameEngine::popState(){
 }
 
 void GameEngine::handleEvents(){
-    
+    sf::Event event;
+    while (window.pollEvent(event))
+    {
+        if (event.type == sf::Event::Closed)
+        {
+            quit();
+        }
+        if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+        {
+            quit();
+        }
+    }
     // Delegate handling events to the current state
     states.back()->handleEvents(this);
 }

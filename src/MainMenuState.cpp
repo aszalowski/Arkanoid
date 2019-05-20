@@ -21,12 +21,14 @@ void MainMenuState::resume()
 
 void MainMenuState::handleEvents(GameEngine* game){
 
+    std::cout << "MainMenuState::handleEvents()" << std::endl;
+
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space))
         game->pushState(PlayState::instance());
 }
 
 void MainMenuState::update(GameEngine* game){
-
+    std::cout << "MainMenuState::update()" << std::endl;
 }
 
 void MainMenuState::render(GameEngine* game){
