@@ -4,7 +4,9 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-GameEngine::GameEngine(int width, int height, std::string title, std::string iconPath, int frameLimit, bool vsync)
+GameEngine::GameEngine(int width, int height, std::string title, std::string iconPath, int frameLimit, bool vsync) : 
+p1(1, sf::Vector2f(304, 324), sf::Keyboard::A, sf::Keyboard::D, sf::Keyboard::Space), 
+p2(2, sf::Vector2f(304, 20), sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
 {
     // Create and setup the main window
     this->window.create(sf::VideoMode(width, height), title); //TODO move to init list
@@ -19,8 +21,9 @@ GameEngine::GameEngine(int width, int height, std::string title, std::string ico
     else{
         // Fallback to default icon
     }
-
     m_running = true;
+
+    
 }
 
 
@@ -65,6 +68,7 @@ void GameEngine::popState(){
 }
 
 void GameEngine::handleEvents(){
+    std::cout<<"handleEvents"<<std::endl;
     sf::Event event;
     while (window.pollEvent(event))
     {

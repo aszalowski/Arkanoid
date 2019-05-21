@@ -35,7 +35,7 @@ void MainMenuState::render(GameEngine* game){
     std::cout << "MainMenuState::render()" << std::endl;
     sf::Font font;
     game->window.clear();
-    if (!font.loadFromFile("resources/sansation.ttf")) {
+    if (!font.loadFromFile("resources/pixel.ttf")) {
         std::cout << "ERORR loading font" << std::endl;
         return;
     }

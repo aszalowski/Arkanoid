@@ -1,7 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "GameEngine.hpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -21,10 +20,12 @@ private:
     Controls controls;
 
 public:
-    Player(int, sf::Vector2f, sf::Texture, sf::Keyboard::Key, sf::Keyboard::Key, sf::Keyboard::Key, int hp = 3, int score = 0);
+    Player(int, sf::Vector2f, sf::Keyboard::Key, sf::Keyboard::Key, sf::Keyboard::Key, int hp = 3, int score = 0);
     sf::Vector2f getPosition();
     void setPosition(sf::Vector2f);
     void setControls(sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start);
+    void setTexture(sf::Texture newTexture){texture.update(newTexture);}
+    sf::Texture getTexture(){return texture;}
 };
 
 #endif
