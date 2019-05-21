@@ -10,7 +10,10 @@ class Object{
 
         virtual sf::Vector2f getPosition() const = 0;
 
-        virtual ~Object() = 0;
+        virtual ~Object(){}
 };
+
+
+
 
 #endif // __OBJECT_HPP__

@@ -1,4 +1,5 @@
 #include "../include/Player.hpp"
+#include "../include/GameEngine.hpp"
 
 Player::Player(int index, sf::Vector2f Position, sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start, int hp, int score)
 {
@@ -10,9 +11,11 @@ Player::Player(int index, sf::Vector2f Position, sf::Keyboard::Key left, sf::Key
     sprite.setTexture(texture);
 }
 
+Player::~Player(){}
+
 void Player::setTexture(sf::Texture *newTexture)
 {
-    texture.update(*newTexture);
+    //texture.update(*newTexture);
 }
 void Player::setTexture(std::string path, sf::IntRect rect)
 {
