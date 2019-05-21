@@ -1,7 +1,7 @@
 #ifndef __OBJECT_HPP__
 #define __OBJECT_HPP__
 
-#include "GameEngine.hpp"
+class GameEngine;
 
 class Object{
     public:

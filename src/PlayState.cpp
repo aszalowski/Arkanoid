@@ -37,7 +37,7 @@ void PlayState::render(GameEngine* game){
     sf::Texture t;
     t.loadFromFile("resources/breakout_pieces.png", sf::IntRect(8,8,32,16));
     sf::Sprite s;
-    game->p1.setTexture(t);
+    game->p1.setTexture(&t);
     s.setTexture(game->p1.getTexture());
     s.setPosition(game->p1.getPosition());
     game->window.draw(s);
