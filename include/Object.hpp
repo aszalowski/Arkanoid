@@ -1,6 +1,8 @@
 #ifndef __OBJECT_HPP__
 #define __OBJECT_HPP__
 
+#include <memory>
+
 class GameEngine;
 
 class Object

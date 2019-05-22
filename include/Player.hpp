@@ -3,7 +3,10 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics.hpp>
+#include <memory>
+
 #include "Object.hpp"
+
 class GameEngine;
 
 struct Controls
