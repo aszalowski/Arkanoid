@@ -40,6 +40,7 @@ int main(int, char const**)
     //game.window.setSize(sf::Vector2u(1920,1080));
 
     while( game.running() ){
+        game.Clock.restart();
         game.handleEvents();
         game.update();
         game.render();
