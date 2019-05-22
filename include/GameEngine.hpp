@@ -5,8 +5,10 @@
 #include <string>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+
 #include "Player.hpp"
 #include "Ball.hpp"
+#include "TextureMenager.hpp"
 
 class GameState;
 
@@ -31,6 +33,7 @@ class GameEngine
 
 		Player p1, p2;
 		Ball ball;
+		TextureMenager textureMenager;
 
 
 	private:

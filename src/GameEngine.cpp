@@ -22,6 +22,10 @@ p2(2, sf::Vector2f(304, 20), sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboa
     else{
         // Fallback to default icon
     }
+
+    //
+    textureMenager.addDir("resources/");
+
     m_running = true;
 
     
