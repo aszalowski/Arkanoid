@@ -8,15 +8,13 @@ Player::Player(int index, sf::Vector2f Position, sf::Keyboard::Key left, sf::Key
     this->score = score;
     this->setPosition(Position);
     this->setControls(left, right, start);
-    sprite.setTexture(texture);
 }
 
 Player::~Player(){}
 
 void Player::setTexture(sf::Texture *newTexture)
 {
-    texture.update(*newTexture);
-    sprite.setTexture(texture);
+    sprite.setTexture(*newTexture);
 }
 void Player::setTexture(std::string path, sf::IntRect rect)
 {

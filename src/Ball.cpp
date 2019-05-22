@@ -33,7 +33,6 @@ void Ball::setTexture(const std::string path, const sf::IntRect rect)
 }
 
 void Ball::setTexture(const sf::Texture* texture){
-    this->texture.update(*texture);
     this->sprite.setTexture(this->texture);
 }
 
