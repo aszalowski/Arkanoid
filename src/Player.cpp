@@ -15,11 +15,13 @@ Player::~Player(){}
 
 void Player::setTexture(sf::Texture *newTexture)
 {
-    //texture.update(*newTexture);
+    texture.update(*newTexture);
+    sprite.setTexture(texture);
 }
 void Player::setTexture(std::string path, sf::IntRect rect)
 {
     texture.loadFromFile(path, rect);
+    sprite.setTexture(texture);
 }
 
 sf::Vector2f Player::getPosition() const
@@ -41,5 +43,5 @@ void Player::setControls(sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Ke
 
 void Player::draw(GameEngine *game) const
 {
-    game->window.draw(sprite);
+    game->window.draw(this->sprite);
 }

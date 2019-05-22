@@ -34,7 +34,6 @@ void GameEngine::changeState(GameState* state){
         states.back()->cleanup();
         states.pop_back();
     }
-
     // Push and initialize new state
     states.push_back(state);
     states.back()->init();

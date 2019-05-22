@@ -6,6 +6,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Player.hpp"
+#include "Ball.hpp"
 
 class GameState;
 
@@ -29,6 +30,7 @@ class GameEngine
 		sf::RenderWindow window;
 
 		Player p1, p2;
+		Ball ball;
 
 
 	private:

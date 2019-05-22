@@ -30,7 +30,7 @@ public:
     void setControls(sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start);
     void setTexture(sf::Texture *newTexture);
     void setTexture(std::string path, sf::IntRect rect);
-    sf::Texture getTexture() { return texture; }
+    sf::Texture& getTexture() { return texture; }
 
     void draw(GameEngine *game) const ;
 };
