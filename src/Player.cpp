@@ -34,3 +34,12 @@ void Player::draw(GameEngine *game) const
 {
     game->window.draw(this->sprite);
 }
+
+void Player::move(int side, GameEngine *game){
+    const int step = 5;
+    std::cout << getPosition().x<<std::endl;
+    if (getPosition().x > 0 && side < 0)
+        sprite.move(side * step, 0);
+    if (getPosition().x < game->getVirtualSize().x - sprite.getTextureRect().width && side > 0)
+        sprite.move(side * step, 0);
+}

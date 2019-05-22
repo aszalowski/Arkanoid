@@ -36,6 +36,8 @@ public:
     const uint getScore() const { return score; }
     void operator+=(uint points) { score += points; };
 
+    void move(int side, GameEngine *game);
+
     void draw(GameEngine *game) const;
 };
 

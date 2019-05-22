@@ -30,7 +30,6 @@ void Ball::move(GameEngine *game)
 {
     uint time = game->getElapsedTime();
     sprite.move(speed.x * time, speed.y * time);
-    //sprite.move(speed.x * 20, speed.y *20 );
     sf::Vector2f pos = getPosition();
     std::cout << pos.x << " " << pos.y << std::endl;
     if (pos.x < 0) {

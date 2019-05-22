@@ -73,7 +73,6 @@ void GameEngine::popState(){
 }
 
 void GameEngine::handleEvents(){
-    std::cout<<"handleEvents"<<std::endl;
     sf::Event event;
     while (window.pollEvent(event))
     {
