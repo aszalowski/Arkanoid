@@ -80,6 +80,10 @@ void GameEngine::handleEvents(){
         {
             quit();
         }
+        if (event.type == sf::Event::Resized)
+        {
+            this->resetClock();
+        }
     }
     // Delegate handling events to the current state
     states.back()->handleEvents(this);

@@ -23,7 +23,6 @@ void PlayState::resume()
 }
 
 void PlayState::handleEvents(GameEngine* game){
-    
 }
 
 void PlayState::update(GameEngine* game){

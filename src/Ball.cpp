@@ -39,7 +39,7 @@ void Ball::move(GameEngine *game)
     }
     if (pos.x > game->virtualSize.x - sprite.getTextureRect().width) {
         speed.x = -speed.x;
-        setPosition(sf::Vector2f(game->virtualSize.x,getPosition().y));
+        setPosition(sf::Vector2f(game->virtualSize.x - sprite.getTextureRect().width, getPosition().y));
     }
 
     if (pos.y < 0) {
@@ -50,6 +50,6 @@ void Ball::move(GameEngine *game)
     if (pos.y > game->virtualSize.y - sprite.getTextureRect().width)
     {
         speed.y = -speed.y;
-        setPosition(sf::Vector2f(getPosition().x, game->virtualSize.y));
+        setPosition(sf::Vector2f(getPosition().x, game->virtualSize.y - sprite.getTextureRect().width));
     }
 }
