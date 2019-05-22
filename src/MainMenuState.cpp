@@ -3,7 +3,7 @@
 #include "../include/MainMenuState.hpp"
 #include "../include/PlayState.hpp"
 
-void MainMenuState::init()
+void MainMenuState::init(GameEngine *game)
 {
     std::cout << "MainMenuState::init()" << std::endl;
 }

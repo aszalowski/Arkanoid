@@ -28,6 +28,7 @@ public:
 	inline void quit() { m_running = false; }
 
 	sf::RenderWindow window;
+	sf::Vector2u virtualSize;
 
 	Player p1, p2;
 	Ball ball;

@@ -26,14 +26,30 @@ void Ball::setSpeed(const sf::Vector2f &newSpeed)
     this->speed = newSpeed;
 }
 
-void Ball::move(GameEngine* game)
+void Ball::move(GameEngine *game)
 {
-    if((sprite.getPosition().x <= (game->window.getSize().x - sprite.getTextureRect().width)) && sprite.getPosition().x>=0){
-        uint time = game->getElapsedTime();
-        sprite.move(speed.x * time, speed.y * time);
-        //std::cout<<(game->ball.sprite.getPosition().x <= (game->window.getSize().x - game->ball.sprite.getTextureRect().width))<<std::endl;
-    }
-    else{
+    uint time = game->getElapsedTime();
+    sprite.move(speed.x * time, speed.y * time);
+    //sprite.move(speed.x * 20, speed.y *20 );
+    sf::Vector2f pos = getPosition();
+    std::cout << pos.x << " " << pos.y << std::endl;
+    if (pos.x < 0) {
         speed.x = -speed.x;
+        setPosition(sf::Vector2f(0,getPosition().y));
+    }
+    if (pos.x > game->virtualSize.x - sprite.getTextureRect().width) {
+        speed.x = -speed.x;
+        setPosition(sf::Vector2f(game->virtualSize.x,getPosition().y));
+    }
+
+    if (pos.y < 0) {
+        speed.y = -speed.y;
+        setPosition(sf::Vector2f(getPosition().x, 0));
+    }
+
+    if (pos.y > game->virtualSize.y - sprite.getTextureRect().width)
+    {
+        speed.y = -speed.y;
+        setPosition(sf::Vector2f(getPosition().x, game->virtualSize.y));
     }
 }

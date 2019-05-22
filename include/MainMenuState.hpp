@@ -5,7 +5,7 @@
 
 class MainMenuState : public GameState {
     public:
-        void init();
+        void init(GameEngine *game);
         void cleanup(GameEngine* game);
 
         void pause();

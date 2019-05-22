@@ -2,10 +2,11 @@
 
 #include "../include/PlayState.hpp"
 
-void PlayState::init(){
+void PlayState::init(GameEngine *game){
     std::cout << "PlayState::init()" << std::endl;
 
-  
+    game->ball.setPosition(sf::Vector2f(100,100));
+    game->ball.setSpeed(sf::Vector2f(0.2, -0.2));
 
 }
 
@@ -31,15 +32,12 @@ void PlayState::update(GameEngine* game){
 
 void PlayState::render(GameEngine* game){
     game->window.clear();
-    std::cout << "PlayState::render()" << std::endl;
     std::shared_ptr<sf::Texture> t = std::make_shared<sf::Texture>();
     t.get()->loadFromFile("resources/ball.png", sf::IntRect(0, 0, 20, 20));
-
     game->ball.setTexture(t);
-    //game->ball.setPosition(sf::Vector2f(100,100));
-    game->ball.setSpeed(sf::Vector2f(0.2,0));
+    std::cout << "PlayState::render()" << std::endl;
     game->ball.move(game);
-    std::cout<<game->ball.getPosition().x<<std::endl;
+    std::cout<<game->ball.getPosition().y<<std::endl;
     game->ball.draw(game);
     game->window.display();
 }

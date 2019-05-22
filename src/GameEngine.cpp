@@ -12,6 +12,7 @@ p2(2, sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
     this->window.create(sf::VideoMode(width, height), title); //TODO move to init list
     this->window.setFramerateLimit(frameLimit);
     this->window.setVerticalSyncEnabled(vsync);
+    this->virtualSize = sf::Vector2u(width,height);
 
     // Set the icon
     sf::Image icon;
@@ -36,7 +37,7 @@ void GameEngine::changeState(GameState* state){
     }
     // Push and initialize new state
     states.push_back(state);
-    states.back()->init();
+    states.back()->init(this);
 
 }
 
@@ -48,7 +49,7 @@ void GameEngine::pushState(GameState* state){
 
     // Push and initialize new state 
     states.push_back(state);
-    states.back()->init();
+    states.back()->init(this);
 
 }
 
