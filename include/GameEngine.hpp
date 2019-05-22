@@ -29,6 +29,8 @@ class GameEngine
 
 		sf::RenderWindow window;
 
+		sf::Clock Clock;
+		
 		Player p1, p2;
 		Ball ball;
 

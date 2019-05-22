@@ -6,33 +6,34 @@
 #include "Object.hpp"
 class GameEngine;
 
-typedef struct
+struct Controls
 {
     sf::Keyboard::Key left, right, start;
-} Controls;
+    Controls(sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start) : left(left), right(right), start(start){};
+};
 
 class Player : public Object
 {
 private:
     int index;
-    int hp;
-    int score;
+    int hp = 3;
+    uint score = 0;
     sf::Sprite sprite;
-    sf::Texture texture;
-    sf::Vector2f position;
     Controls controls;
 
 public:
-    Player(int, sf::Vector2f, sf::Keyboard::Key, sf::Keyboard::Key, sf::Keyboard::Key, int hp = 3, int score = 0);
-    ~Player();
-    sf::Vector2f getPosition() const;
+    Player(int index, sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start) : index(index), controls(left, right, start){};
+    ~Player(){}
+    const sf::Vector2f getPosition() const;
     void setPosition(const sf::Vector2f &);
-    void setControls(sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start);
-    void setTexture(sf::Texture *newTexture);
-    void setTexture(std::string path, sf::IntRect rect);
-    sf::Texture& getTexture() { return texture; }
+    void setControls(sf::Keyboard::Key, sf::Keyboard::Key, sf::Keyboard::Key);
+    void setTexture(std::shared_ptr<sf::Texture>);
+    void setTexture(std::string, sf::IntRect);
+    void setScore(const uint &newScore) { score = newScore; }
+    const uint getScore() const { return score; }
+    void operator+=(uint points) { score += points; };
 
-    void draw(GameEngine *game) const ;
+    void draw(GameEngine *game) const;
 };
 
 #endif

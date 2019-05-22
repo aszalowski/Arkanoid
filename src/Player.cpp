@@ -1,37 +1,26 @@
 #include "../include/Player.hpp"
 #include "../include/GameEngine.hpp"
 
-Player::Player(int index, sf::Vector2f Position, sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start, int hp, int score)
-{
-    this->index = index;
-    this->hp = hp;
-    this->score = score;
-    this->setPosition(Position);
-    this->setControls(left, right, start);
-    sprite.setTexture(texture);
-}
 
-Player::~Player(){}
-
-void Player::setTexture(sf::Texture *newTexture)
+void Player::setTexture(const std::shared_ptr<sf::Texture> newTexture)
 {
-    texture.update(*newTexture);
-    sprite.setTexture(texture);
+    sprite.setTexture(*newTexture.get(), true);
 }
 void Player::setTexture(std::string path, sf::IntRect rect)
 {
-    texture.loadFromFile(path, rect);
-    sprite.setTexture(texture);
+    sf::Texture t;
+    t.loadFromFile(path, rect);
+    sprite.setTexture(t);
 }
 
-sf::Vector2f Player::getPosition() const
+const sf::Vector2f Player::getPosition() const
 {
-    return this->position;
+    return this->sprite.getPosition();
 }
 
-void Player::setPosition(const sf::Vector2f &Position)
+void Player::setPosition(const sf::Vector2f &newPosition)
 {
-    this->position = Position;
+    this->sprite.setPosition(newPosition);
 }
 
 void Player::setControls(sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start)

@@ -5,8 +5,8 @@
 #include <iostream>
 
 GameEngine::GameEngine(int width, int height, std::string title, std::string iconPath, int frameLimit, bool vsync) : 
-p1(1, sf::Vector2f(304, 324), sf::Keyboard::A, sf::Keyboard::D, sf::Keyboard::Space), 
-p2(2, sf::Vector2f(304, 20), sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
+p1(1, sf::Keyboard::A, sf::Keyboard::D, sf::Keyboard::Space), 
+p2(2, sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
 {
     // Create and setup the main window
     this->window.create(sf::VideoMode(width, height), title); //TODO move to init list
@@ -31,7 +31,7 @@ void GameEngine::changeState(GameState* state){
     
     // Cleanup the current state
     if( !states.empty() ){
-        states.back()->cleanup();
+        states.back()->cleanup(this);
         states.pop_back();
     }
     // Push and initialize new state
@@ -56,7 +56,7 @@ void GameEngine::popState(){
 
     // Cleanup current state
     if( !states.empty() ){
-        states.back()->cleanup();
+        states.back()->cleanup(this);
         states.pop_back();
     }
 

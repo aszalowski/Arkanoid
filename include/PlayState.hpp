@@ -7,7 +7,7 @@
 class PlayState : public GameState {
     public:
         void init();
-        void cleanup();
+        void cleanup(GameEngine *game);
 
         void pause();
         void resume();

@@ -37,7 +37,7 @@ int main(int, char const**)
 
     game.changeState(MainMenuState::instance());
 
-    game.window.setSize(sf::Vector2u(1920,1080));
+    //game.window.setSize(sf::Vector2u(1920,1080));
 
     while( game.running() ){
         game.handleEvents();

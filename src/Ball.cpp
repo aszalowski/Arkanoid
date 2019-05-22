@@ -1,44 +1,37 @@
 #include "../include/Ball.hpp"
 #include "../include/GameEngine.hpp"
 
-Ball::Ball()
+void Ball::setPosition(const sf::Vector2f &newPosition)
 {
-    this->sprite.setTexture(texture);
+    this->sprite.setPosition(newPosition);
 }
 
-Ball::Ball(sf::Vector2f position)
+const sf::Vector2f Ball::getPosition() const
 {
-    this->position = position;
-    this->sprite.setTexture(texture);
+    return this->sprite.getPosition();
 }
 
-Ball::~Ball()
+void Ball::setTexture(const std::shared_ptr<sf::Texture> newTexture)
 {
+    this->sprite.setTexture(*newTexture.get(), true);
 }
-
-void Ball::setPosition(const sf::Vector2f &position)
-{
-    this->position = position;
-}
-
-sf::Vector2f Ball::getPosition() const
-{
-    return this->position;
-}
-
-void Ball::setTexture(const std::string path, const sf::IntRect rect)
-{
-    this->texture.loadFromFile(path, rect);
-    this->sprite.setTexture(this->texture);
-}
-
-void Ball::setTexture(const sf::Texture* texture){
-    this->texture.update(*texture);
-    this->sprite.setTexture(this->texture);
-}
-
 
 void Ball::draw(GameEngine *game) const
 {
     game->window.draw(sprite);
+}
+
+void Ball::setSpeed(const sf::Vector2f &newSpeed)
+{
+    this->speed = newSpeed;
+}
+
+void Ball::move(GameEngine* game)
+{
+    std::cout << game->ball.sprite.getPosition().x << std::endl;
+    if((game->ball.sprite.getPosition().x <= (game->window.getSize().x - game->ball.sprite.getTextureRect().width)) ){
+        int time = game->Clock.getElapsedTime().asMilliseconds();
+        game->ball.sprite.move(speed.x * time, speed.y * time);
+        //std::cout<<(game->ball.sprite.getPosition().x <= (game->window.getSize().x - game->ball.sprite.getTextureRect().width))<<std::endl;
+    }
 }
