@@ -8,6 +8,7 @@ GameEngine::GameEngine(int width, int height, std::string title, std::string ico
 p1(1, sf::Keyboard::A, sf::Keyboard::D, sf::Keyboard::Space), 
 p2(2, sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
 {
+    std::cout << "GameEngine constructor" << std::endl;
     // Create and setup the main window
     this->window.create(sf::VideoMode(width, height), title); //TODO move to init list
     this->window.setFramerateLimit(frameLimit);
@@ -22,6 +23,10 @@ p2(2, sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
     else{
         // Fallback to default icon
     }
+
+    //
+    textureMenager.addDir("resources/");
+
     m_running = true;
 
     

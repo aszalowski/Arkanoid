@@ -5,8 +5,10 @@
 #include <string>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+
 #include "Player.hpp"
 #include "Ball.hpp"
+#include "TextureMenager.hpp"
 
 class GameState;
 
@@ -32,6 +34,7 @@ public:
 
 	Player p1, p2;
 	Ball ball;
+	TextureMenager textureMenager;
 
 	void resetClock() { Clock.restart(); }
 	void setElapsedTime() { elapsedTime = Clock.getElapsedTime().asMilliseconds(); }
