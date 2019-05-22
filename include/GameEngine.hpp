@@ -5,6 +5,8 @@
 #include <string>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "Player.hpp"
+#include "Ball.hpp"
 
 class GameState;
 
@@ -26,6 +28,9 @@ class GameEngine
 		inline void quit() { m_running = false; }
 
 		sf::RenderWindow window;
+
+		Player p1, p2;
+		Ball ball;
 
 
 	private:

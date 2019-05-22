@@ -2,7 +2,6 @@
 #define __MAINMENUSTATE_HPP__
 
 #include "GameState.hpp"
-#include "GameEngine.hpp"
 
 class MainMenuState : public GameState {
     public:

@@ -1,7 +1,7 @@
 #ifndef __OBJECT_HPP__
 #define __OBJECT_HPP__
 
-#include "GameEngine.hpp"
+class GameEngine;
 
 class Object{
     public:
@@ -10,7 +10,10 @@ class Object{
 
         virtual sf::Vector2f getPosition() const = 0;
 
-        virtual ~Object() = 0;
+        virtual ~Object(){}
 };
+
+
+
 
 #endif // __OBJECT_HPP__

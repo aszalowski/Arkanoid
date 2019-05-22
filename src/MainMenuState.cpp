@@ -23,8 +23,9 @@ void MainMenuState::handleEvents(GameEngine* game){
 
     std::cout << "MainMenuState::handleEvents()" << std::endl;
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)){
         game->pushState(PlayState::instance());
+    }
 }
 
 void MainMenuState::update(GameEngine* game){
@@ -35,7 +36,7 @@ void MainMenuState::render(GameEngine* game){
     std::cout << "MainMenuState::render()" << std::endl;
     sf::Font font;
     game->window.clear();
-    if (!font.loadFromFile("resources/sansation.ttf")) {
+    if (!font.loadFromFile("resources/pixel.ttf")) {
         std::cout << "ERORR loading font" << std::endl;
         return;
     }
