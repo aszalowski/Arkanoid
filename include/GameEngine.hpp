@@ -29,13 +29,16 @@ public:
 
 	sf::RenderWindow window;
 
-	sf::Clock Clock;
-	uint time;
-	inline void setTime() { time = Clock.getElapsedTime().asMilliseconds(); }
 	Player p1, p2;
 	Ball ball;
 
+	void resetClock() { Clock.restart(); }
+	void setElapsedTime() { elapsedTime = Clock.getElapsedTime().asMilliseconds(); }
+	const uint getElapsedTime() const { return elapsedTime; }
+
 private:
+	sf::Clock Clock;
+	uint elapsedTime;
 	std::vector<GameState *> states;
 
 	bool m_running;
