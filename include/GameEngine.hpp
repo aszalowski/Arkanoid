@@ -30,7 +30,7 @@ public:
 	inline void quit() { m_running = false; }
 
 	sf::RenderWindow window;
-	sf::Vector2u virtualSize;
+	const sf::Vector2u& getVirtualSize() const { return virtualSize; };
 
 	Player p1, p2;
 	Ball ball;
@@ -44,6 +44,7 @@ private:
 	sf::Clock Clock;
 	uint elapsedTime;
 	std::vector<GameState *> states;
+	sf::Vector2u virtualSize;
 
 	bool m_running;
 	bool m_fullscreen;
