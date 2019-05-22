@@ -12,34 +12,34 @@ class GameState;
 
 class GameEngine
 {
-	public:
-		GameEngine(int width, int height, std::string title, std::string iconPath, int frameLimit, bool vsync);
-		~GameEngine(){ std::cout << "GameEngine destructor" << std::endl; };
+public:
+	GameEngine(int width, int height, std::string title, std::string iconPath, int frameLimit, bool vsync);
+	~GameEngine() { std::cout << "GameEngine destructor" << std::endl; };
 
-		void changeState(GameState* state);
-		void pushState(GameState* state);
-		void popState();
+	void changeState(GameState *state);
+	void pushState(GameState *state);
+	void popState();
 
-		void handleEvents();
-		void update();
-		void render();
+	void handleEvents();
+	void update();
+	void render();
 
-		inline bool running() { return m_running; }
-		inline void quit() { m_running = false; }
+	inline bool running() { return m_running; }
+	inline void quit() { m_running = false; }
 
-		sf::RenderWindow window;
+	sf::RenderWindow window;
 
-		sf::Clock Clock;
-		
-		Player p1, p2;
-		Ball ball;
+	sf::Clock Clock;
+	uint time;
+	inline void setTime() { time = Clock.getElapsedTime().asMilliseconds(); }
+	Player p1, p2;
+	Ball ball;
 
+private:
+	std::vector<GameState *> states;
 
-	private:
-		std::vector<GameState*> states;
-
-		bool m_running;
-		bool m_fullscreen;
+	bool m_running;
+	bool m_fullscreen;
 };
 
 #endif

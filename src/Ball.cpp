@@ -29,8 +29,7 @@ void Ball::setSpeed(const sf::Vector2f &newSpeed)
 void Ball::move(GameEngine* game)
 {
     if((sprite.getPosition().x <= (game->window.getSize().x - sprite.getTextureRect().width)) ){
-        int time = game->Clock.getElapsedTime().asMilliseconds();
-        std::cout<<time;
+        int time = game->time;
         sprite.move(speed.x * time, speed.y * time);
         //std::cout<<(game->ball.sprite.getPosition().x <= (game->window.getSize().x - game->ball.sprite.getTextureRect().width))<<std::endl;
     }

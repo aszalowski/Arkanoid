@@ -44,6 +44,8 @@ int main(int, char const**)
         game.handleEvents();
         game.update();
         game.render();
+        game.setTime();
+        std::cout<<game.time<<std::endl;
     }
 
     
