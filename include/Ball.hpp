@@ -25,7 +25,7 @@ public:
     const sf::Vector2f getSpeed() const { return speed; };
     void setTexture(const std::string, const sf::IntRect);
     void setTexture(const std::shared_ptr<sf::Texture>);
-    const sf::Vector2f getPosition() const;
+    const sf::Vector2f& getPosition() const;
     void move(GameEngine *);
 };
 

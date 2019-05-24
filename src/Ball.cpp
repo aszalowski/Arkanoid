@@ -6,7 +6,7 @@ void Ball::setPosition(const sf::Vector2f &newPosition)
     this->sprite.setPosition(newPosition);
 }
 
-const sf::Vector2f Ball::getPosition() const
+const sf::Vector2f& Ball::getPosition() const
 {
     return this->sprite.getPosition();
 }

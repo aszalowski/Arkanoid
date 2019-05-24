@@ -27,7 +27,7 @@ private:
 public:
     Player(int index, sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start) : index(index), controls(left, right, start){};
     ~Player(){}
-    const sf::Vector2f getPosition() const;
+    const sf::Vector2f& getPosition() const;
     void setPosition(const sf::Vector2f &);
     void setControls(sf::Keyboard::Key, sf::Keyboard::Key, sf::Keyboard::Key);
     void setTexture(std::shared_ptr<sf::Texture>);

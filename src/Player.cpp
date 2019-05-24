@@ -13,7 +13,7 @@ void Player::setTexture(std::string path, sf::IntRect rect)
     sprite.setTexture(t);
 }
 
-const sf::Vector2f Player::getPosition() const
+const sf::Vector2f& Player::getPosition() const
 {
     return this->sprite.getPosition();
 }
