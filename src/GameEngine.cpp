@@ -26,6 +26,7 @@ p2(2, sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
 
     //
     textureMenager.addDir("resources/");
+    fontMenager.addDir("resources/");
 
     m_running = true;
 

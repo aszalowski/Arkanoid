@@ -2,7 +2,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-#include "../include/TextureMenager.hpp"
+#include "../include/ResourceMenager.hpp"
 
 template <class Resource>
 ResourceMenager<Resource>::~ResourceMenager()
@@ -102,5 +102,6 @@ void ResourceMenager<Resource>::removeDir( const std::string& directory )
 	}
 }
 
+// NOTE explicit instantiating the template class, read: https://bytefreaks.net/programming-2/c/c-undefined-reference-to-templated-class-function
 template class ResourceMenager<sf::Texture>;
 template class ResourceMenager<sf::Font>;

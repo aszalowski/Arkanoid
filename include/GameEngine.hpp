@@ -8,7 +8,7 @@
 
 #include "Player.hpp"
 #include "Ball.hpp"
-#include "TextureMenager.hpp"
+#include "ResourceMenager.hpp"
 
 class GameState;
 
@@ -34,7 +34,10 @@ public:
 
 	Player p1, p2;
 	Ball ball;
-	TextureMenager textureMenager;
+
+	ResourceMenager<sf::Texture> textureMenager;
+	ResourceMenager<sf::Font> fontMenager;
+	
 
 	void resetClock() { Clock.restart(); }
 	void setElapsedTime() { elapsedTime = Clock.getElapsedTime().asMilliseconds(); }
