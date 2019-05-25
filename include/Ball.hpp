@@ -6,6 +6,7 @@
 #include <memory>
 
 #include "Object.hpp"
+#include "Collision.hpp"
 
 class GameEngine;
 
@@ -26,7 +27,15 @@ public:
     void setTexture(const std::string, const sf::IntRect);
     void setTexture(const std::shared_ptr<sf::Texture>);
     const sf::Vector2f getPosition() const;
-    void move(GameEngine *);
+    const sf::Sprite getSprite() const { return sprite; }
+    void moveX(uint);
+    void moveY(uint);
+    bool sideWindowHit(sf::Vector2u);
+    bool downWindowHit(sf::Vector2u);
+    bool topWindowHit(sf::Vector2u);
+    bool playerHit(const sf::Sprite &);
+    bool playerTopHit(const sf::Sprite &);
+    Ball* operator*=(sf::Vector2f &);
 };
 
-#endif // __OBJECT_HPP__
+#endif // __BALL_HPP__
