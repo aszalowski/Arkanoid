@@ -33,9 +33,8 @@ public:
     bool sideWindowHit(sf::Vector2u);
     bool downWindowHit(sf::Vector2u);
     bool topWindowHit(sf::Vector2u);
-    bool playerHit(const sf::Sprite &);
-    bool playerTopHit(const sf::Sprite &);
-    Ball* operator*=(sf::Vector2f &);
+    bool objectHit(const sf::Sprite &);
+    Ball operator*=(sf::Vector2f);
 };
 
 #endif // __BALL_HPP__

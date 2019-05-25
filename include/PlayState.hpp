@@ -3,8 +3,11 @@
 
 #include "GameState.hpp"
 #include "GameEngine.hpp"
+#include "Block.hpp"
 
 class PlayState : public GameState {
+    private:
+        std::vector <Block> blocks;
     public:
         void init(GameEngine *game);
         void cleanup(GameEngine *game);

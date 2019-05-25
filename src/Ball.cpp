@@ -41,37 +41,28 @@ bool Ball::sideWindowHit(sf::Vector2u virtualSize)
     sf::Vector2f pos = getPosition();
     return (pos.x > virtualSize.x - sprite.getTextureRect().width || pos.x < 0) ? 1 : 0;
 }
+
 bool Ball::downWindowHit(sf::Vector2u virtualSize)
 {
     return (getPosition().y > virtualSize.y - sprite.getTextureRect().height) ? 1 : 0;
 }
+
 bool Ball::topWindowHit(sf::Vector2u virtualSize)
 {
     return (getPosition().y < 0) ? 1 : 0;
 }
 
-bool Ball::playerHit(const sf::Sprite &player)
+bool Ball::objectHit(const sf::Sprite &object)
 {
-    return Collision::PixelPerfectTest(player, sprite) ? 1 : 0;
-}
-bool Ball::playerTopHit(const sf::Sprite &player)
-{
-    sf::Vector2f pos = getPosition();
-    if (pos.y + sprite.getTextureRect().height > player.getPosition().y && pos.y < player.getPosition().y + player.getTextureRect().height)
-    {
-
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    return Collision::PixelPerfectTest(object, sprite) ? 1 : 0;
 }
 
-Ball* Ball::operator*=(sf::Vector2f &reverse)
+
+
+Ball Ball::operator*=(sf::Vector2f vector)
 {
-    speed.x *= reverse.x;
-    speed.y *= reverse.y;
-    return this;
+    speed.x *= vector.x;
+    speed.y *= vector.y;
+    return *this;
 
 }

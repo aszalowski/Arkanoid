@@ -36,7 +36,8 @@ public:
     const sf::Sprite getSprite() const{ return sprite; }
     const uint getScore() const { return score; }
     //const sf::IntRect getRect() const {return sprite.getTextureRect();}
-    void operator+=(uint points) { score += points; };
+    void operator+=(uint points) { score += points; }
+    Player operator--() { hp--; return *this;}
 
     void move(int side, GameEngine *game);
 
