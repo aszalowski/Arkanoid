@@ -3,6 +3,8 @@
 #include "../include/MainMenuState.hpp"
 #include "../include/PlayState.hpp"
 
+#include "../include/Buttons.hpp"
+
 void MainMenuState::init(GameEngine *game)
 {
     std::cout << "MainMenuState::init()" << std::endl;
@@ -47,13 +49,10 @@ void MainMenuState::render(GameEngine *game)
         std::cout << "ERORR loading font" << std::endl;
         return;
     }
-    sf::Text t("TEST", font, 40);
-    t.setPosition(100, 100);
-    t.setFillColor(sf::Color::Yellow);
-    t.setOutlineColor(sf::Color::Blue);
-    t.setOutlineThickness(5);
+    sf::Text t("ATAAAliL", font, 15);
+    TextButton b(game->textureMenager.get("button.png").get(), game->textureMenager.get("button.png").get(), sf::Vector2f(100, 100), t);
 
 
-    game->window.draw(t);
+    b.draw(game);
     game->window.display();
 }
