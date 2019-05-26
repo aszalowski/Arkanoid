@@ -1,21 +1,24 @@
 #include <iostream>
 
 #include "../include/PlayState.hpp"
+#include "../include/ServeState.hpp"
 
 void PlayState::init(GameEngine *game)
 {
     std::cout << "PlayState::init()" << std::endl;
     game->ball.setPosition(sf::Vector2f(310, 100));
-    game->ball.setSpeed(sf::Vector2f(-0.2, 0));
+    game->ball.setSpeed(sf::Vector2f(-0.2, 0.2));
     game->p1.setPosition(sf::Vector2f(100, 300));
 
     game->ball.setTexture(game->textureMenager.get("ball.png"));
-    game->p1.setTexture(game->textureMenager.get("paddle.png"));
+    game->p1.setTexture(game, "breakout_pieces.png", sf::IntRect(48, 72, 64, 16));
+    //game->p1.setTexture(game->textureMenager.get("breakout_pieces.png"));
+    //game->p1.getSprite().setTextureRect(sf::IntRect(48,72,64,16));
 
     for (int i = 0; i < 5; i++)
     {
         Block a(1, game->textureMenager.get("block01.png"), sf::Vector2f(100 + i * 40, 100));
-        blocks.push_back(a);
+        game->blocks.push_back(a);
     }
 }
 
@@ -33,16 +36,18 @@ void PlayState::resume()
 
 void PlayState::handleEvents(GameEngine *game)
 {
+    uint time = game->getElapsedTime();
+    sf::Vector2u virtualSize = game->getVirtualSize(); 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-        game->p1.move(-1, game);
+        game->p1.move(-1, virtualSize, time);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-        game->p1.move(1, game);
+        game->p1.move(1, virtualSize, time);
 }
 
 void PlayState::update(GameEngine *game)
 {
     game->ball.moveX(game->getElapsedTime());
-    std::cout << game->ball.getPosition().x << std::endl;
+
     if (game->ball.sideWindowHit(game->getVirtualSize()))
     {
         game->ball *= sf::Vector2f(-1, 1);
@@ -54,22 +59,25 @@ void PlayState::update(GameEngine *game)
         game->ball.moveX(game->getElapsedTime());
     }
 
-    for (std::list<Block>::const_iterator i = blocks.begin(); i != blocks.end(); ++i)
+    for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
     {
         if (game->ball.objectHit(i->getSprite()))
         {
             game->ball *= sf::Vector2f(-1, 1);
             game->ball.moveX(game->getElapsedTime());
-            i = blocks.erase(i);
+            i = game->blocks.erase(i);
             game->p1 += 100;
         }
     }
 
     game->ball.moveY(game->getElapsedTime());
+
     if (game->ball.downWindowHit(game->getVirtualSize()))
     {
         game->ball *= sf::Vector2f(1, -1);
-        //game->p1--;
+        game->p1--;
+        game->ball.setPosition(sf::Vector2f(game->p1.getPosition().x + (game->p1.getSprite().getTextureRect().width - game->ball.getSprite().getTextureRect().width) / 2, game->p1.getPosition().y - game->ball.getSprite().getTextureRect().height));
+        game->pushState(ServeState::instance());
     }
 
     if (game->ball.topWindowHit(game->getVirtualSize()))
@@ -83,13 +91,13 @@ void PlayState::update(GameEngine *game)
         game->ball.moveY(game->getElapsedTime());
     }
 
-    for (std::list<Block>::const_iterator i = blocks.begin(); i != blocks.end(); ++i)
+    for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
     {
         if (game->ball.objectHit(i->getSprite()))
         {
             game->ball *= sf::Vector2f(1, -1);
             game->ball.moveY(game->getElapsedTime());
-            i = blocks.erase(i);
+            i = game->blocks.erase(i);
             game->p1 += 100;
         }
     }
@@ -100,7 +108,7 @@ void PlayState::render(GameEngine *game)
     game->window.clear();
     std::cout << "PlayState::render()" << std::endl;
 
-    for (std::list<Block>::const_iterator i = blocks.begin(); i != blocks.end(); ++i)
+    for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
     {
         i->draw(game);
     }

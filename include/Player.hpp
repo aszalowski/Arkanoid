@@ -23,6 +23,7 @@ private:
     uint score = 0;
     Controls controls;
     sf::Sprite sprite;
+    float moveStep = 0.5;
 
 public:
     Player(int index, sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start) : index(index), controls(left, right, start){};
@@ -31,15 +32,18 @@ public:
     void setPosition(const sf::Vector2f &);
     void setControls(sf::Keyboard::Key, sf::Keyboard::Key, sf::Keyboard::Key);
     void setTexture(std::shared_ptr<sf::Texture>);
-    void setTexture(std::string, sf::IntRect);
+    void setTexture(GameEngine *, std::string, sf::IntRect);
     void setScore(const uint &newScore) { score = newScore; }
-    const sf::Sprite getSprite() const{ return sprite; }
+    const sf::Sprite &getSprite() const { return sprite; }
+    sf::Sprite &modifySprite() { return sprite; }
     const uint getScore() const { return score; }
+    const float getMoveStep() const { return moveStep; }
+    void setMoveStep(float &newStep) { moveStep = newStep; }
     //const sf::IntRect getRect() const {return sprite.getTextureRect();}
     void operator+=(uint points) { score += points; }
-    Player operator--() { hp--; return *this;}
+    Player operator--(int);
 
-    void move(int side, GameEngine *game);
+    void move(int side, sf::Vector2u, uint);
 
     void draw(GameEngine *game) const;
 };

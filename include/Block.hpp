@@ -24,8 +24,10 @@ public:
 
     const sf::Vector2f getPosition() const { return sprite.getPosition(); }
     void setPosition(const sf::Vector2f &newPosition) { sprite.setPosition(newPosition); }
-    const sf::Sprite getSprite() const { return sprite; }
+    const sf::Sprite &getSprite() const{ return sprite; }
+    sf::Sprite &modifySprite() { return sprite; }
     void setTexture(const std::shared_ptr<sf::Texture> );
+    void setTexture(GameEngine *, std::string, sf::IntRect);
 
     ~Block() {}
 };

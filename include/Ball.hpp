@@ -24,10 +24,11 @@ public:
     void setPosition(const sf::Vector2f &);
     void setSpeed(const sf::Vector2f &);
     const sf::Vector2f getSpeed() const { return speed; };
-    void setTexture(const std::string, const sf::IntRect);
+    void setTexture(GameEngine *, std::string, sf::IntRect);
     void setTexture(const std::shared_ptr<sf::Texture>);
     const sf::Vector2f getPosition() const;
-    const sf::Sprite getSprite() const { return sprite; }
+    const sf::Sprite &getSprite() const { return sprite; }
+    sf::Sprite &modifySprite() { return sprite; }
     void moveX(uint);
     void moveY(uint);
     bool sideWindowHit(sf::Vector2u);

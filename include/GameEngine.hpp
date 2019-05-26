@@ -1,13 +1,14 @@
 #ifndef GAMEENGINE_H
 #define GAMEENGINE_H
 
-#include <vector>
+#include <list>
 #include <string>
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
 #include "Player.hpp"
 #include "Ball.hpp"
+#include "Block.hpp"
 #include "TextureMenager.hpp"
 
 class GameState;
@@ -35,6 +36,7 @@ public:
 	Player p1, p2;
 	Ball ball;
 	TextureMenager textureMenager;
+	std::list<Block> blocks;
 
 	void resetClock() { Clock.restart(); }
 	void setElapsedTime() { elapsedTime = Clock.getElapsedTime().asMilliseconds(); }

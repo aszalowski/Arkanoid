@@ -6,11 +6,10 @@ void Player::setTexture(const std::shared_ptr<sf::Texture> newTexture)
 {
     sprite.setTexture(*newTexture.get(), true);
 }
-void Player::setTexture(std::string path, sf::IntRect rect)
+void Player::setTexture(GameEngine *game, std::string name, sf::IntRect rect)
 {
-    sf::Texture t;
-    t.loadFromFile(path, rect);
-    sprite.setTexture(t);
+    setTexture(game->textureMenager.get(name));
+    sprite.setTextureRect(rect);
 }
 
 const sf::Vector2f Player::getPosition() const
@@ -35,10 +34,16 @@ void Player::draw(GameEngine *game) const
     game->window.draw(this->sprite);
 }
 
-void Player::move(int side, GameEngine *game){
-    const int step = 5;
+void Player::move(int side, sf::Vector2u virtualSize, uint time){
     if (getPosition().x > 0 && side < 0)
-        sprite.move(side * step, 0);
-    if (getPosition().x < game->getVirtualSize().x - sprite.getTextureRect().width && side > 0)
-        sprite.move(side * step, 0);
+        sprite.move(side * moveStep * time, 0);
+    if (getPosition().x < virtualSize.x - sprite.getTextureRect().width && side > 0)
+        sprite.move(side * moveStep * time, 0);
+}
+
+Player Player::operator--(int a)
+{
+    
+    this->hp--;
+    return *this;
 }

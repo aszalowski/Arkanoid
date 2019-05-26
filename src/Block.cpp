@@ -17,3 +17,9 @@ void Block::setTexture(const std::shared_ptr<sf::Texture> newTexture)
 {
     this->sprite.setTexture(*newTexture.get(), true);
 }
+
+void Block::setTexture(GameEngine *game, std::string name, sf::IntRect rect)
+{
+    setTexture(game->textureMenager.get(name));
+    sprite.setTextureRect(rect);
+}
