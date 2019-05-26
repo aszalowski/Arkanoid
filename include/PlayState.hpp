@@ -1,13 +1,15 @@
 #ifndef PLAYSTATE_H
 #define PLAYSTATE_H
 
+#include <list>
+
 #include "GameState.hpp"
 #include "GameEngine.hpp"
 #include "Block.hpp"
 
 class PlayState : public GameState {
     private:
-        std::vector <Block> blocks;
+        std::list <Block> blocks;
     public:
         void init(GameEngine *game);
         void cleanup(GameEngine *game);

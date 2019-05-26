@@ -54,7 +54,7 @@ void PlayState::update(GameEngine *game)
         game->ball.moveX(game->getElapsedTime());
     }
 
-    for (std::vector<Block>::const_iterator i = blocks.begin(); i != blocks.end(); )
+    for (std::list<Block>::const_iterator i = blocks.begin(); i != blocks.end(); )
     {
         if (game->ball.objectHit(i->getSprite()))
         {
@@ -86,7 +86,7 @@ void PlayState::update(GameEngine *game)
         game->ball.moveY(game->getElapsedTime());
     }
 
-    for (std::vector<Block>::const_iterator i = blocks.begin(); i != blocks.end(); ++i)
+    for (std::list<Block>::const_iterator i = blocks.begin(); i != blocks.end();)
     {
         if (game->ball.objectHit(i->getSprite()))
         {
@@ -94,6 +94,9 @@ void PlayState::update(GameEngine *game)
             game->ball.moveY(game->getElapsedTime());
             blocks.erase(i);
             game->p1 += 100;
+        }
+        else{
+            ++i;
         }
     }
 }
@@ -103,7 +106,7 @@ void PlayState::render(GameEngine *game)
     game->window.clear();
     std::cout << "PlayState::render()" << std::endl;
 
-    for (std::vector<Block>::const_iterator i = blocks.begin(); i != blocks.end(); ++i)
+    for (std::list<Block>::const_iterator i = blocks.begin(); i != blocks.end(); ++i)
     {
         i->draw(game);
     }
