@@ -5,8 +5,8 @@
 void PlayState::init(GameEngine *game)
 {
     std::cout << "PlayState::init()" << std::endl;
-    game->ball.setPosition(sf::Vector2f(232, 5));
-    game->ball.setSpeed(sf::Vector2f(-0.1, 0.1));
+    game->ball.setPosition(sf::Vector2f(310, 100));
+    game->ball.setSpeed(sf::Vector2f(-0.2, 0));
     game->p1.setPosition(sf::Vector2f(100, 300));
 
     game->ball.setTexture(game->textureMenager.get("ball.png"));
@@ -46,6 +46,7 @@ void PlayState::handleEvents(GameEngine *game)
 void PlayState::update(GameEngine *game)
 {
     game->ball.moveX(game->getElapsedTime());
+    std::cout << game->ball.getPosition().x << std::endl;
     if (game->ball.sideWindowHit(game->getVirtualSize()))
     {
         game->ball *= sf::Vector2f(-1, 1);
@@ -57,7 +58,7 @@ void PlayState::update(GameEngine *game)
         game->ball.moveX(game->getElapsedTime());
     }
 
-    for (std::vector<Block>::const_iterator i = blocks.begin(); i != blocks.end(); ++i)
+    for (std::vector<Block>::const_iterator i = blocks.begin(); i != blocks.end(); )
     {
         if (game->ball.objectHit(i->getSprite()))
         {
@@ -65,6 +66,9 @@ void PlayState::update(GameEngine *game)
             game->ball.moveX(game->getElapsedTime());
             blocks.erase(i);
             game->p1 += 100;
+        }
+        else{
+            ++i;
         }
     }
 
