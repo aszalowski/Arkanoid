@@ -5,8 +5,8 @@
 void PlayState::init(GameEngine *game)
 {
     std::cout << "PlayState::init()" << std::endl;
-    game->ball.setPosition(sf::Vector2f(232, 5));
-    game->ball.setSpeed(sf::Vector2f(-0.1, 0.1));
+    game->ball.setPosition(sf::Vector2f(320, 100));
+    game->ball.setSpeed(sf::Vector2f(-0.2, 0));
     game->p1.setPosition(sf::Vector2f(100, 300));
 
     game->ball.setTexture(game->textureMenager.get("ball.png"));
@@ -14,11 +14,7 @@ void PlayState::init(GameEngine *game)
 
     for (int i = 0; i < 5; i++)
     {
-        char c = i + 48;
-        std::string name = "block0";
-        name += c;
-        name += ".png";
-        Block a(1, game->textureMenager.get(name), sf::Vector2f(100 + i * 40, 100));
+        Block a(1, game->textureMenager.get("block01.png"), sf::Vector2f(100 + i * 40, 100));
         blocks.push_back(a);
     }
 }
