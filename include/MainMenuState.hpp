@@ -1,7 +1,13 @@
 #ifndef __MAINMENUSTATE_HPP__
 #define __MAINMENUSTATE_HPP__
 
+#include <vector>
+#include <memory>
+#include <SFML/Graphics.hpp>
+
 #include "GameState.hpp"
+#include "Buttons.hpp"
+
 
 class MainMenuState : public GameState {
     public:
@@ -11,7 +17,7 @@ class MainMenuState : public GameState {
         void pause();
         void resume();
 
-        void handleEvents(GameEngine*);
+        void handleEvents(GameEngine*, sf::Event);
         void update(GameEngine*);
         void render(GameEngine*);
 
@@ -24,6 +30,12 @@ class MainMenuState : public GameState {
         MainMenuState(){}
 
     private:
+        std::vector<std::shared_ptr<Button>> buttons; 
+        sf::Font* font;
+        uint mediumFontSize = 25;
+
+
+
 
 };
 

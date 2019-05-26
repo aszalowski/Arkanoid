@@ -1,4 +1,6 @@
 #include <iostream>
+#include <memory>
+#include <algorithm>
 
 #include "../include/MainMenuState.hpp"
 #include "../include/PlayState.hpp"
@@ -8,6 +10,13 @@
 void MainMenuState::init(GameEngine *game)
 {
     std::cout << "MainMenuState::init()" << std::endl;
+    font = game->fontMenager.get("pixel.ttf").get();
+    const_cast<sf::Texture&>(font->getTexture(mediumFontSize)).setSmooth(false);
+
+    std::shared_ptr<TextButton> newButton = std::make_shared<TextButton>(game->textureMenager.get("button.png").get(), sf::Color(200, 200, 200, 200), sf::Vector2f(0, 0), sf::Text("Button 1", *font, mediumFontSize));
+    newButton.get()->setPosition(sf::Vector2f(game->getVirtualSize().x/2.0 - newButton.get()->getGlobalBounds().width/2.0, 50));
+    buttons.push_back(newButton);
+
 }
 
 void MainMenuState::cleanup(GameEngine *game)
@@ -23,36 +32,44 @@ void MainMenuState::resume()
 {
 }
 
-void MainMenuState::handleEvents(GameEngine *game)
+void MainMenuState::handleEvents(GameEngine *game, sf::Event event)
 {
 
-    std::cout << "MainMenuState::handleEvents()" << std::endl;
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space))
+    if (event.type == sf::Event::MouseButtonPressed)
     {
-        game->changeState(PlayState::instance());
+        if (event.mouseButton.button == sf::Mouse::Left)
+        {
+            for(auto button : buttons){
+                if(button.get()->isHovered(sf::Vector2f(sf::Mouse::getPosition(game->window)) * game->getScreenRatio())){
+                    button.get()->click(game);
+                }
+            }
+        }
     }
+    else if(event.type == sf::Event::MouseMoved){
+        for(auto button : buttons){
+            if(button.get()->isHovered(sf::Vector2f(sf::Mouse::getPosition(game->window)) * game->getScreenRatio())){
+                button.get()->hover();
+            }
+            else
+            {
+                button.get()->reset();
+            }
+            
+        }
+    }
+
 }
 
 void MainMenuState::update(GameEngine *game)
 {
-    std::cout << "MainMenuState::update()" << std::endl;
 }
 
 void MainMenuState::render(GameEngine *game)
 {
-    std::cout << "MainMenuState::render()" << std::endl;
-    sf::Font font;
-    game->window.clear();
-    if (!font.loadFromFile("resources/pixel.ttf"))
-    {
-        std::cout << "ERORR loading font" << std::endl;
-        return;
-    }
-    sf::Text t("ATAAAliL", font, 15);
-    TextButton b(game->textureMenager.get("button.png").get(), game->textureMenager.get("button.png").get(), sf::Vector2f(100, 100), t);
+    for(auto button : buttons)
+        button.get()->draw(game);
 
 
-    b.draw(game);
     game->window.display();
 }
