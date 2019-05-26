@@ -15,7 +15,7 @@ class GameState;
 class GameEngine
 {
 public:
-	GameEngine(int width, int height, std::string title, std::string iconPath, int frameLimit, bool vsync);
+	GameEngine(int virtualWidth, int virtualHeight, int width, int height,  std::string title, std::string iconPath, int frameLimit, bool vsync);
 	~GameEngine() { std::cout << "GameEngine destructor" << std::endl; };
 
 	void changeState(GameState *state);
@@ -42,12 +42,14 @@ public:
 	void resetClock() { Clock.restart(); }
 	void setElapsedTime() { elapsedTime = Clock.getElapsedTime().asMilliseconds(); }
 	const uint getElapsedTime() const { return elapsedTime; }
+	float getScreenRatio() const { return screenRatio; };
 
 private:
 	sf::Clock Clock;
 	uint elapsedTime;
 	std::vector<GameState *> states;
 	sf::Vector2u virtualSize;
+	float screenRatio;
 
 	bool m_running;
 	bool m_fullscreen;

@@ -1,6 +1,8 @@
 #ifndef PLAYSTATE_H
 #define PLAYSTATE_H
 
+#include <SFML/Graphics.hpp>
+
 #include "GameState.hpp"
 #include "GameEngine.hpp"
 
@@ -12,7 +14,7 @@ class PlayState : public GameState {
         void pause();
         void resume();
 
-        void handleEvents(GameEngine*);
+        void handleEvents(GameEngine*, sf::Event);
         void update(GameEngine*);
         void render(GameEngine*);
 
