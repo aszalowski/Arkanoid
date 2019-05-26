@@ -14,11 +14,7 @@ void PlayState::init(GameEngine *game)
 
     for (int i = 0; i < 5; i++)
     {
-        char c = i + 48;
-        std::string name = "block0";
-        name += c;
-        name += ".png";
-        Block a(1, game->textureMenager.get(name), sf::Vector2f(100 + i * 40, 100));
+        Block a(1, game->textureMenager.get("block01.png"), sf::Vector2f(100 + i * 40, 100));
         blocks.push_back(a);
     }
 }
