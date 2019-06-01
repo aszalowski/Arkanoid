@@ -60,7 +60,7 @@ void ServeState::update(GameEngine *game)
         srand(time);
         float dx = rand() % 400 / 1000.0, dy;
         float oldSpeed = pow(game->ball.getSpeed().x, 2) + pow(game->ball.getSpeed().y, 2);
-        dy = -sqrt(oldSpeed -dx * dx);
+        dy = -sqrt(fabs(oldSpeed -dx * dx));
         std::cout << dy << std::endl;
         rand() % 2 ? dx = -dx : dx = dx;
         game->ball.setSpeed(sf::Vector2f(dx, dy));
