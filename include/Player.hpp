@@ -33,6 +33,7 @@ public:
     void setTexture(std::shared_ptr<sf::Texture>);
     void setTexture(std::string, sf::IntRect);
     void setScore(const uint &newScore) { score = newScore; }
+    sf::Sprite& modifySprite(){ return sprite; }
     const uint getScore() const { return score; }
     void operator+=(uint points) { score += points; };
 
