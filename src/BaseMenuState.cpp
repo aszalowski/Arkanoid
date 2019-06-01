@@ -63,12 +63,10 @@ void BaseMenuState::update(GameEngine *game)
 
 void BaseMenuState::render(GameEngine *game)
 {
-    game->window.clear();
     for(auto button : buttons)
         button.get()->draw(game);
     
     for(auto object : objects)
         game->window.draw(*object);
 
-    game->window.display();
 }

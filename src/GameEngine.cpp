@@ -84,10 +84,6 @@ void GameEngine::handleEvents(){
         {
             quit();
         }
-        else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
-        {
-            quit();
-        }
         else if (event.type == sf::Event::Resized)
         {
             this->resetClock();
@@ -107,6 +103,11 @@ void GameEngine::update(){
 
 void GameEngine::render(){
 
+    window.clear();
+    if(states.back()->isTransparent())
+        if(states.size() > 1)
+            states.end()[-2]->render(this);
     //Delegate rendering to the current state
     states.back()->render(this);
+    window.display();
 }

@@ -17,6 +17,8 @@ class GameState{
         virtual void update(GameEngine*) = 0;
         virtual void render(GameEngine*) = 0;
 
+        virtual bool isTransparent(){ return false; }
+
         void changeState(GameEngine* game, GameState* state){
             game->changeState(state);
         }
