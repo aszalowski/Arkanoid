@@ -88,8 +88,10 @@ void GameEngine::handleEvents(){
         {
             this->resetClock();
         }
+        else
+            states.back()->handleEvents(this, event);
     }
-    states.back()->handleEvents(this, event);
+
     // Delegate handling events to the current state
 }
 

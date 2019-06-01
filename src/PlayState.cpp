@@ -2,6 +2,7 @@
 
 #include "../include/PlayState.hpp"
 #include "../include/ServeState.hpp"
+#include "../include/PauseState.hpp"
 
 void PlayState::init(GameEngine *game)
 {
@@ -11,7 +12,6 @@ void PlayState::init(GameEngine *game)
     game->p1.setPosition(sf::Vector2f(300, 320));
 
     game->ball.setTexture(game->textureMenager.get("ball.png"));
-    game->p1.setTexture(game, "breakout_pieces.png", sf::IntRect(48, 72, 64, 16));
 
     for (int i = 0; i < 5; i++)
     {
@@ -34,7 +34,14 @@ void PlayState::resume()
 
 void PlayState::handleEvents(GameEngine *game, sf::Event event)
 {
+    if(event.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+        game->pushState(PauseState::instance());
+}
+
+void PlayState::update(GameEngine *game)
+{
     uint time = game->getElapsedTime();
+
     sf::Vector2u virtualSize = game->getVirtualSize(); 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
         game->p1.move(-1, virtualSize, time);
@@ -46,11 +53,8 @@ void PlayState::handleEvents(GameEngine *game, sf::Event event)
         if(game->ball.objectHit(game->p1.getSprite()))
             game->ball.setPosition(sf::Vector2f(game->p1.getPosition().x + game->p1.getSprite().getGlobalBounds().width + 1, game->ball.getPosition().y));
     }
-}
 
-void PlayState::update(GameEngine *game)
-{
-    game->ball.moveX(game->getElapsedTime());
+    game->ball.moveX(time);
 
     if (game->ball.sideWindowHit(game->getVirtualSize()))
     {
@@ -74,7 +78,7 @@ void PlayState::update(GameEngine *game)
         }
     }
 
-    game->ball.moveY(game->getElapsedTime());
+    game->ball.moveY(time);
 
     if (game->ball.downWindowHit(game->getVirtualSize()))
     {
@@ -111,8 +115,6 @@ void PlayState::update(GameEngine *game)
 
 void PlayState::render(GameEngine *game)
 {
-    std::cout << "PlayState::render()" << std::endl;
-
     for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
     {
         i->draw(game);
