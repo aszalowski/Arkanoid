@@ -34,9 +34,17 @@ void HotSeatPlayState::handleEvents(GameEngine *game)
     uint time = game->getElapsedTime();
     sf::Vector2u virtualSize = game->getVirtualSize();
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+    {
         game->p2.move(-1, virtualSize, time);
+        if (game->ball.objectHit(game->p2.getSprite()))
+            game->ball.setPosition(sf::Vector2f(game->p2.getPosition().x - game->ball.getSprite().getGlobalBounds().width - 1, game->ball.getPosition().y));
+    }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+    {
         game->p2.move(1, virtualSize, time);
+        if (game->ball.objectHit(game->p2.getSprite()))
+            game->ball.setPosition(sf::Vector2f(game->p2.getPosition().x + game->p2.getSprite().getGlobalBounds().width + 1, game->ball.getPosition().y));
+    }
     PlayState::handleEvents(game);
 }
 
