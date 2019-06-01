@@ -34,6 +34,8 @@ public:
     void setTexture(std::shared_ptr<sf::Texture>);
     void setTexture(GameEngine *, std::string, sf::IntRect);
     void setScore(const uint &newScore) { score = newScore; }
+    uint getScore() { return score; }
+    uint getHp() { return hp; }
     const sf::Sprite &getSprite() const { return sprite; }
     sf::Sprite &modifySprite() { return sprite; }
     const uint getScore() const { return score; }

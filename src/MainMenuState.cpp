@@ -2,6 +2,7 @@
 
 #include "../include/MainMenuState.hpp"
 #include "../include/PlayState.hpp"
+#include "../include/HotSeatPlayState.hpp"
 
 void MainMenuState::init(GameEngine *game)
 {
@@ -29,6 +30,10 @@ void MainMenuState::handleEvents(GameEngine *game)
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space))
     {
         game->changeState(PlayState::instance());
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::H))
+    {
+        game->changeState(HotSeatPlayState::instance());
     }
 }
 

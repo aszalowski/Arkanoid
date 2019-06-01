@@ -40,6 +40,7 @@ int main(int, char const**)
         game.update();
         game.render();
         game.setElapsedTime();
+        game.window.clear();
     }
 
     

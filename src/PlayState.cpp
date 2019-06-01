@@ -6,14 +6,12 @@
 void PlayState::init(GameEngine *game)
 {
     std::cout << "PlayState::init()" << std::endl;
-    game->ball.setPosition(sf::Vector2f(310, 100));
-    game->ball.setSpeed(sf::Vector2f(-0.2, 0.2));
-    game->p1.setPosition(sf::Vector2f(100, 300));
+    game->ball.setPosition(sf::Vector2f(300, 270));
+    game->ball.setSpeed(sf::Vector2f(0.2, -0.2));
+    game->p1.setPosition(sf::Vector2f(300, 320));
 
     game->ball.setTexture(game->textureMenager.get("ball.png"));
     game->p1.setTexture(game, "breakout_pieces.png", sf::IntRect(48, 72, 64, 16));
-    //game->p1.setTexture(game->textureMenager.get("breakout_pieces.png"));
-    //game->p1.getSprite().setTextureRect(sf::IntRect(48,72,64,16));
 
     for (int i = 0; i < 5; i++)
     {
@@ -76,6 +74,7 @@ void PlayState::update(GameEngine *game)
     {
         game->ball *= sf::Vector2f(1, -1);
         game->p1--;
+        //TODO: Add life check and gameover
         game->ball.setPosition(sf::Vector2f(game->p1.getPosition().x + (game->p1.getSprite().getTextureRect().width - game->ball.getSprite().getTextureRect().width) / 2, game->p1.getPosition().y - game->ball.getSprite().getTextureRect().height));
         game->pushState(ServeState::instance());
     }
@@ -105,13 +104,26 @@ void PlayState::update(GameEngine *game)
 
 void PlayState::render(GameEngine *game)
 {
-    game->window.clear();
     std::cout << "PlayState::render()" << std::endl;
 
     for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
     {
         i->draw(game);
     }
+
+    sf::Font font;
+    if (!font.loadFromFile("resources/pixel.ttf"))
+    {
+        std::cout << "ERORR loading font" << std::endl;
+        return;
+    }
+
+    // sf::Text p1Life("Lifes left: " + std::to_string(game->p1.getHp()), font, 20);
+    // p1Life.setPosition(0, 0);
+    // sf::Text p1Points("Score: " + std::to_string(game->p1.getScore()), font, 20);
+    // p1Points.setPosition(500, 0);
+    // game->window.draw(p1Points);
+    // game->window.draw(p1Life);
 
     game->ball.draw(game);
     game->p1.draw(game);
