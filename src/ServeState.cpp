@@ -26,7 +26,14 @@ void ServeState::resume()
 void ServeState::handleEvents(GameEngine *game, sf::Event event)
 {
     std::cout << "ServeState::handleEvents()" << std::endl;
+    if(event.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+        game->pushState(PauseState::instance());
 
+}
+
+void ServeState::update(GameEngine *game)
+{
+    std::cout << "ServeState::update()" << std::endl;
     uint time = game->getElapsedTime();
     sf::Vector2u virtualSize = game->getVirtualSize();
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
@@ -58,11 +65,6 @@ void ServeState::handleEvents(GameEngine *game, sf::Event event)
         game->ball.setSpeed(sf::Vector2f(dx, dy));
         game->popState();
     }
-}
-
-void ServeState::update(GameEngine *game)
-{
-    std::cout << "ServeState::update()" << std::endl;
 }
 
 void ServeState::render(GameEngine *game)
