@@ -24,16 +24,11 @@
 #include "../include/PlayState.hpp"
 #include "../include/MainMenuState.hpp"
 
-
-
-bool isCollide(sf::Sprite s1, sf::Sprite s2){
-    return s1.getGlobalBounds().intersects(s2.getGlobalBounds());
-}
-
-const float XChangeSpeed = 0.08, YChangeSpeed = 0.08;
 int main(int, char const**)
 {
     GameEngine game(640, 360, 1200, 675, "Arkanoid", "resources/icon.png", 60, true);
+
+    game.textureMenager.addDir("resources");
 
     game.changeState(MainMenuState::instance());
 
@@ -44,6 +39,7 @@ int main(int, char const**)
         game.update();
         game.render();
         game.setElapsedTime();
+        game.window.clear();
     }
 
     

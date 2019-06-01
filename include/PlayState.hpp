@@ -5,8 +5,11 @@
 
 #include "GameState.hpp"
 #include "GameEngine.hpp"
+#include "Block.hpp"
 
 class PlayState : public GameState {
+    private:
+
     public:
         void init(GameEngine *game);
         void cleanup(GameEngine *game);

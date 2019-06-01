@@ -1,7 +1,7 @@
 #ifndef GAMEENGINE_H
 #define GAMEENGINE_H
 
-#include <vector>
+#include <list>
 #include <string>
 #include <iostream>
 #include <SFML/Graphics.hpp>
@@ -9,6 +9,7 @@
 #include "Player.hpp"
 #include "Ball.hpp"
 #include "ResourceMenager.hpp"
+#include "Block.hpp"
 
 class GameState;
 
@@ -34,11 +35,10 @@ public:
 
 	Player p1, p2;
 	Ball ball;
-
 	ResourceMenager<sf::Texture> textureMenager;
 	ResourceMenager<sf::Font> fontMenager;
 	
-
+	std::list<Block> blocks;
 	void resetClock() { Clock.restart(); }
 	void setElapsedTime() { elapsedTime = Clock.getElapsedTime().asMilliseconds(); }
 	const uint getElapsedTime() const { return elapsedTime; }
