@@ -36,10 +36,16 @@ void PlayState::handleEvents(GameEngine *game)
 {
     uint time = game->getElapsedTime();
     sf::Vector2u virtualSize = game->getVirtualSize(); 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
         game->p1.move(-1, virtualSize, time);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+        if(game->ball.objectHit(game->p1.getSprite()))
+            game->ball.setPosition(sf::Vector2f(game->p1.getPosition().x - game->ball.getSprite().getGlobalBounds().width - 1, game->ball.getPosition().y));
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
         game->p1.move(1, virtualSize, time);
+        if(game->ball.objectHit(game->p1.getSprite()))
+            game->ball.setPosition(sf::Vector2f(game->p1.getPosition().x + game->p1.getSprite().getGlobalBounds().width + 1, game->ball.getPosition().y));
+    }
 }
 
 void PlayState::update(GameEngine *game)
@@ -83,6 +89,7 @@ void PlayState::update(GameEngine *game)
     {
         game->ball *= sf::Vector2f(1, -1);
     }
+
 
     if (game->ball.objectHit(game->p1.getSprite()))
     {
