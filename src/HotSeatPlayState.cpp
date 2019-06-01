@@ -31,18 +31,19 @@ void HotSeatPlayState::handleEvents(GameEngine *game, sf::Event event)
 {
     std::cout << "HotSeat::handleEvents()" << std::endl;
 
-    uint time = game->getElapsedTime();
-    sf::Vector2u virtualSize = game->getVirtualSize();
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-        game->p2.move(-1, virtualSize, time);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-        game->p2.move(1, virtualSize, time);
     PlayState::handleEvents(game, event);
 }
 
 void HotSeatPlayState::update(GameEngine *game)
 {
     std::cout << "HotSeat::update()" << std::endl;
+
+    uint time = game->getElapsedTime();
+    sf::Vector2u virtualSize = game->getVirtualSize();
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+        game->p2.move(-1, virtualSize, time);
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+        game->p2.move(1, virtualSize, time);
 
     if (game->ball.topWindowHit(game->getVirtualSize()))
     {

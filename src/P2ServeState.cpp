@@ -30,6 +30,11 @@ void P2ServeState::resume()
 void P2ServeState::handleEvents(GameEngine *game, sf::Event event)
 {
     std::cout << "P2ServeState::handleEvents()" << std::endl;
+}
+
+void P2ServeState::update(GameEngine *game)
+{
+    std::cout << "P2ServeState::update()" << std::endl;
 
     uint time = game->getElapsedTime();
     sf::Vector2u virtualSize = game->getVirtualSize();
@@ -62,12 +67,6 @@ void P2ServeState::handleEvents(GameEngine *game, sf::Event event)
         game->ball.setSpeed(sf::Vector2f(dx, dy));
         game->popState();
     }
-    
-}
-
-void P2ServeState::update(GameEngine *game)
-{
-    std::cout << "P2ServeState::update()" << std::endl;
 }
 
 void P2ServeState::render(GameEngine *game)
