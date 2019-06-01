@@ -12,7 +12,7 @@ void Player::setTexture(GameEngine *game, std::string name, sf::IntRect rect)
     sprite.setTextureRect(rect);
 }
 
-const sf::Vector2f& Player::getPosition() const
+const sf::Vector2f Player::getPosition() const
 {
     return this->sprite.getPosition();
 }

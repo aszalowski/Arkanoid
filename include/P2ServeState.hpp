@@ -17,7 +17,7 @@ public:
     void pause();
     void resume();
 
-    void handleEvents(GameEngine *);
+    void handleEvents(GameEngine *, sf::Event);
     void update(GameEngine *);
     void render(GameEngine *);
 

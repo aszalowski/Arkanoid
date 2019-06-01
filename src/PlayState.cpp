@@ -32,7 +32,7 @@ void PlayState::resume()
 {
 }
 
-void PlayState::handleEvents(GameEngine *game)
+void PlayState::handleEvents(GameEngine *game, sf::Event event)
 {
     uint time = game->getElapsedTime();
     sf::Vector2u virtualSize = game->getVirtualSize(); 
@@ -134,5 +134,4 @@ void PlayState::render(GameEngine *game)
 
     game->ball.draw(game);
     game->p1.draw(game);
-    game->window.display();
 }

@@ -23,7 +23,7 @@ void ServeState::resume()
 {
 }
 
-void ServeState::handleEvents(GameEngine *game)
+void ServeState::handleEvents(GameEngine *game, sf::Event event)
 {
     std::cout << "ServeState::handleEvents()" << std::endl;
 
@@ -75,5 +75,4 @@ void ServeState::render(GameEngine *game)
     game->ball.draw(game);
     game->p1.draw(game);
     game->p2.draw(game);
-    game->window.display();
 }

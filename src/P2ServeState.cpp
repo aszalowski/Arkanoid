@@ -27,7 +27,7 @@ void P2ServeState::resume()
     ServeState::resume();
 }
 
-void P2ServeState::handleEvents(GameEngine *game)
+void P2ServeState::handleEvents(GameEngine *game, sf::Event event)
 {
     std::cout << "P2ServeState::handleEvents()" << std::endl;
 

@@ -27,7 +27,7 @@ void HotSeatPlayState::resume()
 {
 }
 
-void HotSeatPlayState::handleEvents(GameEngine *game)
+void HotSeatPlayState::handleEvents(GameEngine *game, sf::Event event)
 {
     std::cout << "HotSeat::handleEvents()" << std::endl;
 
@@ -37,7 +37,7 @@ void HotSeatPlayState::handleEvents(GameEngine *game)
         game->p2.move(-1, virtualSize, time);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
         game->p2.move(1, virtualSize, time);
-    PlayState::handleEvents(game);
+    PlayState::handleEvents(game, event);
 }
 
 void HotSeatPlayState::update(GameEngine *game)
