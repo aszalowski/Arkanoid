@@ -5,6 +5,7 @@
 
 #include "../include/ServeState.hpp"
 #include "../include/PlayState.hpp"
+#include "../include/PauseState.hpp"
 
 void ServeState::init(GameEngine *game)
 {
