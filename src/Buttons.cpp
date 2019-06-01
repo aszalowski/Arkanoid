@@ -4,20 +4,26 @@
 
 #include <iostream> // TODO delete when done debuging
 
-Button::Button(sf::Texture *normal, sf::Texture* hovered, const sf::Vector2f& position, void (* onClickCallback)(GameEngine* game))
-: normal(*normal), hovered(*hovered), currentSprite(&this->normal), onClickCallback(onClickCallback)
+
+const sf::Color Button::GREY = sf::Color(100, 100, 100, 255);
+
+Button::Button(sf::Texture *normal, sf::Texture* hovered, const sf::Vector2f& position, bool (* onClickCallback)(GameEngine* game, Button* button))
+: normal(*normal), hovered(*hovered), deactivated(*normal), currentSprite(&this->normal), onClickCallback(onClickCallback), active(true)
 {
     this->normal.setPosition(position);
     this->hovered.setPosition(position);
-    this->hovered.setColor(sf::Color(200, 200, 200, 100));
+    this->deactivated.setPosition(position);
+    this->deactivated.setColor(GREY);
 }
 
-Button::Button(sf::Texture *normal, const sf::Color& hoveredColor, const sf::Vector2f& position, void (* onClickCallback)(GameEngine* game))
-: normal(*normal), hovered(*normal), currentSprite(&this->normal), onClickCallback(onClickCallback)
+Button::Button(sf::Texture *normal, const sf::Color& hoveredColor, const sf::Vector2f& position, bool (* onClickCallback)(GameEngine* game, Button* button))
+: normal(*normal), hovered(*normal), deactivated(*normal), currentSprite(&this->normal), onClickCallback(onClickCallback), active(true)
 {
     this->normal.setPosition(position);
     this->hovered.setPosition(position);
     this->hovered.setColor(hoveredColor);
+    this->deactivated.setPosition(position);
+    this->deactivated.setColor(sf::Color(GREY));
 }
 
 void Button::draw(GameEngine* game) const
@@ -25,15 +31,17 @@ void Button::draw(GameEngine* game) const
     game->window.draw(*currentSprite);
 }
 
-void Button::click(GameEngine* game){
-    onClickCallback(game);
+bool Button::click(GameEngine* game){
+    if(active)
+        return onClickCallback(game, this);
+    return false;
 }
 
 bool Button::isHovered(const sf::Vector2f& mousePosition){
     return currentSprite->getGlobalBounds().contains(mousePosition);
 }
 
-TextButton::TextButton(sf::Texture* normal, sf::Texture* hovered, const sf::Vector2f& position, const sf::Text& label, void (* onClickCallback)(GameEngine* game))
+TextButton::TextButton(sf::Texture* normal, sf::Texture* hovered, const sf::Vector2f& position, const sf::Text& label, bool (* onClickCallback)(GameEngine* game, Button* button))
 : Button(normal, hovered, position, onClickCallback), label(label)
 {
     // Set Origin of the label to it's middle
@@ -43,7 +51,7 @@ TextButton::TextButton(sf::Texture* normal, sf::Texture* hovered, const sf::Vect
     this->label.setPosition(currentSprite->getPosition().x + currentSprite->getGlobalBounds().width/2.0, currentSprite->getPosition().y + currentSprite->getGlobalBounds().height/2.0);
 }
 
-TextButton::TextButton(sf::Texture* normal, const sf::Color& hoveredColor, const sf::Vector2f& position, const sf::Text& label, void (* onClickCallback)(GameEngine* game))
+TextButton::TextButton(sf::Texture* normal, const sf::Color& hoveredColor, const sf::Vector2f& position, const sf::Text& label, bool (* onClickCallback)(GameEngine* game, Button* button))
 : Button(normal, hoveredColor, position, onClickCallback), label(label)
 {
     // Set Origin of the label to it's middle
