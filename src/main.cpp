@@ -26,9 +26,10 @@
 
 int main(int, char const**)
 {
-    GameEngine game(640, 360, 1200, 675, "Arkanoid", "resources/icon.png", 60, true);
+    GameEngine game(640, 360, 1920, 1080, "Arkanoid", "resources/icon.png", 60, true);
 
     game.changeState(MainMenuState::instance());
+;
 
 
     while( game.running() ){

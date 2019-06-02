@@ -9,7 +9,6 @@
 
 class PlayState : public GameState {
     private:
-
     public:
         void init(GameEngine *game);
         void cleanup(GameEngine *game);
