@@ -11,7 +11,6 @@ void PlayState::init(GameEngine *game)
     game->ball.setSpeed(sf::Vector2f(0.2, -0.2));
     game->p1.setPosition(sf::Vector2f(300, 320));
 
-    game->ball.setTexture(game->textureMenager.get("ball.png"));
 
     for (int i = 0; i < 5; i++)
     {

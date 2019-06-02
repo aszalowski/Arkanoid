@@ -16,7 +16,7 @@ class Button: public Object{
 
         virtual void draw(GameEngine*) const;
 
-        virtual void setPosition(sf::Vector2f position) { normal.setPosition(position); hovered.setPosition(position); deactivated.setPosition(position);}
+        virtual void setPosition(const sf::Vector2f& position) { normal.setPosition(position); hovered.setPosition(position); deactivated.setPosition(position);}
         virtual const sf::Vector2f getPosition() const { return currentSprite->getPosition(); }
 
         sf::FloatRect getGlobalBounds() const { return currentSprite->getGlobalBounds(); } 
