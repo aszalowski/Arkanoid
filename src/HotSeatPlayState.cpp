@@ -61,11 +61,6 @@ void HotSeatPlayState::update(GameEngine *game)
 
     if (game->ball.objectHit(game->p2.getSprite()))
     {
-        game->ball *= sf::Vector2f(-1, 1);
-        game->ball.moveX(game->getElapsedTime());
-    }
-    if (game->ball.objectHit(game->p2.getSprite()))
-    {
         game->ball *= sf::Vector2f(1, -1);
         game->ball.moveY(game->getElapsedTime());
     }
