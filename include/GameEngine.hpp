@@ -42,14 +42,13 @@ public:
 	void resetClock() { Clock.restart(); }
 	void setElapsedTime() { elapsedTime = Clock.getElapsedTime().asMilliseconds(); }
 	const uint getElapsedTime() const { return elapsedTime; }
-	float getScreenRatio() const { return screenRatio; };
+	float getScreenRatio() const { return (float) virtualSize.x / window.getSize().x; };
 
 private:
 	sf::Clock Clock;
 	uint elapsedTime;
 	std::vector<GameState *> states;
 	sf::Vector2u virtualSize;
-	float screenRatio;
 
 	bool m_running;
 	bool m_fullscreen;

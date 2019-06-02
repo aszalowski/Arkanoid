@@ -16,7 +16,6 @@ p2(2, sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
     this->virtualSize = sf::Vector2u(virtualWidth, virtualHeight);
 
     this->window.setSize(sf::Vector2u(width, height));
-    this->screenRatio = (float) virtualWidth / width;
 
     // Set the icon
     sf::Image icon;
