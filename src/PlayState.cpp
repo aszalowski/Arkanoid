@@ -1,8 +1,10 @@
 #include <iostream>
+#include <ctime>
 
 #include "../include/PlayState.hpp"
 #include "../include/ServeState.hpp"
 #include "../include/PauseState.hpp"
+#include "../include/LevelGenerator.hpp"
 
 void PlayState::init(GameEngine *game)
 {
@@ -11,12 +13,7 @@ void PlayState::init(GameEngine *game)
     game->ball.setSpeed(sf::Vector2f(0.2, -0.2));
     game->p1.setPosition(sf::Vector2f(300, 320));
 
-
-    for (int i = 0; i < 5; i++)
-    {
-        Block a(1, game->textureMenager.get("block01.png"), sf::Vector2f(100 + i * 40, 100));
-        game->blocks.push_back(a);
-    }
+    generateLevel(game);
 }
 
 void PlayState::cleanup(GameEngine *game)
@@ -33,27 +30,29 @@ void PlayState::resume()
 
 void PlayState::handleEvents(GameEngine *game, sf::Event event)
 {
-    if(event.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+    if (event.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         game->pushState(PauseState::instance());
 }
 
 void PlayState::update(GameEngine *game)
 {
-    uint time = game->getElapsedTime();
+    uint lastFrameTime = game->getElapsedTime();
 
-    sf::Vector2u virtualSize = game->getVirtualSize(); 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
-        game->p1.move(-1, virtualSize, time);
-        if(game->ball.objectHit(game->p1.getSprite()))
+    sf::Vector2u virtualSize = game->getVirtualSize();
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    {
+        game->p1.move(-1, virtualSize, lastFrameTime);
+        if (game->ball.objectHit(game->p1.getSprite()))
             game->ball.setPosition(sf::Vector2f(game->p1.getPosition().x - game->ball.getSprite().getGlobalBounds().width - 1, game->ball.getPosition().y));
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
-        game->p1.move(1, virtualSize, time);
-        if(game->ball.objectHit(game->p1.getSprite()))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    {
+        game->p1.move(1, virtualSize, lastFrameTime);
+        if (game->ball.objectHit(game->p1.getSprite()))
             game->ball.setPosition(sf::Vector2f(game->p1.getPosition().x + game->p1.getSprite().getGlobalBounds().width + 1, game->ball.getPosition().y));
     }
 
-    game->ball.moveX(time);
+    game->ball.moveX(lastFrameTime);
 
     if (game->ball.sideWindowHit(game->getVirtualSize()))
     {
@@ -62,6 +61,7 @@ void PlayState::update(GameEngine *game)
 
     if (game->ball.objectHit(game->p1.getSprite()))
     {
+        game->ball.whoHit = p1;
         game->ball *= sf::Vector2f(-1, 1);
         game->ball.moveX(game->getElapsedTime());
     }
@@ -72,12 +72,21 @@ void PlayState::update(GameEngine *game)
         {
             game->ball *= sf::Vector2f(-1, 1);
             game->ball.moveX(game->getElapsedTime());
-            i = game->blocks.erase(i);
+            uint hp = i->getHp();
+            if (hp == 1)
+                i = game->blocks.erase(i);
+            else
+            {
+                sf::Vector2f pos = i->getPosition();
+                Block a(--hp, game->textureMenager.get("breakout_pieces.png"), pos);
+                game->blocks.push_back(a);
+                i = game->blocks.erase(i);
+            }
             game->p1 += 100;
         }
     }
 
-    game->ball.moveY(time);
+    game->ball.moveY(lastFrameTime);
 
     if (game->ball.downWindowHit(game->getVirtualSize()))
     {
@@ -93,9 +102,9 @@ void PlayState::update(GameEngine *game)
         game->ball *= sf::Vector2f(1, -1);
     }
 
-
     if (game->ball.objectHit(game->p1.getSprite()))
     {
+        game->ball.whoHit = p1;
         game->ball *= sf::Vector2f(1, -1);
         game->ball.moveY(game->getElapsedTime());
     }
@@ -106,7 +115,16 @@ void PlayState::update(GameEngine *game)
         {
             game->ball *= sf::Vector2f(1, -1);
             game->ball.moveY(game->getElapsedTime());
-            i = game->blocks.erase(i);
+            uint hp = i->getHp();
+            if (hp == 1)
+                i = game->blocks.erase(i);
+            else
+            {
+                sf::Vector2f pos = i->getPosition();
+                Block a(--hp, game->textureMenager.get("breakout_pieces.png"), pos);
+                game->blocks.push_back(a);
+                i = game->blocks.erase(i);
+            }
             game->p1 += 100;
         }
     }

@@ -21,6 +21,10 @@ void Ball::setTexture(GameEngine *game, std::string name, sf::IntRect rect)
     setTexture(game->textureMenager.get(name));
     sprite.setTextureRect(rect);
 }
+void Ball::setTexture(const std::shared_ptr<sf::Texture> newTexture, sf::IntRect rect){
+    this->sprite.setTexture(*newTexture.get(), true);
+    this->sprite.setTextureRect(rect);
+}
 
 void Ball::draw(GameEngine *game) const
 {

@@ -5,6 +5,7 @@ Block::Block(const int hp, const std::shared_ptr<sf::Texture> texture, const sf:
 {
     this->hp = hp;
     sprite.setTexture(*texture.get(), true);
+    sprite.setTextureRect(sf::IntRect(8, 8 + 20 * (hp - 1), 32, 16));
     sprite.setPosition(position);
 }
 
@@ -22,4 +23,10 @@ void Block::setTexture(GameEngine *game, std::string name, sf::IntRect rect)
 {
     setTexture(game->textureMenager.get(name));
     sprite.setTextureRect(rect);
+}
+void Block::looseHp() 
+{
+    hp--;
+    sf::IntRect rect = sprite.getTextureRect();
+    sprite.setTextureRect(sf::IntRect(rect.left, rect.height - 20, rect.width, rect.height));
 }

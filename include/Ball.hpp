@@ -10,14 +10,20 @@
 
 class GameEngine;
 
+enum HitBy
+{
+    p1 = 1,
+    p2 = 2
+};
+
 class Ball : public Object
 {
 private:
-    int whoHit = 0;
     sf::Sprite sprite;
     sf::Vector2f speed;
 
 public:
+    HitBy whoHit;
     Ball() {}
     ~Ball() {}
     void draw(GameEngine *) const;
@@ -26,8 +32,9 @@ public:
     const sf::Vector2f getSpeed() const { return speed; };
     void setTexture(GameEngine *, std::string, sf::IntRect);
     void setTexture(const std::shared_ptr<sf::Texture>);
+    void setTexture(const std::shared_ptr<sf::Texture>, sf::IntRect);
     const sf::Vector2f getPosition() const;
-    const sf::Sprite &getSprite() const { return sprite; }
+    sf::Sprite &getSprite() { return sprite; }
     sf::Sprite &modifySprite() { return sprite; }
     void moveX(uint);
     void moveY(uint);
