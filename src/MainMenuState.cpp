@@ -1,6 +1,6 @@
 #include "../include/MainMenuState.hpp"
 #include "../include/SingleMenuState.hpp"
-#include "../include/HotSeatPlayState.hpp"
+#include "../include/HotSeatMenuState.hpp"
 
 
 void MainMenuState::init(GameEngine* game)
@@ -13,7 +13,7 @@ void MainMenuState::init(GameEngine* game)
     newButton.get()->setPosition(sf::Vector2f(game->getVirtualSize().x/2.0 - newButton.get()->getGlobalBounds().width/2.0, 100));
     buttons.push_back(newButton);
 
-    newButton = std::make_shared<TextButton>(game->textureMenager.get("button.png").get(), sf::Color::Yellow, sf::Vector2f(0, 0), sf::Text("HotSeat", *font, mediumFontSize), [](GameEngine* game, Button* button){game->changeState(HotSeatPlayState::instance()); return true;});
+    newButton = std::make_shared<TextButton>(game->textureMenager.get("button.png").get(), sf::Color::Yellow, sf::Vector2f(0, 0), sf::Text("HotSeat", *font, mediumFontSize), [](GameEngine* game, Button* button){game->changeState(HotSeatMenuState::instance()); return true;});
     newButton.get()->setPosition(sf::Vector2f(game->getVirtualSize().x/2.0 - newButton.get()->getGlobalBounds().width/2.0, 150));
     buttons.push_back(newButton);
 

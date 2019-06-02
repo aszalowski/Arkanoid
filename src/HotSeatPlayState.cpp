@@ -9,7 +9,6 @@
 void HotSeatPlayState::init(GameEngine *game)
 {
     std::cout << "HotSeat::init()" << std::endl;
-    game->p2.setTexture(game, "breakout_pieces.png", sf::IntRect(48, 72, 64, 16));
     game->p2.setPosition(sf::Vector2f(100, 20));
     std::cout << game->p2.getSprite().getPosition().x << ',' << game->p2.getSprite().getPosition().x<<std::endl;
     PlayState::init(game);
