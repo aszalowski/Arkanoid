@@ -1,0 +1,52 @@
+\hypertarget{class_block}{}\section{Block Class Reference}
+\label{class_block}\index{Block@{Block}}
+Inheritance diagram for Block\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_block}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_block_a6e2109c914d77166f2879944da582e7a}\label{class_block_a6e2109c914d77166f2879944da582e7a}} 
+\mbox{\hyperlink{class_block_a6e2109c914d77166f2879944da582e7a}{Block}} (const int, const std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$, const sf\+::\+Vector2f)
+\begin{DoxyCompactList}\small\item\em Constructor with health points, texture shared pointer from Resource\+Manager, Vector of position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_a3a41cfe615a31b5c4b824004d248ba65}\label{class_block_a3a41cfe615a31b5c4b824004d248ba65}} 
+void \mbox{\hyperlink{class_block_a3a41cfe615a31b5c4b824004d248ba65}{draw}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$) const
+\begin{DoxyCompactList}\small\item\em Drawing object on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_a01788216d95ab7230287cb0d58a19c34}\label{class_block_a01788216d95ab7230287cb0d58a19c34}} 
+const uint {\bfseries get\+Hp} () const
+\item 
+\mbox{\Hypertarget{class_block_ae7621aaed284804fc898174207eb1587}\label{class_block_ae7621aaed284804fc898174207eb1587}} 
+const sf\+::\+Vector2f {\bfseries get\+Position} () const
+\item 
+\mbox{\Hypertarget{class_block_a9c4782f321b4760d572a01bd31c42a06}\label{class_block_a9c4782f321b4760d572a01bd31c42a06}} 
+void {\bfseries set\+Position} (const sf\+::\+Vector2f \&new\+Position)
+\item 
+\mbox{\Hypertarget{class_block_a40e27a756a586c9784d4023163bf92ef}\label{class_block_a40e27a756a586c9784d4023163bf92ef}} 
+const sf\+::\+Sprite \& {\bfseries get\+Sprite} () const
+\item 
+\mbox{\Hypertarget{class_block_affece2c491813eba0583a9deeee9d925}\label{class_block_affece2c491813eba0583a9deeee9d925}} 
+sf\+::\+Sprite \& {\bfseries modify\+Sprite} ()
+\item 
+\mbox{\Hypertarget{class_block_a01ef735022e9a92357e00cca6228f7b7}\label{class_block_a01ef735022e9a92357e00cca6228f7b7}} 
+void \mbox{\hyperlink{class_block_a01ef735022e9a92357e00cca6228f7b7}{set\+Texture}} (const std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$)
+\begin{DoxyCompactList}\small\item\em Setting texture with a shared pointer from Resource\+Manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_a866e57c9df2c81910879ef991670931e}\label{class_block_a866e57c9df2c81910879ef991670931e}} 
+void {\bfseries set\+Texture} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$, std\+::string, sf\+::\+Int\+Rect)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_block_a8b1d6db0268d1e54f55c8824cbb429f2}\label{class_block_a8b1d6db0268d1e54f55c8824cbb429f2}} 
+uint \mbox{\hyperlink{class_block_a8b1d6db0268d1e54f55c8824cbb429f2}{hp}}
+\begin{DoxyCompactList}\small\item\em Health points -\/ how meny hits it take to destroy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_a0fb8279435ff1a353df3170f26428bff}\label{class_block_a0fb8279435ff1a353df3170f26428bff}} 
+sf\+::\+Sprite \mbox{\hyperlink{class_block_a0fb8279435ff1a353df3170f26428bff}{sprite}}
+\begin{DoxyCompactList}\small\item\em Drawable representation of a texture, with its own transformations, color, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Block.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{class_button}{}\section{Button Class Reference}
+\label{class_button}\index{Button@{Button}}
+Inheritance diagram for Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_button}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_button_ad1a553528260f66367628724384cdfd0}\label{class_button_ad1a553528260f66367628724384cdfd0}} 
+{\bfseries Button} (sf\+::\+Texture $\ast$normal, sf\+::\+Texture $\ast$hovered, const sf\+::\+Vector2f \&position, bool($\ast$on\+Click\+Callback)(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)=\mbox{[}$\,$\mbox{]}(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)\{std\+::cout$<$$<$ \char`\"{}D\+E\+B\+U\+G\+: Using default on\+Click\+Callback\char`\"{}$<$$<$ std\+::endl;return false;\})
+\item 
+\mbox{\Hypertarget{class_button_ad1756d01fbebe40e07b45fd1963c33d8}\label{class_button_ad1756d01fbebe40e07b45fd1963c33d8}} 
+{\bfseries Button} (sf\+::\+Texture $\ast$normal, const sf\+::\+Color \&hovered\+Color, const sf\+::\+Vector2f \&position, bool($\ast$on\+Click\+Callback)(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)=\mbox{[}$\,$\mbox{]}(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)\{std\+::cout$<$$<$ \char`\"{}D\+E\+B\+U\+G\+: Using default on\+Click\+Callback\char`\"{}$<$$<$ std\+::endl;return false;\})
+\item 
+\mbox{\Hypertarget{class_button_a99e75218b31357786cff815f87f1a093}\label{class_button_a99e75218b31357786cff815f87f1a093}} 
+virtual void \mbox{\hyperlink{class_button_a99e75218b31357786cff815f87f1a093}{draw}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$) const
+\begin{DoxyCompactList}\small\item\em Drawing object on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_button_a95a9aafc24ed5d95d3557f7155832433}\label{class_button_a95a9aafc24ed5d95d3557f7155832433}} 
+virtual void {\bfseries set\+Position} (const sf\+::\+Vector2f \&position)
+\item 
+\mbox{\Hypertarget{class_button_a01ff4aace35c7d0c4d8b35eda290378f}\label{class_button_a01ff4aace35c7d0c4d8b35eda290378f}} 
+virtual const sf\+::\+Vector2f {\bfseries get\+Position} () const
+\item 
+\mbox{\Hypertarget{class_button_ab9d2e98e4940309543a9c94509f99437}\label{class_button_ab9d2e98e4940309543a9c94509f99437}} 
+sf\+::\+Float\+Rect {\bfseries get\+Global\+Bounds} () const
+\item 
+\mbox{\Hypertarget{class_button_a1a5ca19ed8efe0ea27625217dcab9f2c}\label{class_button_a1a5ca19ed8efe0ea27625217dcab9f2c}} 
+void {\bfseries hover} ()
+\item 
+\mbox{\Hypertarget{class_button_ae34e8f3c482654e8585360fd639d02e3}\label{class_button_ae34e8f3c482654e8585360fd639d02e3}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{class_button_a57efb09b51a4846a25e7f61abee78cd6}\label{class_button_a57efb09b51a4846a25e7f61abee78cd6}} 
+void {\bfseries deactivate} ()
+\item 
+\mbox{\Hypertarget{class_button_ac5e8ae25dcb8a33c6e8711ddbaed71bf}\label{class_button_ac5e8ae25dcb8a33c6e8711ddbaed71bf}} 
+bool {\bfseries click} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
+\item 
+\mbox{\Hypertarget{class_button_a4d1a833e7e928d2fe25db3ba28f53e40}\label{class_button_a4d1a833e7e928d2fe25db3ba28f53e40}} 
+bool {\bfseries is\+Hovered} (const sf\+::\+Vector2f \&mouse\+Position)
+\item 
+\mbox{\Hypertarget{class_button_acf2ea3a5fea9e6cb24b291fabab033ff}\label{class_button_acf2ea3a5fea9e6cb24b291fabab033ff}} 
+bool {\bfseries is\+Active} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_button_a5a2a5e1c6b378762f5b2fe39e9053d9e}\label{class_button_a5a2a5e1c6b378762f5b2fe39e9053d9e}} 
+sf\+::\+Sprite {\bfseries normal}
+\item 
+\mbox{\Hypertarget{class_button_a181477cb3462763b510a30a4f27cd756}\label{class_button_a181477cb3462763b510a30a4f27cd756}} 
+sf\+::\+Sprite {\bfseries hovered}
+\item 
+\mbox{\Hypertarget{class_button_a85f7fc9ea9ff8aae240469b0bddb662a}\label{class_button_a85f7fc9ea9ff8aae240469b0bddb662a}} 
+sf\+::\+Sprite {\bfseries deactivated}
+\item 
+\mbox{\Hypertarget{class_button_ae43bb88d6b390a0ab6607278102952c4}\label{class_button_ae43bb88d6b390a0ab6607278102952c4}} 
+sf\+::\+Sprite $\ast$ {\bfseries current\+Sprite}
+\item 
+\mbox{\Hypertarget{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}\label{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}} 
+bool($\ast$ {\bfseries on\+Click\+Callback} )(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)
+\item 
+\mbox{\Hypertarget{class_button_a03070c78335786c482088bf00c894325}\label{class_button_a03070c78335786c482088bf00c894325}} 
+bool {\bfseries active}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_button_afc0927052e6f57f0cfc7521953421617}\label{class_button_afc0927052e6f57f0cfc7521953421617}} 
+static const sf\+::\+Color {\bfseries G\+R\+EY}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Buttons.\+hpp\end{DoxyCompactItemize}

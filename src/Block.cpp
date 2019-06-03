@@ -24,9 +24,3 @@ void Block::setTexture(GameEngine *game, std::string name, sf::IntRect rect)
     setTexture(game->textureMenager.get(name));
     sprite.setTextureRect(rect);
 }
-void Block::looseHp() 
-{
-    hp--;
-    sf::IntRect rect = sprite.getTextureRect();
-    sprite.setTextureRect(sf::IntRect(rect.left, rect.height - 20, rect.width, rect.height));
-}

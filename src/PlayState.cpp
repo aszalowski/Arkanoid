@@ -82,7 +82,7 @@ void PlayState::update(GameEngine *game)
                 game->blocks.push_back(a);
                 i = game->blocks.erase(i);
             }
-            game->p1 += 100;
+            (game->ball.whoHit == p1) ? game->p1 += 100 : game->p2 += 100;
         }
     }
 
@@ -125,7 +125,7 @@ void PlayState::update(GameEngine *game)
                 game->blocks.push_back(a);
                 i = game->blocks.erase(i);
             }
-            game->p1 += 100;
+            (game->ball.whoHit == p1) ? game->p1 += 100 : game->p2 += 100;
         }
     }
 }

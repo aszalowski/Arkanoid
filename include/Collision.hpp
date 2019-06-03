@@ -1,4 +1,4 @@
-/*
+/**
  * File:   collision.h
  * Authors: Nick Koirala (original version), ahnonay (SFML2 compatibility)
  *

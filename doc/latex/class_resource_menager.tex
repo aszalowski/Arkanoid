@@ -1,0 +1,34 @@
+\hypertarget{class_resource_menager}{}\section{Resource\+Menager$<$ Resource $>$ Class Template Reference}
+\label{class_resource_menager}\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_resource_menager_a1c75062d799f0baa37cfa4bbbc9a5779}\label{class_resource_menager_a1c75062d799f0baa37cfa4bbbc9a5779}} 
+const std\+::shared\+\_\+ptr$<$ Resource $>$ {\bfseries get} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{class_resource_menager_a4b5dd5677fcb6e948c23f9925d6a6418}\label{class_resource_menager_a4b5dd5677fcb6e948c23f9925d6a6418}} 
+void {\bfseries delete\+Resource} (const std\+::shared\+\_\+ptr$<$ Resource $>$ \&)
+\item 
+\mbox{\Hypertarget{class_resource_menager_a18a1e6c8e9ec427abefe13d44b84b2f2}\label{class_resource_menager_a18a1e6c8e9ec427abefe13d44b84b2f2}} 
+void {\bfseries delete\+Resource} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{class_resource_menager_a0d170bac7d943759d3ccc608b6db7761}\label{class_resource_menager_a0d170bac7d943759d3ccc608b6db7761}} 
+void {\bfseries add\+Dir} (const std\+::string \&dir)
+\item 
+\mbox{\Hypertarget{class_resource_menager_a795728420523e598b095abded51019b4}\label{class_resource_menager_a795728420523e598b095abded51019b4}} 
+void {\bfseries remove\+Dir} (const std\+::string \&directory)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_resource_menager_a20929ebb0198262129dd109e85f8dbd8}\label{class_resource_menager_a20929ebb0198262129dd109e85f8dbd8}} 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ Resource $>$ $>$ {\bfseries Resources}
+\item 
+\mbox{\Hypertarget{class_resource_menager_aab54aad0286011ff600278b888e5a134}\label{class_resource_menager_aab54aad0286011ff600278b888e5a134}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries dirs}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Resource\+Menager.\+hpp\end{DoxyCompactItemize}

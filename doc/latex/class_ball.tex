@@ -1,0 +1,95 @@
+\hypertarget{class_ball}{}\section{Ball Class Reference}
+\label{class_ball}\index{Ball@{Ball}}
+
+
+{\ttfamily \#include $<$Ball.\+hpp$>$}
+
+Inheritance diagram for Ball\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ball}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ball_a86a144d3dad6c953e422e32435923bbb}\label{class_ball_a86a144d3dad6c953e422e32435923bbb}} 
+\mbox{\hyperlink{class_ball_a86a144d3dad6c953e422e32435923bbb}{Ball}} ()
+\begin{DoxyCompactList}\small\item\em Default ball constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a20f2f6ac0bf648f406a8e12e63429fcd}\label{class_ball_a20f2f6ac0bf648f406a8e12e63429fcd}} 
+\mbox{\hyperlink{class_ball_a20f2f6ac0bf648f406a8e12e63429fcd}{$\sim$\+Ball}} ()
+\begin{DoxyCompactList}\small\item\em Default ball destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a278c50c66e8ea81f2178328022d742ff}\label{class_ball_a278c50c66e8ea81f2178328022d742ff}} 
+void \mbox{\hyperlink{class_ball_a278c50c66e8ea81f2178328022d742ff}{draw}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$) const
+\begin{DoxyCompactList}\small\item\em Drawing object on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_af2260b5f0b9b20d4974ada97481004f3}\label{class_ball_af2260b5f0b9b20d4974ada97481004f3}} 
+void {\bfseries set\+Position} (const sf\+::\+Vector2f \&)
+\item 
+\mbox{\Hypertarget{class_ball_ad82f5f35eaf987d5c2b0faabd06989c5}\label{class_ball_ad82f5f35eaf987d5c2b0faabd06989c5}} 
+void {\bfseries set\+Speed} (const sf\+::\+Vector2f \&)
+\item 
+\mbox{\Hypertarget{class_ball_a9986943aa6685d80f65d441dd68c2e69}\label{class_ball_a9986943aa6685d80f65d441dd68c2e69}} 
+const sf\+::\+Vector2f {\bfseries get\+Speed} () const
+\item 
+\mbox{\Hypertarget{class_ball_a9ac324bd0e233a1baf7ccb9eee5d05ca}\label{class_ball_a9ac324bd0e233a1baf7ccb9eee5d05ca}} 
+void {\bfseries set\+Texture} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$, std\+::string, sf\+::\+Int\+Rect)
+\item 
+\mbox{\Hypertarget{class_ball_a4f750fa26a759145e3b04bba05d87711}\label{class_ball_a4f750fa26a759145e3b04bba05d87711}} 
+void {\bfseries set\+Texture} (const std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$)
+\item 
+\mbox{\Hypertarget{class_ball_af15cbcd2773587b98db326fbc994b7a2}\label{class_ball_af15cbcd2773587b98db326fbc994b7a2}} 
+void {\bfseries set\+Texture} (const std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$, sf\+::\+Int\+Rect)
+\item 
+\mbox{\Hypertarget{class_ball_a672da3b511f6b30fde82a63927fe8174}\label{class_ball_a672da3b511f6b30fde82a63927fe8174}} 
+const sf\+::\+Vector2f {\bfseries get\+Position} () const
+\item 
+\mbox{\Hypertarget{class_ball_a2f85e93bd6650f5c5cbf4a0dbd961ca4}\label{class_ball_a2f85e93bd6650f5c5cbf4a0dbd961ca4}} 
+sf\+::\+Sprite \& {\bfseries get\+Sprite} ()
+\item 
+\mbox{\Hypertarget{class_ball_a06adff7ba12d0971bb9885cf3fbd2950}\label{class_ball_a06adff7ba12d0971bb9885cf3fbd2950}} 
+sf\+::\+Sprite \& {\bfseries modify\+Sprite} ()
+\item 
+\mbox{\Hypertarget{class_ball_ab2a08ec563b02d1dcb0b38dcd5429967}\label{class_ball_ab2a08ec563b02d1dcb0b38dcd5429967}} 
+void \mbox{\hyperlink{class_ball_ab2a08ec563b02d1dcb0b38dcd5429967}{moveX}} (uint)
+\begin{DoxyCompactList}\small\item\em Moves ball in X-\/axis based on the time of rendering the frame (eliminates lagging, when framerate drops) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a5c833ba1588d41ea4176b6fcffff850e}\label{class_ball_a5c833ba1588d41ea4176b6fcffff850e}} 
+void \mbox{\hyperlink{class_ball_a5c833ba1588d41ea4176b6fcffff850e}{moveY}} (uint)
+\begin{DoxyCompactList}\small\item\em Moves ball in Y-\/axis based on the time of rendering the frame (eliminates lagging, when framerate drops) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_add304c78bcbb5067844d71cb16fc29be}\label{class_ball_add304c78bcbb5067844d71cb16fc29be}} 
+bool \mbox{\hyperlink{class_ball_add304c78bcbb5067844d71cb16fc29be}{side\+Window\+Hit}} (sf\+::\+Vector2u)
+\begin{DoxyCompactList}\small\item\em Checking if ball hit side of the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_aa1bfb33edb1bdbe67380fe2be419ab11}\label{class_ball_aa1bfb33edb1bdbe67380fe2be419ab11}} 
+bool \mbox{\hyperlink{class_ball_aa1bfb33edb1bdbe67380fe2be419ab11}{down\+Window\+Hit}} (sf\+::\+Vector2u)
+\begin{DoxyCompactList}\small\item\em Checking if ball hit bottom of the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a5e57d9e1b688dc45f6111d7f52b89ccf}\label{class_ball_a5e57d9e1b688dc45f6111d7f52b89ccf}} 
+bool \mbox{\hyperlink{class_ball_a5e57d9e1b688dc45f6111d7f52b89ccf}{top\+Window\+Hit}} (sf\+::\+Vector2u)
+\begin{DoxyCompactList}\small\item\em Checking if ball hit top of the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a57806d70f8a4f78ba7e66d425465e1e4}\label{class_ball_a57806d70f8a4f78ba7e66d425465e1e4}} 
+bool \mbox{\hyperlink{class_ball_a57806d70f8a4f78ba7e66d425465e1e4}{object\+Hit}} (const sf\+::\+Sprite \&)
+\begin{DoxyCompactList}\small\item\em Check collision with objects like Blocks and Players(paddles) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a41fb0c62d108caa6e20573598030c648}\label{class_ball_a41fb0c62d108caa6e20573598030c648}} 
+\mbox{\hyperlink{class_ball}{Ball}} \mbox{\hyperlink{class_ball_a41fb0c62d108caa6e20573598030c648}{operator $\ast$=}} (sf\+::\+Vector2f)
+\begin{DoxyCompactList}\small\item\em Changes the ball speed by multiplying vectors (a,b) $\ast$ (c,d) = (a$\ast$c, b$\ast$d) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ball_aad64a181e6e7c8e028dddde82403c9e5}\label{class_ball_aad64a181e6e7c8e028dddde82403c9e5}} 
+Hit\+By \mbox{\hyperlink{class_ball_aad64a181e6e7c8e028dddde82403c9e5}{who\+Hit}}
+\begin{DoxyCompactList}\small\item\em Stores information, which player hit the ball. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ball_a16017a7b3ea4c4005046eedecb3fe774}\label{class_ball_a16017a7b3ea4c4005046eedecb3fe774}} 
+sf\+::\+Sprite \mbox{\hyperlink{class_ball_a16017a7b3ea4c4005046eedecb3fe774}{sprite}}
+\begin{DoxyCompactList}\small\item\em Drawable representation of a texture, with its own transformations, color, etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a827972a1eab3ea7f878b7c86201a674d}\label{class_ball_a827972a1eab3ea7f878b7c86201a674d}} 
+sf\+::\+Vector2f \mbox{\hyperlink{class_ball_a827972a1eab3ea7f878b7c86201a674d}{speed}}
+\begin{DoxyCompactList}\small\item\em Vector of speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_ball}{Ball}} class 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Ball.\+hpp\end{DoxyCompactItemize}

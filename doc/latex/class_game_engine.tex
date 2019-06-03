@@ -1,0 +1,106 @@
+\hypertarget{class_game_engine}{}\section{Game\+Engine Class Reference}
+\label{class_game_engine}\index{GameEngine@{GameEngine}}
+
+
+Stores crucial game parts\+: \mbox{\hyperlink{class_player}{Player}}, \mbox{\hyperlink{class_ball}{Ball}}, \mbox{\hyperlink{class_block}{Block}}, \mbox{\hyperlink{class_game_state}{Game\+State}}, Window.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Engine.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_engine_a5365f65c15fa45ab2f6e4e661f6fbd5f}\label{class_game_engine_a5365f65c15fa45ab2f6e4e661f6fbd5f}} 
+{\bfseries Game\+Engine} (int virtual\+Width, int virtual\+Height, int width, int height, std\+::string title, std\+::string icon\+Path, int frame\+Limit, bool vsync)
+\item 
+\mbox{\Hypertarget{class_game_engine_a2a83394496e5c9060b9f8ddb5a7abd24}\label{class_game_engine_a2a83394496e5c9060b9f8ddb5a7abd24}} 
+void \mbox{\hyperlink{class_game_engine_a2a83394496e5c9060b9f8ddb5a7abd24}{change\+State}} (\mbox{\hyperlink{class_game_state}{Game\+State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Changes \mbox{\hyperlink{class_game_state}{Game\+State}}, destructing old \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a082e38033f8dc63b2d130a0cfd3fbdd9}\label{class_game_engine_a082e38033f8dc63b2d130a0cfd3fbdd9}} 
+void \mbox{\hyperlink{class_game_engine_a082e38033f8dc63b2d130a0cfd3fbdd9}{push\+State}} (\mbox{\hyperlink{class_game_state}{Game\+State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Quick change of \mbox{\hyperlink{class_game_state}{Game\+State}}, easy to go back to the old one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a21d2ebf3778429727595a8b87893314f}\label{class_game_engine_a21d2ebf3778429727595a8b87893314f}} 
+void \mbox{\hyperlink{class_game_engine_a21d2ebf3778429727595a8b87893314f}{pop\+State}} ()
+\begin{DoxyCompactList}\small\item\em Going back to the old \mbox{\hyperlink{class_game_state}{Game\+State}} after push\+State. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a15e2e71a499386e3a19bbba361be4377}\label{class_game_engine_a15e2e71a499386e3a19bbba361be4377}} 
+void \mbox{\hyperlink{class_game_engine_a15e2e71a499386e3a19bbba361be4377}{handle\+Events}} ()
+\begin{DoxyCompactList}\small\item\em More about in\+: \mbox{\hyperlink{class_game_state_a3ef0638514dbfe71581d593cf0f66ce5}{Game\+State\+::handle\+Events()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_ae03241b464040b659b6a91f27920e8c3}\label{class_game_engine_ae03241b464040b659b6a91f27920e8c3}} 
+void \mbox{\hyperlink{class_game_engine_ae03241b464040b659b6a91f27920e8c3}{update}} ()
+\begin{DoxyCompactList}\small\item\em More about in\+: \mbox{\hyperlink{class_game_state_a66b11afe355a9479f94aaf76576980bd}{Game\+State\+::update()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a267bf9164ba09e32b7a24ba4afb527d4}\label{class_game_engine_a267bf9164ba09e32b7a24ba4afb527d4}} 
+void \mbox{\hyperlink{class_game_engine_a267bf9164ba09e32b7a24ba4afb527d4}{render}} ()
+\begin{DoxyCompactList}\small\item\em More about in\+: \mbox{\hyperlink{class_game_state_a0d56cd5355f59a87cf95e1c6d719f329}{Game\+State\+::render()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_ab3f9945e3cb77c3ae0a7e0c91c22c19a}\label{class_game_engine_ab3f9945e3cb77c3ae0a7e0c91c22c19a}} 
+bool \mbox{\hyperlink{class_game_engine_ab3f9945e3cb77c3ae0a7e0c91c22c19a}{running}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if game is running. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_ad82b626def2e52b28f0d6c2d167589f6}\label{class_game_engine_ad82b626def2e52b28f0d6c2d167589f6}} 
+void \mbox{\hyperlink{class_game_engine_ad82b626def2e52b28f0d6c2d167589f6}{quit}} ()
+\begin{DoxyCompactList}\small\item\em Sets m\+\_\+running value to false, what quits the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a77d8443f4919f8eca96acfb40e6b64bd}\label{class_game_engine_a77d8443f4919f8eca96acfb40e6b64bd}} 
+const sf\+::\+Vector2u \& {\bfseries get\+Virtual\+Size} () const
+\item 
+\mbox{\Hypertarget{class_game_engine_a0f906c0e3c093e66abf1d387767d2a24}\label{class_game_engine_a0f906c0e3c093e66abf1d387767d2a24}} 
+void \mbox{\hyperlink{class_game_engine_a0f906c0e3c093e66abf1d387767d2a24}{reset\+Clock}} ()
+\begin{DoxyCompactList}\small\item\em Resets clock used for timing frames. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a579b1c7d9ca8d4cb9f788824f969ae68}\label{class_game_engine_a579b1c7d9ca8d4cb9f788824f969ae68}} 
+void \mbox{\hyperlink{class_game_engine_a579b1c7d9ca8d4cb9f788824f969ae68}{set\+Elapsed\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Saves time between last rendered frames. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a83d4cc180c4ad2c7db5224ce840140e1}\label{class_game_engine_a83d4cc180c4ad2c7db5224ce840140e1}} 
+const uint \mbox{\hyperlink{class_game_engine_a83d4cc180c4ad2c7db5224ce840140e1}{get\+Elapsed\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Gets saved time between last rendered frames. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a6328d97829e7f0a79a5672c5dd040592}\label{class_game_engine_a6328d97829e7f0a79a5672c5dd040592}} 
+float {\bfseries get\+Screen\+Ratio} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_engine_ac91a68b9e136eda3dc8cabcb46a5dbaa}\label{class_game_engine_ac91a68b9e136eda3dc8cabcb46a5dbaa}} 
+sf\+::\+Render\+Window \mbox{\hyperlink{class_game_engine_ac91a68b9e136eda3dc8cabcb46a5dbaa}{window}}
+\begin{DoxyCompactList}\small\item\em Main window, where\textquotesingle{}s everything rendered. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a45f8b7ffe6bf84aeb399155fff5198ea}\label{class_game_engine_a45f8b7ffe6bf84aeb399155fff5198ea}} 
+\mbox{\hyperlink{class_player}{Player}} {\bfseries p1}
+\item 
+\mbox{\Hypertarget{class_game_engine_a323b76c16f034ed20826889c7f2103ea}\label{class_game_engine_a323b76c16f034ed20826889c7f2103ea}} 
+\mbox{\hyperlink{class_player}{Player}} {\bfseries p2}
+\item 
+\mbox{\Hypertarget{class_game_engine_ad07458d9433b72aa2c9946ccb912b0c9}\label{class_game_engine_ad07458d9433b72aa2c9946ccb912b0c9}} 
+\mbox{\hyperlink{class_ball}{Ball}} {\bfseries ball}
+\item 
+\mbox{\Hypertarget{class_game_engine_ab4b2a10f836b40e474862475b8fce137}\label{class_game_engine_ab4b2a10f836b40e474862475b8fce137}} 
+\mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ sf\+::\+Texture $>$ {\bfseries texture\+Menager}
+\item 
+\mbox{\Hypertarget{class_game_engine_aae1aa6983a65e2e41f721603804dd36a}\label{class_game_engine_aae1aa6983a65e2e41f721603804dd36a}} 
+\mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ sf\+::\+Font $>$ {\bfseries font\+Menager}
+\item 
+\mbox{\Hypertarget{class_game_engine_a2402978b6652462ea8cca5916c9ac16e}\label{class_game_engine_a2402978b6652462ea8cca5916c9ac16e}} 
+std\+::list$<$ \mbox{\hyperlink{class_block}{Block}} $>$ {\bfseries blocks}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_engine_ac333df2252a88ef34ec94acd82db6264}\label{class_game_engine_ac333df2252a88ef34ec94acd82db6264}} 
+sf\+::\+Clock \mbox{\hyperlink{class_game_engine_ac333df2252a88ef34ec94acd82db6264}{Clock}}
+\begin{DoxyCompactList}\small\item\em Clock used for measuring frame render time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a60668e07d7fc0c796bf773745f195cae}\label{class_game_engine_a60668e07d7fc0c796bf773745f195cae}} 
+uint \mbox{\hyperlink{class_game_engine_a60668e07d7fc0c796bf773745f195cae}{elapsed\+Time}}
+\begin{DoxyCompactList}\small\item\em Time between two rendered frames (used for fluent objects movement) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_aacfdc453e12dcbf15cadb150839d72dd}\label{class_game_engine_aacfdc453e12dcbf15cadb150839d72dd}} 
+std\+::vector$<$ \mbox{\hyperlink{class_game_state}{Game\+State}} $\ast$ $>$ \mbox{\hyperlink{class_game_engine_aacfdc453e12dcbf15cadb150839d72dd}{states}}
+\begin{DoxyCompactList}\small\item\em Vector of all Game\+States. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_a57b84b09b731bc5664a22f0e517de4dc}\label{class_game_engine_a57b84b09b731bc5664a22f0e517de4dc}} 
+sf\+::\+Vector2u \mbox{\hyperlink{class_game_engine_a57b84b09b731bc5664a22f0e517de4dc}{virtual\+Size}}
+\begin{DoxyCompactList}\small\item\em Real size of the window, than scaled up to obtain pixel art style. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_engine_ae587c23c6915881101bb2110dcb9370e}\label{class_game_engine_ae587c23c6915881101bb2110dcb9370e}} 
+bool \mbox{\hyperlink{class_game_engine_ae587c23c6915881101bb2110dcb9370e}{m\+\_\+running}}
+\begin{DoxyCompactList}\small\item\em Stores if game is still running. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores crucial game parts\+: \mbox{\hyperlink{class_player}{Player}}, \mbox{\hyperlink{class_ball}{Ball}}, \mbox{\hyperlink{class_block}{Block}}, \mbox{\hyperlink{class_game_state}{Game\+State}}, Window. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Game\+Engine.\+hpp\end{DoxyCompactItemize}

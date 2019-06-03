@@ -1,0 +1,67 @@
+\hypertarget{namespace_collision}{}\section{Collision Namespace Reference}
+\label{namespace_collision}\index{Collision@{Collision}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespace_collision_a5514da2189b7230dd266ac6ada2fcc5b}{Pixel\+Perfect\+Test}} (const sf\+::\+Sprite \&Object1, const sf\+::\+Sprite \&Object2, sf\+::\+Uint8 Alpha\+Limit=0)
+\item 
+bool \mbox{\hyperlink{namespace_collision_a22b8e23d7fc5cb243d4365d1c179cf39}{Create\+Texture\+And\+Bitmask}} (sf\+::\+Texture \&Load\+Into, const std\+::string \&Filename)
+\item 
+bool \mbox{\hyperlink{namespace_collision_af2f8835beee81b76d04311c794c36c0f}{Circle\+Test}} (const sf\+::\+Sprite \&Object1, const sf\+::\+Sprite \&Object2)
+\item 
+bool \mbox{\hyperlink{namespace_collision_a6f5945d467e629017010b139062919c6}{Bounding\+Box\+Test}} (const sf\+::\+Sprite \&Object1, const sf\+::\+Sprite \&Object2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File\+: collision.\+h Authors\+: Nick Koirala (original version), ahnonay (S\+F\+M\+L2 compatibility)
+
+\mbox{\hyperlink{namespace_collision}{Collision}} Detection and handling class For S\+F\+M\+L2.
+
+Notice from the original version\+:
+
+(c) 2009 -\/ Little\+Monkey Ltd
+
+This software is provided \textquotesingle{}as-\/is\textquotesingle{}, without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions\+:
+
+
+\begin{DoxyEnumerate}
+\item The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+\item Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+\item This notice may not be removed or altered from any source distribution.
+
+Created on 30 January 2009, 11\+:02 
+\end{DoxyEnumerate}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_collision_a6f5945d467e629017010b139062919c6}\label{namespace_collision_a6f5945d467e629017010b139062919c6}} 
+\index{Collision@{Collision}!BoundingBoxTest@{BoundingBoxTest}}
+\index{BoundingBoxTest@{BoundingBoxTest}!Collision@{Collision}}
+\subsubsection{\texorpdfstring{BoundingBoxTest()}{BoundingBoxTest()}}
+{\footnotesize\ttfamily bool Collision\+::\+Bounding\+Box\+Test (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{Object1,  }\item[{const sf\+::\+Sprite \&}]{Object2 }\end{DoxyParamCaption})}
+
+Test for bounding box collision using the Separating Axis Theorem Supports scaling and rotation \mbox{\Hypertarget{namespace_collision_af2f8835beee81b76d04311c794c36c0f}\label{namespace_collision_af2f8835beee81b76d04311c794c36c0f}} 
+\index{Collision@{Collision}!CircleTest@{CircleTest}}
+\index{CircleTest@{CircleTest}!Collision@{Collision}}
+\subsubsection{\texorpdfstring{CircleTest()}{CircleTest()}}
+{\footnotesize\ttfamily bool Collision\+::\+Circle\+Test (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{Object1,  }\item[{const sf\+::\+Sprite \&}]{Object2 }\end{DoxyParamCaption})}
+
+Test for collision using circle collision dection Radius is averaged from the dimensions of the sprite so roughly circular objects will be much more accurate \mbox{\Hypertarget{namespace_collision_a22b8e23d7fc5cb243d4365d1c179cf39}\label{namespace_collision_a22b8e23d7fc5cb243d4365d1c179cf39}} 
+\index{Collision@{Collision}!CreateTextureAndBitmask@{CreateTextureAndBitmask}}
+\index{CreateTextureAndBitmask@{CreateTextureAndBitmask}!Collision@{Collision}}
+\subsubsection{\texorpdfstring{CreateTextureAndBitmask()}{CreateTextureAndBitmask()}}
+{\footnotesize\ttfamily bool Collision\+::\+Create\+Texture\+And\+Bitmask (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{Load\+Into,  }\item[{const std\+::string \&}]{Filename }\end{DoxyParamCaption})}
+
+Replaces Texture\+::load\+From\+File Load an imagefile into the given texture and create a bitmask for it This is much faster than creating the bitmask for a texture on the first run of \char`\"{}\+Pixel\+Perfect\+Test\char`\"{}
+
+The function returns false if the file could not be opened for some reason \mbox{\Hypertarget{namespace_collision_a5514da2189b7230dd266ac6ada2fcc5b}\label{namespace_collision_a5514da2189b7230dd266ac6ada2fcc5b}} 
+\index{Collision@{Collision}!PixelPerfectTest@{PixelPerfectTest}}
+\index{PixelPerfectTest@{PixelPerfectTest}!Collision@{Collision}}
+\subsubsection{\texorpdfstring{PixelPerfectTest()}{PixelPerfectTest()}}
+{\footnotesize\ttfamily bool Collision\+::\+Pixel\+Perfect\+Test (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{Object1,  }\item[{const sf\+::\+Sprite \&}]{Object2,  }\item[{sf\+::\+Uint8}]{Alpha\+Limit = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Test for a collision between two sprites by comparing the alpha values of overlapping pixels Supports scaling and rotation Alpha\+Limit\+: The threshold at which a pixel becomes \char`\"{}solid\char`\"{}. If Alpha\+Limit is 127, a pixel with alpha value 128 will cause a collision and a pixel with alpha value 126 will not.
+
+This functions creates bitmasks of the textures of the two sprites by downloading the textures from the graphics card to memory -\/$>$ S\+L\+O\+W! You can avoid this by using the \char`\"{}\+Create\+Texture\+And\+Bitmask\char`\"{} function 

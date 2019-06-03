@@ -1,0 +1,55 @@
+\hypertarget{class_base_menu_state}{}\section{Base\+Menu\+State Class Reference}
+\label{class_base_menu_state}\index{BaseMenuState@{BaseMenuState}}
+Inheritance diagram for Base\+Menu\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_base_menu_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_base_menu_state_ae29d522c56a4582ce79e113426421741}\label{class_base_menu_state_ae29d522c56a4582ce79e113426421741}} 
+void \mbox{\hyperlink{class_base_menu_state_ae29d522c56a4582ce79e113426421741}{init}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Initializes \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_base_menu_state_a6ca2a29b45a0c2d6d2cbbb6ee67d38ac}\label{class_base_menu_state_a6ca2a29b45a0c2d6d2cbbb6ee67d38ac}} 
+void \mbox{\hyperlink{class_base_menu_state_a6ca2a29b45a0c2d6d2cbbb6ee67d38ac}{cleanup}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Clean-\/ups after \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_base_menu_state_a3ac8e688220c609b467ca4ae4c6600d6}\label{class_base_menu_state_a3ac8e688220c609b467ca4ae4c6600d6}} 
+void \mbox{\hyperlink{class_base_menu_state_a3ac8e688220c609b467ca4ae4c6600d6}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Pauses \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_base_menu_state_a8b0bba27d448b83a1f8f4ceca8dde07e}\label{class_base_menu_state_a8b0bba27d448b83a1f8f4ceca8dde07e}} 
+void \mbox{\hyperlink{class_base_menu_state_a8b0bba27d448b83a1f8f4ceca8dde07e}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Resumes \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_base_menu_state_af593c53bcd111bd210b933ddb360f509}\label{class_base_menu_state_af593c53bcd111bd210b933ddb360f509}} 
+void \mbox{\hyperlink{class_base_menu_state_af593c53bcd111bd210b933ddb360f509}{handle\+Events}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$, sf\+::\+Event)
+\begin{DoxyCompactList}\small\item\em Handle events like key presses or closing the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_base_menu_state_abfc8c5d2c7c3811443fc79a107a5936e}\label{class_base_menu_state_abfc8c5d2c7c3811443fc79a107a5936e}} 
+void \mbox{\hyperlink{class_base_menu_state_abfc8c5d2c7c3811443fc79a107a5936e}{update}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Updates objects used in the \mbox{\hyperlink{class_game_state}{Game\+State}} -\/ positions, textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_base_menu_state_a404076aa3e789fa75ba1bfe7752c1e18}\label{class_base_menu_state_a404076aa3e789fa75ba1bfe7752c1e18}} 
+void \mbox{\hyperlink{class_base_menu_state_a404076aa3e789fa75ba1bfe7752c1e18}{render}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Draws objects into the single frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_base_menu_state_ab63cc442453d06b70372d627ceaf8a8e}\label{class_base_menu_state_ab63cc442453d06b70372d627ceaf8a8e}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_button}{Button}} $>$ $>$ {\bfseries buttons}
+\item 
+\mbox{\Hypertarget{class_base_menu_state_a59278b3c16e953a01ad350b179024778}\label{class_base_menu_state_a59278b3c16e953a01ad350b179024778}} 
+std\+::vector$<$ sf\+::\+Drawable $\ast$ $>$ {\bfseries objects}
+\item 
+\mbox{\Hypertarget{class_base_menu_state_a2759c3ca4cfd0f34175846e295e0f4e9}\label{class_base_menu_state_a2759c3ca4cfd0f34175846e295e0f4e9}} 
+sf\+::\+Font $\ast$ {\bfseries font}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_base_menu_state_a003cf33aa9c69fa85db7486f6812b4f6}\label{class_base_menu_state_a003cf33aa9c69fa85db7486f6812b4f6}} 
+static const uint {\bfseries medium\+Font\+Size} = 25
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Base\+Menu\+State.\+hpp\end{DoxyCompactItemize}
