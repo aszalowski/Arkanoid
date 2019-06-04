@@ -13,11 +13,17 @@ void EndGameState::init(GameEngine* game)
 
     if(game->p2.active)
     {
-        if(game->p1.getHp() == 0 || game->p1.getScore() < game->p2.getScore()){
+        if(game->p1.getHp() == 0 ){
             title.setString("Player 2 won!");
         }
-        else if(game->p2.getHp() == 0 || game->p2.getScore() < game->p2.getScore())
+        else if(game->p2.getHp() == 0)
         {
+            title.setString("Player 1 won!");
+        }
+        else if(game->p1.getScore() < game->p2.getScore()){
+            title.setString("Player 2 won!");
+        }
+        else if(game->p1.getScore() > game->p2.getScore()){
             title.setString("Player 1 won!");
         }
         else
