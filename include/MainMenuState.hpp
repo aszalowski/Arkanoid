@@ -6,16 +6,16 @@
 ///Main menu at the beggining of the game
 class MainMenuState : public BaseMenuState
 {
-    public:
-        void init(GameEngine* game);
+public:
+    void init(GameEngine *game);
 
-        static MainMenuState* instance()
-        {
-            static MainMenuState MainMenuStateInstance;
-            return &MainMenuStateInstance;
-        }
-    
-    private:
+    static MainMenuState *instance()
+    {
+        static MainMenuState MainMenuStateInstance;
+        return &MainMenuStateInstance;
+    }
+
+private:
 };
 
 #endif // __MAINMENUSTATE_HPP__

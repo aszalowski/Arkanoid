@@ -10,9 +10,8 @@
 class ServeState : public GameState
 {
 private:
-
 public:
-    void init(GameEngine *game); 
+    void init(GameEngine *game);
     void cleanup(GameEngine *game);
 
     void pause();

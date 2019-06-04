@@ -6,7 +6,7 @@
 #include "PlayState.hpp"
 
 ///Play state for 2 players - uses PlayState
-class HotSeatPlayState :  public PlayState
+class HotSeatPlayState : public PlayState
 {
 private:
 public:

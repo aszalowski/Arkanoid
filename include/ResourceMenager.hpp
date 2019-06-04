@@ -18,6 +18,6 @@ public:
 
 private:
     std::map<std::string, std::shared_ptr<Resource>> Resources; ///< Stores pointers of resources
-    std::vector<std::string> dirs; ///< Stores names of the used directories
+    std::vector<std::string> dirs;                              ///< Stores names of the used directories
 };
 #endif

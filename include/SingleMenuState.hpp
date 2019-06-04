@@ -8,18 +8,18 @@
 ///Menu state in single player
 class SingleMenuState : public BaseMenuState
 {
-    public:
-        void init(GameEngine* game);
-        void cleanup(GameEngine* game);
+public:
+    void init(GameEngine *game);
+    void cleanup(GameEngine *game);
 
-        static SingleMenuState* instance()
-        {
-            static SingleMenuState SingleMenuStateInstance;
-            return &SingleMenuStateInstance;
-        }
-    
-        SpriteManager skinChooser;
-        SpriteManager ballChooser;
+    static SingleMenuState *instance()
+    {
+        static SingleMenuState SingleMenuStateInstance;
+        return &SingleMenuStateInstance;
+    }
+
+    SpriteManager skinChooser;
+    SpriteManager ballChooser;
 };
 
 #endif // __SINGLEMENUSTATE_HPP__

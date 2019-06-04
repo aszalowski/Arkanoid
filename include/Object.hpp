@@ -4,7 +4,7 @@
 #include <memory>
 
 class GameEngine;
- ///Abstract class used for all objects
+///Abstract class used for all objects
 class Object
 {
 public:

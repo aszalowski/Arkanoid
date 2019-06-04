@@ -20,7 +20,7 @@ public:
 
     virtual bool isTransparent() { return false; }
 
-    void changeState(GameEngine *game, GameState *state)    ///< Changes GameState
+    void changeState(GameEngine *game, GameState *state) ///< Changes GameState
     {
         game->changeState(state);
     }

@@ -7,20 +7,21 @@
 #include "BaseMenuState.hpp"
 #include "GameEngine.hpp"
 ///Pause - accessible with Escape button
-class PauseState : public BaseMenuState {
-    public:
-        void init(GameEngine *game);
+class PauseState : public BaseMenuState
+{
+public:
+    void init(GameEngine *game);
 
-        bool isTransparent(){ return true; }
+    bool isTransparent() { return true; }
 
-        static PauseState* instance(){
-            static PauseState PauseStateInstance;
-            return &PauseStateInstance;
-        }
-    
-    protected:
-        PauseState(){}
+    static PauseState *instance()
+    {
+        static PauseState PauseStateInstance;
+        return &PauseStateInstance;
+    }
 
+protected:
+    PauseState() {}
 };
 
 #endif
