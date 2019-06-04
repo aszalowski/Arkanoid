@@ -8,7 +8,7 @@
 
 class GameEngine;
 
-
+///Class of all used buttons
 class Button: public Object{
     public:
         Button(sf::Texture* normal, sf::Texture* hovered, const sf::Vector2f& position, bool (* onClickCallback)(GameEngine* game, Button* button) = [](GameEngine* game, Button* button){std::cout << "DEBUG: Using default onClickCallback" << std::endl; return false;});
@@ -44,7 +44,7 @@ class Button: public Object{
         const static sf::Color GREY;
 
 };
-
+///Button with text on it
 class TextButton: public Button{
     public:
         TextButton(sf::Texture* normal, sf::Texture* hovered, const sf::Vector2f& position, const sf::Text& label, bool (* onClickCallback)(GameEngine* game, Button* button) = [](GameEngine* game, Button* button){std::cout << "DEBUG: Using default onClickCallback" << std::endl; return false;});

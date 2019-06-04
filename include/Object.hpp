@@ -4,11 +4,11 @@
 #include <memory>
 
 class GameEngine;
-
+ ///Abstract class used for all objects
 class Object
 {
 public:
-    virtual void draw(GameEngine *) const = 0;
+    virtual void draw(GameEngine *) const = 0; ///< Drawing object on the screen
 
     virtual const sf::Vector2f getPosition() const = 0; // NOTE: where are sfml and std linked
     virtual void setPosition(const sf::Vector2f &) = 0;

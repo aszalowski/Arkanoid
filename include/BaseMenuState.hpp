@@ -8,6 +8,7 @@
 #include "GameState.hpp"
 #include "Buttons.hpp"
 
+///Class of all menus
 
 class BaseMenuState : virtual public GameState {
     public:

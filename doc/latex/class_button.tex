@@ -1,0 +1,219 @@
+\hypertarget{class_button}{}\section{Button Class Reference}
+\label{class_button}\index{Button@{Button}}
+
+
+Class of all used buttons.  
+
+
+
+
+{\ttfamily \#include $<$Buttons.\+hpp$>$}
+
+Inheritance diagram for Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_button}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button_ad1a553528260f66367628724384cdfd0}{Button}} (sf\+::\+Texture $\ast$\mbox{\hyperlink{class_button_a5a2a5e1c6b378762f5b2fe39e9053d9e}{normal}}, sf\+::\+Texture $\ast$\mbox{\hyperlink{class_button_a181477cb3462763b510a30a4f27cd756}{hovered}}, const sf\+::\+Vector2f \&position, bool($\ast$\mbox{\hyperlink{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}{on\+Click\+Callback}})(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)=\mbox{[}$\,$\mbox{]}(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)\{std\+::cout$<$$<$ \char`\"{}D\+E\+B\+U\+G\+: Using default \mbox{\hyperlink{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}{on\+Click\+Callback}}\char`\"{}$<$$<$ std\+::endl;return false;\})
+\item 
+\mbox{\hyperlink{class_button_ad1756d01fbebe40e07b45fd1963c33d8}{Button}} (sf\+::\+Texture $\ast$\mbox{\hyperlink{class_button_a5a2a5e1c6b378762f5b2fe39e9053d9e}{normal}}, const sf\+::\+Color \&hovered\+Color, const sf\+::\+Vector2f \&position, bool($\ast$\mbox{\hyperlink{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}{on\+Click\+Callback}})(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)=\mbox{[}$\,$\mbox{]}(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)\{std\+::cout$<$$<$ \char`\"{}D\+E\+B\+U\+G\+: Using default \mbox{\hyperlink{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}{on\+Click\+Callback}}\char`\"{}$<$$<$ std\+::endl;return false;\})
+\item 
+virtual void \mbox{\hyperlink{class_button_a99e75218b31357786cff815f87f1a093}{draw}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$) const
+\begin{DoxyCompactList}\small\item\em Drawing object on the screen. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_button_a95a9aafc24ed5d95d3557f7155832433}{set\+Position}} (const sf\+::\+Vector2f \&position)
+\item 
+virtual const sf\+::\+Vector2f \mbox{\hyperlink{class_button_a01ff4aace35c7d0c4d8b35eda290378f}{get\+Position}} () const
+\item 
+sf\+::\+Float\+Rect \mbox{\hyperlink{class_button_ab9d2e98e4940309543a9c94509f99437}{get\+Global\+Bounds}} () const
+\item 
+void \mbox{\hyperlink{class_button_a1a5ca19ed8efe0ea27625217dcab9f2c}{hover}} ()
+\item 
+void \mbox{\hyperlink{class_button_ae34e8f3c482654e8585360fd639d02e3}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_button_a57efb09b51a4846a25e7f61abee78cd6}{deactivate}} ()
+\item 
+bool \mbox{\hyperlink{class_button_ac5e8ae25dcb8a33c6e8711ddbaed71bf}{click}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
+\item 
+bool \mbox{\hyperlink{class_button_a4d1a833e7e928d2fe25db3ba28f53e40}{is\+Hovered}} (const sf\+::\+Vector2f \&mouse\+Position)
+\item 
+bool \mbox{\hyperlink{class_button_acf2ea3a5fea9e6cb24b291fabab033ff}{is\+Active}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_button_a5a2a5e1c6b378762f5b2fe39e9053d9e}{normal}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_button_a181477cb3462763b510a30a4f27cd756}{hovered}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_button_a85f7fc9ea9ff8aae240469b0bddb662a}{deactivated}}
+\item 
+sf\+::\+Sprite $\ast$ \mbox{\hyperlink{class_button_ae43bb88d6b390a0ab6607278102952c4}{current\+Sprite}}
+\item 
+bool($\ast$ \mbox{\hyperlink{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}{on\+Click\+Callback}} )(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)
+\item 
+bool \mbox{\hyperlink{class_button_a03070c78335786c482088bf00c894325}{active}}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const sf\+::\+Color \mbox{\hyperlink{class_button_afc0927052e6f57f0cfc7521953421617}{G\+R\+EY}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class of all used buttons. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_button_ad1a553528260f66367628724384cdfd0}\label{class_button_ad1a553528260f66367628724384cdfd0}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\subsubsection{\texorpdfstring{Button()}{Button()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{normal,  }\item[{sf\+::\+Texture $\ast$}]{hovered,  }\item[{const sf\+::\+Vector2f \&}]{position,  }\item[{bool($\ast$)(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)}]{on\+Click\+Callback = {\ttfamily \mbox{[}\mbox{]}(\mbox{\hyperlink{class_game_engine}{Game\+Engine}}~$\ast$game,~\mbox{\hyperlink{class_button}{Button}}~$\ast$button)\{std\+:\+:cout$<$$<$~\char`\"{}DEBUG\+:~Using~default~\mbox{\hyperlink{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}{on\+Click\+Callback}}\char`\"{}$<$$<$~std\+:\+:endl;return~false;\}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_button_ad1756d01fbebe40e07b45fd1963c33d8}\label{class_button_ad1756d01fbebe40e07b45fd1963c33d8}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\subsubsection{\texorpdfstring{Button()}{Button()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{normal,  }\item[{const sf\+::\+Color \&}]{hovered\+Color,  }\item[{const sf\+::\+Vector2f \&}]{position,  }\item[{bool($\ast$)(\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)}]{on\+Click\+Callback = {\ttfamily \mbox{[}\mbox{]}(\mbox{\hyperlink{class_game_engine}{Game\+Engine}}~$\ast$game,~\mbox{\hyperlink{class_button}{Button}}~$\ast$button)\{std\+:\+:cout$<$$<$~\char`\"{}DEBUG\+:~Using~default~\mbox{\hyperlink{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}{on\+Click\+Callback}}\char`\"{}$<$$<$~std\+:\+:endl;return~false;\}} }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_button_ac5e8ae25dcb8a33c6e8711ddbaed71bf}\label{class_button_ac5e8ae25dcb8a33c6e8711ddbaed71bf}} 
+\index{Button@{Button}!click@{click}}
+\index{click@{click}!Button@{Button}}
+\subsubsection{\texorpdfstring{click()}{click()}}
+{\footnotesize\ttfamily bool Button\+::click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_button_a57efb09b51a4846a25e7f61abee78cd6}\label{class_button_a57efb09b51a4846a25e7f61abee78cd6}} 
+\index{Button@{Button}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!Button@{Button}}
+\subsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily void Button\+::deactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_button_a99e75218b31357786cff815f87f1a093}\label{class_button_a99e75218b31357786cff815f87f1a093}} 
+\index{Button@{Button}!draw@{draw}}
+\index{draw@{draw}!Button@{Button}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Button\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Drawing object on the screen. 
+
+
+
+Implements \mbox{\hyperlink{class_object_af9862406dcd271bd45580737df468af4}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_text_button_a8af6b4a6e9084f157ffb015d29a02fcf}{Text\+Button}}.
+
+\mbox{\Hypertarget{class_button_ab9d2e98e4940309543a9c94509f99437}\label{class_button_ab9d2e98e4940309543a9c94509f99437}} 
+\index{Button@{Button}!getGlobalBounds@{getGlobalBounds}}
+\index{getGlobalBounds@{getGlobalBounds}!Button@{Button}}
+\subsubsection{\texorpdfstring{getGlobalBounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect Button\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_button_a01ff4aace35c7d0c4d8b35eda290378f}\label{class_button_a01ff4aace35c7d0c4d8b35eda290378f}} 
+\index{Button@{Button}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Button@{Button}}
+\subsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily virtual const sf\+::\+Vector2f Button\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_object_a3fd6370b8cfc53e5e41d09704726c2d4}{Object}}.
+
+\mbox{\Hypertarget{class_button_a1a5ca19ed8efe0ea27625217dcab9f2c}\label{class_button_a1a5ca19ed8efe0ea27625217dcab9f2c}} 
+\index{Button@{Button}!hover@{hover}}
+\index{hover@{hover}!Button@{Button}}
+\subsubsection{\texorpdfstring{hover()}{hover()}}
+{\footnotesize\ttfamily void Button\+::hover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_button_acf2ea3a5fea9e6cb24b291fabab033ff}\label{class_button_acf2ea3a5fea9e6cb24b291fabab033ff}} 
+\index{Button@{Button}!isActive@{isActive}}
+\index{isActive@{isActive}!Button@{Button}}
+\subsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily bool Button\+::is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_button_a4d1a833e7e928d2fe25db3ba28f53e40}\label{class_button_a4d1a833e7e928d2fe25db3ba28f53e40}} 
+\index{Button@{Button}!isHovered@{isHovered}}
+\index{isHovered@{isHovered}!Button@{Button}}
+\subsubsection{\texorpdfstring{isHovered()}{isHovered()}}
+{\footnotesize\ttfamily bool Button\+::is\+Hovered (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{mouse\+Position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_button_ae34e8f3c482654e8585360fd639d02e3}\label{class_button_ae34e8f3c482654e8585360fd639d02e3}} 
+\index{Button@{Button}!reset@{reset}}
+\index{reset@{reset}!Button@{Button}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Button\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_button_a95a9aafc24ed5d95d3557f7155832433}\label{class_button_a95a9aafc24ed5d95d3557f7155832433}} 
+\index{Button@{Button}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Button@{Button}}
+\subsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily virtual void Button\+::set\+Position (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_object_ac5c796bfa75dedf6d3bfc74685b2b77d}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_text_button_a4550c33ce65f77b9e9e119526bfcc357}{Text\+Button}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_button_a03070c78335786c482088bf00c894325}\label{class_button_a03070c78335786c482088bf00c894325}} 
+\index{Button@{Button}!active@{active}}
+\index{active@{active}!Button@{Button}}
+\subsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily bool Button\+::active\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_button_ae43bb88d6b390a0ab6607278102952c4}\label{class_button_ae43bb88d6b390a0ab6607278102952c4}} 
+\index{Button@{Button}!currentSprite@{currentSprite}}
+\index{currentSprite@{currentSprite}!Button@{Button}}
+\subsubsection{\texorpdfstring{currentSprite}{currentSprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite$\ast$ Button\+::current\+Sprite\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_button_a85f7fc9ea9ff8aae240469b0bddb662a}\label{class_button_a85f7fc9ea9ff8aae240469b0bddb662a}} 
+\index{Button@{Button}!deactivated@{deactivated}}
+\index{deactivated@{deactivated}!Button@{Button}}
+\subsubsection{\texorpdfstring{deactivated}{deactivated}}
+{\footnotesize\ttfamily sf\+::\+Sprite Button\+::deactivated\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_button_afc0927052e6f57f0cfc7521953421617}\label{class_button_afc0927052e6f57f0cfc7521953421617}} 
+\index{Button@{Button}!GREY@{GREY}}
+\index{GREY@{GREY}!Button@{Button}}
+\subsubsection{\texorpdfstring{GREY}{GREY}}
+{\footnotesize\ttfamily const sf\+::\+Color Button\+::\+G\+R\+EY\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_button_a181477cb3462763b510a30a4f27cd756}\label{class_button_a181477cb3462763b510a30a4f27cd756}} 
+\index{Button@{Button}!hovered@{hovered}}
+\index{hovered@{hovered}!Button@{Button}}
+\subsubsection{\texorpdfstring{hovered}{hovered}}
+{\footnotesize\ttfamily sf\+::\+Sprite Button\+::hovered\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_button_a5a2a5e1c6b378762f5b2fe39e9053d9e}\label{class_button_a5a2a5e1c6b378762f5b2fe39e9053d9e}} 
+\index{Button@{Button}!normal@{normal}}
+\index{normal@{normal}!Button@{Button}}
+\subsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily sf\+::\+Sprite Button\+::normal\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}\label{class_button_abd70dfccd5cce2eb6d4cae1d684107c3}} 
+\index{Button@{Button}!onClickCallback@{onClickCallback}}
+\index{onClickCallback@{onClickCallback}!Button@{Button}}
+\subsubsection{\texorpdfstring{onClickCallback}{onClickCallback}}
+{\footnotesize\ttfamily bool($\ast$  Button\+::on\+Click\+Callback) (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game, \mbox{\hyperlink{class_button}{Button}} $\ast$button)\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_buttons_8hpp}{Buttons.\+hpp}}\end{DoxyCompactItemize}

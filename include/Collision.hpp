@@ -1,4 +1,4 @@
-/*
+/**
  * File:   collision.h
  * Authors: Nick Koirala (original version), ahnonay (SFML2 compatibility)
  *
@@ -32,6 +32,8 @@
  *
  * Created on 30 January 2009, 11:02
  */
+
+///Collision detection
 
 #ifndef COLLISION_H
 #define COLLISION_H

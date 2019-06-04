@@ -1,0 +1,168 @@
+\hypertarget{class_hot_seat_play_state}{}\section{Hot\+Seat\+Play\+State Class Reference}
+\label{class_hot_seat_play_state}\index{HotSeatPlayState@{HotSeatPlayState}}
+
+
+Play state for 2 players -\/ uses \mbox{\hyperlink{class_play_state}{Play\+State}}.  
+
+
+
+
+{\ttfamily \#include $<$Hot\+Seat\+Play\+State.\+hpp$>$}
+
+Inheritance diagram for Hot\+Seat\+Play\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_hot_seat_play_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_hot_seat_play_state_a2d1a6b35aac53c988e7b036d89794e70}{init}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Initializes \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hot_seat_play_state_ae9ca450fc070526a0ee329002e4308f2}{cleanup}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Clean-\/ups after \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hot_seat_play_state_af0e96c626d63f71e714bbf8119308751}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Pauses \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hot_seat_play_state_a7acf9709fdb1527a321730c49783cb50}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Resumes \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hot_seat_play_state_a92606c5f4b8106b4fec1482a75be3c8d}{handle\+Events}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$, sf\+::\+Event)
+\begin{DoxyCompactList}\small\item\em Handle events like key presses or closing the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hot_seat_play_state_a63baf261e84e10203286fc82082cccdd}{update}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Updates objects used in the \mbox{\hyperlink{class_game_state}{Game\+State}} -\/ positions, textures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hot_seat_play_state_a66bbc19d0a2046a3ff2d926669d0ae26}{render}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Draws objects into the single frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_hot_seat_play_state}{Hot\+Seat\+Play\+State}} $\ast$ \mbox{\hyperlink{class_hot_seat_play_state_a2a0510cffde2533a6b8c9e02fa299302}{instance}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hot_seat_play_state_a634bf50c77bcff048ac47ec11d7e1ea4}{Hot\+Seat\+Play\+State}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Play state for 2 players -\/ uses \mbox{\hyperlink{class_play_state}{Play\+State}}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hot_seat_play_state_a634bf50c77bcff048ac47ec11d7e1ea4}\label{class_hot_seat_play_state_a634bf50c77bcff048ac47ec11d7e1ea4}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!HotSeatPlayState@{HotSeatPlayState}}
+\index{HotSeatPlayState@{HotSeatPlayState}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{HotSeatPlayState()}{HotSeatPlayState()}}
+{\footnotesize\ttfamily Hot\+Seat\+Play\+State\+::\+Hot\+Seat\+Play\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hot_seat_play_state_ae9ca450fc070526a0ee329002e4308f2}\label{class_hot_seat_play_state_ae9ca450fc070526a0ee329002e4308f2}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Hot\+Seat\+Play\+State\+::cleanup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clean-\/ups after \mbox{\hyperlink{class_game_state}{Game\+State}}. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a7df4ea0b4815d2b3b35dbec2a399a0b6}{Game\+State}}.
+
+\mbox{\Hypertarget{class_hot_seat_play_state_a92606c5f4b8106b4fec1482a75be3c8d}\label{class_hot_seat_play_state_a92606c5f4b8106b4fec1482a75be3c8d}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void Hot\+Seat\+Play\+State\+::handle\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{,  }\item[{sf\+::\+Event}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handle events like key presses or closing the window. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a3ef0638514dbfe71581d593cf0f66ce5}{Game\+State}}.
+
+\mbox{\Hypertarget{class_hot_seat_play_state_a2d1a6b35aac53c988e7b036d89794e70}\label{class_hot_seat_play_state_a2d1a6b35aac53c988e7b036d89794e70}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!init@{init}}
+\index{init@{init}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Hot\+Seat\+Play\+State\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes \mbox{\hyperlink{class_game_state}{Game\+State}}. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a10b6e6bb31591c70d08ffcee5f29fa81}{Game\+State}}.
+
+\mbox{\Hypertarget{class_hot_seat_play_state_a2a0510cffde2533a6b8c9e02fa299302}\label{class_hot_seat_play_state_a2a0510cffde2533a6b8c9e02fa299302}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!instance@{instance}}
+\index{instance@{instance}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_hot_seat_play_state}{Hot\+Seat\+Play\+State}}$\ast$ Hot\+Seat\+Play\+State\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_hot_seat_play_state_af0e96c626d63f71e714bbf8119308751}\label{class_hot_seat_play_state_af0e96c626d63f71e714bbf8119308751}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!pause@{pause}}
+\index{pause@{pause}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Hot\+Seat\+Play\+State\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pauses \mbox{\hyperlink{class_game_state}{Game\+State}}. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_aafc908582760099891b37bb380ddd87a}{Game\+State}}.
+
+\mbox{\Hypertarget{class_hot_seat_play_state_a66bbc19d0a2046a3ff2d926669d0ae26}\label{class_hot_seat_play_state_a66bbc19d0a2046a3ff2d926669d0ae26}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!render@{render}}
+\index{render@{render}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Hot\+Seat\+Play\+State\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws objects into the single frame. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a0d56cd5355f59a87cf95e1c6d719f329}{Game\+State}}.
+
+\mbox{\Hypertarget{class_hot_seat_play_state_a7acf9709fdb1527a321730c49783cb50}\label{class_hot_seat_play_state_a7acf9709fdb1527a321730c49783cb50}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!resume@{resume}}
+\index{resume@{resume}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void Hot\+Seat\+Play\+State\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resumes \mbox{\hyperlink{class_game_state}{Game\+State}}. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a4a421c44f4dae6e9a4fbe10b6e8c47ac}{Game\+State}}.
+
+\mbox{\Hypertarget{class_hot_seat_play_state_a63baf261e84e10203286fc82082cccdd}\label{class_hot_seat_play_state_a63baf261e84e10203286fc82082cccdd}} 
+\index{HotSeatPlayState@{HotSeatPlayState}!update@{update}}
+\index{update@{update}!HotSeatPlayState@{HotSeatPlayState}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Hot\+Seat\+Play\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates objects used in the \mbox{\hyperlink{class_game_state}{Game\+State}} -\/ positions, textures. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a66b11afe355a9479f94aaf76576980bd}{Game\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_hot_seat_play_state_8hpp}{Hot\+Seat\+Play\+State.\+hpp}}\end{DoxyCompactItemize}

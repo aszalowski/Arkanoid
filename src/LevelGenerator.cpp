@@ -2,7 +2,7 @@
 
 #define createBlock(hp) Block a((hp), texture, sf::Vector2f(99 + j * 34, 117 + i * 18)); game->blocks.push_back(a);
 
-void generateLevel(GameEngine *game)
+void LevelGenerator::generateLevel(GameEngine *game)
 {
     const std::shared_ptr<sf::Texture> texture = game->textureMenager.get("breakout_pieces.png");
     srand(time(nullptr));

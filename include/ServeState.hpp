@@ -6,7 +6,7 @@
 #include "GameState.hpp"
 #include "GameEngine.hpp"
 #include "Block.hpp"
-
+///Serve after player1 loses life
 class ServeState : public GameState
 {
     public:

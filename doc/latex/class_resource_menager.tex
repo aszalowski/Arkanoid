@@ -1,0 +1,137 @@
+\hypertarget{class_resource_menager}{}\section{Resource\+Menager$<$ Resource $>$ Class Template Reference}
+\label{class_resource_menager}\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+
+
+Manager for textures and fonts.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Menager.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_resource_menager_af686b0f4b7f7167c88cac3586f4599c9}{$\sim$\+Resource\+Menager}} ()
+\item 
+const std\+::shared\+\_\+ptr$<$ Resource $>$ \mbox{\hyperlink{class_resource_menager_a1c75062d799f0baa37cfa4bbbc9a5779}{get}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Checks if resource wasn\textquotesingle{}t used before, kooks for the file in the directory, creates a shared pointed and returns it, if the resource was used returns it\textquotesingle{}s shared pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_resource_menager_a4b5dd5677fcb6e948c23f9925d6a6418}{delete\+Resource}} (const std\+::shared\+\_\+ptr$<$ Resource $>$ \&)
+\begin{DoxyCompactList}\small\item\em Deletes resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_resource_menager_a18a1e6c8e9ec427abefe13d44b84b2f2}{delete\+Resource}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Deletes resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_resource_menager_a0d170bac7d943759d3ccc608b6db7761}{add\+Dir}} (const std\+::string \&dir)
+\begin{DoxyCompactList}\small\item\em Adds a directory, where looks for resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_resource_menager_a795728420523e598b095abded51019b4}{remove\+Dir}} (const std\+::string \&directory)
+\begin{DoxyCompactList}\small\item\em Removes a directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ Resource $>$ $>$ \mbox{\hyperlink{class_resource_menager_a2ec0eb338dd837126c8ba0b53b0ddbc5}{Resources}}
+\begin{DoxyCompactList}\small\item\em Stores pointers of resources. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_resource_menager_a0dc38a54fb434107185e954ed6f60c2e}{dirs}}
+\begin{DoxyCompactList}\small\item\em Stores names of the used directories. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Resource$>$\newline
+class Resource\+Menager$<$ Resource $>$}
+
+Manager for textures and fonts. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_resource_menager_af686b0f4b7f7167c88cac3586f4599c9}\label{class_resource_menager_af686b0f4b7f7167c88cac3586f4599c9}} 
+\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}!````~ResourceMenager@{$\sim$ResourceMenager}}
+\index{````~ResourceMenager@{$\sim$ResourceMenager}!ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsubsection{\texorpdfstring{$\sim$ResourceMenager()}{~ResourceMenager()}}
+{\footnotesize\ttfamily template$<$class Resource$>$ \\
+\mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ Resource $>$\+::$\sim$\mbox{\hyperlink{class_resource_menager}{Resource\+Menager}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_resource_menager_a0d170bac7d943759d3ccc608b6db7761}\label{class_resource_menager_a0d170bac7d943759d3ccc608b6db7761}} 
+\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}!addDir@{addDir}}
+\index{addDir@{addDir}!ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsubsection{\texorpdfstring{addDir()}{addDir()}}
+{\footnotesize\ttfamily template$<$class Resource$>$ \\
+void \mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ Resource $>$\+::add\+Dir (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir }\end{DoxyParamCaption})}
+
+
+
+Adds a directory, where looks for resources. 
+
+\mbox{\Hypertarget{class_resource_menager_a4b5dd5677fcb6e948c23f9925d6a6418}\label{class_resource_menager_a4b5dd5677fcb6e948c23f9925d6a6418}} 
+\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}!deleteResource@{deleteResource}}
+\index{deleteResource@{deleteResource}!ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsubsection{\texorpdfstring{deleteResource()}{deleteResource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Resource$>$ \\
+void \mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ Resource $>$\+::delete\+Resource (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ Resource $>$ \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Deletes resource. 
+
+\mbox{\Hypertarget{class_resource_menager_a18a1e6c8e9ec427abefe13d44b84b2f2}\label{class_resource_menager_a18a1e6c8e9ec427abefe13d44b84b2f2}} 
+\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}!deleteResource@{deleteResource}}
+\index{deleteResource@{deleteResource}!ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsubsection{\texorpdfstring{deleteResource()}{deleteResource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Resource$>$ \\
+void \mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ Resource $>$\+::delete\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Deletes resource. 
+
+\mbox{\Hypertarget{class_resource_menager_a1c75062d799f0baa37cfa4bbbc9a5779}\label{class_resource_menager_a1c75062d799f0baa37cfa4bbbc9a5779}} 
+\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}!get@{get}}
+\index{get@{get}!ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class Resource$>$ \\
+const std\+::shared\+\_\+ptr$<$Resource$>$ \mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ Resource $>$\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Checks if resource wasn\textquotesingle{}t used before, kooks for the file in the directory, creates a shared pointed and returns it, if the resource was used returns it\textquotesingle{}s shared pointer. 
+
+\mbox{\Hypertarget{class_resource_menager_a795728420523e598b095abded51019b4}\label{class_resource_menager_a795728420523e598b095abded51019b4}} 
+\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}!removeDir@{removeDir}}
+\index{removeDir@{removeDir}!ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsubsection{\texorpdfstring{removeDir()}{removeDir()}}
+{\footnotesize\ttfamily template$<$class Resource$>$ \\
+void \mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ Resource $>$\+::remove\+Dir (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{directory }\end{DoxyParamCaption})}
+
+
+
+Removes a directory. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_resource_menager_a0dc38a54fb434107185e954ed6f60c2e}\label{class_resource_menager_a0dc38a54fb434107185e954ed6f60c2e}} 
+\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}!dirs@{dirs}}
+\index{dirs@{dirs}!ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsubsection{\texorpdfstring{dirs}{dirs}}
+{\footnotesize\ttfamily template$<$class Resource$>$ \\
+std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ Resource $>$\+::dirs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores names of the used directories. 
+
+\mbox{\Hypertarget{class_resource_menager_a2ec0eb338dd837126c8ba0b53b0ddbc5}\label{class_resource_menager_a2ec0eb338dd837126c8ba0b53b0ddbc5}} 
+\index{ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}!Resources@{Resources}}
+\index{Resources@{Resources}!ResourceMenager$<$ Resource $>$@{ResourceMenager$<$ Resource $>$}}
+\subsubsection{\texorpdfstring{Resources}{Resources}}
+{\footnotesize\ttfamily template$<$class Resource$>$ \\
+std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$Resource$>$ $>$ \mbox{\hyperlink{class_resource_menager}{Resource\+Menager}}$<$ Resource $>$\+::Resources\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores pointers of resources. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_resource_menager_8hpp}{Resource\+Menager.\+hpp}}\end{DoxyCompactItemize}

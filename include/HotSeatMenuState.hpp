@@ -5,7 +5,7 @@
 #include "Buttons.hpp"
 #include "SpriteManager.hpp"
 
-
+///Menu state in the HotSeat mode
 class HotSeatMenuState : public BaseMenuState
 {
     public:

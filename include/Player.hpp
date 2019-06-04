@@ -9,21 +9,21 @@
 
 class GameEngine;
 
-struct Controls
+struct Controls /// Controls for the player - movement and serve
 {
     sf::Keyboard::Key left, right, start;
     Controls(sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start) : left(left), right(right), start(start){};
 };
-
+/// Class of a paddle
 class Player : public Object
 {
 private:
-    int index;
+    int index; 
     int hp = 3;
     uint score = 0;
     Controls controls;
     sf::Sprite sprite;
-    float moveStep = 0.5;
+    float moveStep = 0.5; 
 
 public:
     Player(int index, sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start) : index(index), controls(left, right, start){};
@@ -42,9 +42,8 @@ public:
     const uint getScore() const { return score; }
     const float getMoveStep() const { return moveStep; }
     void setMoveStep(float &newStep) { moveStep = newStep; }
-    //const sf::IntRect getRect() const {return sprite.getTextureRect();}
-    void operator+=(uint points) { score += points; }
-    Player operator--(int);
+    void operator+=(uint points) { score += points; } ///< Adds score
+    Player operator--(int); ///< Descreses health points
 
     void move(int side, sf::Vector2u, uint);
 

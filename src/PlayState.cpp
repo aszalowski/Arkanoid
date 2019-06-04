@@ -31,7 +31,7 @@ void PlayState::init(GameEngine *game)
     score.setString("Points: 0");
     score.setPosition(0, game->getVirtualSize().y - score.getGlobalBounds().height - 5);
 
-    generateLevel(game);
+    LevelGenerator::generateLevel(game);
 }
 
 void PlayState::cleanup(GameEngine *game)
@@ -103,7 +103,8 @@ void PlayState::update(GameEngine *game)
                 game->blocks.push_back(a);
                 i = game->blocks.erase(i);
             }
-            game->p1 += 100;
+            (game->ball.whoHit == p1) ? game->p1 += 100 : game->p2 += 100;
+            std::cout<<game->p1.getScore();
         }
     }
 
@@ -149,7 +150,8 @@ void PlayState::update(GameEngine *game)
                 game->blocks.push_back(a);
                 i = game->blocks.erase(i);
             }
-            game->p1 += 100;
+            (game->ball.whoHit == p1) ? game->p1 += 100 : game->p2 += 100;
+            std::cout<<game->ball.whoHit;
             score.setString("Points: " + std::to_string(game->p1.getScore()));
         }
     }

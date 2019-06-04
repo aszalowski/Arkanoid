@@ -1,0 +1,82 @@
+\hypertarget{class_object}{}\section{Object Class Reference}
+\label{class_object}\index{Object@{Object}}
+
+
+Abstract class used for all objects.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+hpp$>$}
+
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_object_af9862406dcd271bd45580737df468af4}{draw}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$) const =0
+\begin{DoxyCompactList}\small\item\em Drawing object on the screen. \end{DoxyCompactList}\item 
+virtual const sf\+::\+Vector2f \mbox{\hyperlink{class_object_a3fd6370b8cfc53e5e41d09704726c2d4}{get\+Position}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_object_ac5c796bfa75dedf6d3bfc74685b2b77d}{set\+Position}} (const sf\+::\+Vector2f \&)=0
+\item 
+virtual \mbox{\hyperlink{class_object_aa3e791419d84c4c346ef9499513b8e00}{$\sim$\+Object}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class used for all objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_object_aa3e791419d84c4c346ef9499513b8e00}\label{class_object_aa3e791419d84c4c346ef9499513b8e00}} 
+\index{Object@{Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!Object@{Object}}
+\subsubsection{\texorpdfstring{$\sim$Object()}{~Object()}}
+{\footnotesize\ttfamily virtual Object\+::$\sim$\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_object_af9862406dcd271bd45580737df468af4}\label{class_object_af9862406dcd271bd45580737df468af4}} 
+\index{Object@{Object}!draw@{draw}}
+\index{draw@{draw}!Object@{Object}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Object\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Drawing object on the screen. 
+
+
+
+Implemented in \mbox{\hyperlink{class_text_button_a8af6b4a6e9084f157ffb015d29a02fcf}{Text\+Button}}, \mbox{\hyperlink{class_player_aaa0642fde01a4db5e9ee95693805ecda}{Player}}, \mbox{\hyperlink{class_ball_a278c50c66e8ea81f2178328022d742ff}{Ball}}, \mbox{\hyperlink{class_block_a3a41cfe615a31b5c4b824004d248ba65}{Block}}, and \mbox{\hyperlink{class_button_a99e75218b31357786cff815f87f1a093}{Button}}.
+
+\mbox{\Hypertarget{class_object_a3fd6370b8cfc53e5e41d09704726c2d4}\label{class_object_a3fd6370b8cfc53e5e41d09704726c2d4}} 
+\index{Object@{Object}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Object@{Object}}
+\subsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily virtual const sf\+::\+Vector2f Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_ball_a672da3b511f6b30fde82a63927fe8174}{Ball}}, \mbox{\hyperlink{class_player_a6599dac14c1f2ac94e9160c99376333e}{Player}}, \mbox{\hyperlink{class_block_ae7621aaed284804fc898174207eb1587}{Block}}, and \mbox{\hyperlink{class_button_a01ff4aace35c7d0c4d8b35eda290378f}{Button}}.
+
+\mbox{\Hypertarget{class_object_ac5c796bfa75dedf6d3bfc74685b2b77d}\label{class_object_ac5c796bfa75dedf6d3bfc74685b2b77d}} 
+\index{Object@{Object}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Object@{Object}}
+\subsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily virtual void Object\+::set\+Position (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_text_button_a4550c33ce65f77b9e9e119526bfcc357}{Text\+Button}}, \mbox{\hyperlink{class_player_a9f37a6ecb0abbea3eed1348266135879}{Player}}, \mbox{\hyperlink{class_ball_af2260b5f0b9b20d4974ada97481004f3}{Ball}}, \mbox{\hyperlink{class_block_a9c4782f321b4760d572a01bd31c42a06}{Block}}, and \mbox{\hyperlink{class_button_a95a9aafc24ed5d95d3557f7155832433}{Button}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_object_8hpp}{Object.\+hpp}}\end{DoxyCompactItemize}

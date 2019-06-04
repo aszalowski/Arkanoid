@@ -1,0 +1,168 @@
+\hypertarget{class_play_state}{}\section{Play\+State Class Reference}
+\label{class_play_state}\index{PlayState@{PlayState}}
+
+
+State responsible for everything connected with playing a game\+: \mbox{\hyperlink{class_player}{Player}} and \mbox{\hyperlink{class_ball}{Ball}} movement, \mbox{\hyperlink{class_block}{Block}} collision and counting score.  
+
+
+
+
+{\ttfamily \#include $<$Play\+State.\+hpp$>$}
+
+Inheritance diagram for Play\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_play_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_play_state_ae5761f09579d0f1800253764f2d68218}{init}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Initializes \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_play_state_a047657388db62dc5a80b12147b0294b2}{cleanup}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em Clean-\/ups after \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_play_state_a5c135eed71fd8dbf30b75e577c28ad0d}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Pauses \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_play_state_ad4dda6c0b72ce34bd9caaade8a5562b9}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Resumes \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_play_state_acdb47d9367dac45893eb9c9a45390385}{handle\+Events}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$, sf\+::\+Event)
+\begin{DoxyCompactList}\small\item\em Handle events like key presses or closing the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_play_state_ad784c6b3e75c68505df30d51ebce4523}{update}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Updates objects used in the \mbox{\hyperlink{class_game_state}{Game\+State}} -\/ positions, textures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_play_state_a186b8cb25c420e2ce54002bcb08d8bee}{render}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Draws objects into the single frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_play_state}{Play\+State}} $\ast$ \mbox{\hyperlink{class_play_state_a6a46a82e229d66dae0c68244faa7ade3}{instance}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_play_state_a4d5a25203cf9f78f64143328097fa8c4}{Play\+State}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+State responsible for everything connected with playing a game\+: \mbox{\hyperlink{class_player}{Player}} and \mbox{\hyperlink{class_ball}{Ball}} movement, \mbox{\hyperlink{class_block}{Block}} collision and counting score. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_play_state_a4d5a25203cf9f78f64143328097fa8c4}\label{class_play_state_a4d5a25203cf9f78f64143328097fa8c4}} 
+\index{PlayState@{PlayState}!PlayState@{PlayState}}
+\index{PlayState@{PlayState}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{PlayState()}{PlayState()}}
+{\footnotesize\ttfamily Play\+State\+::\+Play\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_play_state_a047657388db62dc5a80b12147b0294b2}\label{class_play_state_a047657388db62dc5a80b12147b0294b2}} 
+\index{PlayState@{PlayState}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Play\+State\+::cleanup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clean-\/ups after \mbox{\hyperlink{class_game_state}{Game\+State}}. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a7df4ea0b4815d2b3b35dbec2a399a0b6}{Game\+State}}.
+
+\mbox{\Hypertarget{class_play_state_acdb47d9367dac45893eb9c9a45390385}\label{class_play_state_acdb47d9367dac45893eb9c9a45390385}} 
+\index{PlayState@{PlayState}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void Play\+State\+::handle\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{,  }\item[{sf\+::\+Event}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handle events like key presses or closing the window. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a3ef0638514dbfe71581d593cf0f66ce5}{Game\+State}}.
+
+\mbox{\Hypertarget{class_play_state_ae5761f09579d0f1800253764f2d68218}\label{class_play_state_ae5761f09579d0f1800253764f2d68218}} 
+\index{PlayState@{PlayState}!init@{init}}
+\index{init@{init}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Play\+State\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes \mbox{\hyperlink{class_game_state}{Game\+State}}. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a10b6e6bb31591c70d08ffcee5f29fa81}{Game\+State}}.
+
+\mbox{\Hypertarget{class_play_state_a6a46a82e229d66dae0c68244faa7ade3}\label{class_play_state_a6a46a82e229d66dae0c68244faa7ade3}} 
+\index{PlayState@{PlayState}!instance@{instance}}
+\index{instance@{instance}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_play_state}{Play\+State}}$\ast$ Play\+State\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_play_state_a5c135eed71fd8dbf30b75e577c28ad0d}\label{class_play_state_a5c135eed71fd8dbf30b75e577c28ad0d}} 
+\index{PlayState@{PlayState}!pause@{pause}}
+\index{pause@{pause}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Play\+State\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pauses \mbox{\hyperlink{class_game_state}{Game\+State}}. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_aafc908582760099891b37bb380ddd87a}{Game\+State}}.
+
+\mbox{\Hypertarget{class_play_state_a186b8cb25c420e2ce54002bcb08d8bee}\label{class_play_state_a186b8cb25c420e2ce54002bcb08d8bee}} 
+\index{PlayState@{PlayState}!render@{render}}
+\index{render@{render}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Play\+State\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws objects into the single frame. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a0d56cd5355f59a87cf95e1c6d719f329}{Game\+State}}.
+
+\mbox{\Hypertarget{class_play_state_ad4dda6c0b72ce34bd9caaade8a5562b9}\label{class_play_state_ad4dda6c0b72ce34bd9caaade8a5562b9}} 
+\index{PlayState@{PlayState}!resume@{resume}}
+\index{resume@{resume}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void Play\+State\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resumes \mbox{\hyperlink{class_game_state}{Game\+State}}. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a4a421c44f4dae6e9a4fbe10b6e8c47ac}{Game\+State}}.
+
+\mbox{\Hypertarget{class_play_state_ad784c6b3e75c68505df30d51ebce4523}\label{class_play_state_ad784c6b3e75c68505df30d51ebce4523}} 
+\index{PlayState@{PlayState}!update@{update}}
+\index{update@{update}!PlayState@{PlayState}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Play\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates objects used in the \mbox{\hyperlink{class_game_state}{Game\+State}} -\/ positions, textures. 
+
+
+
+Implements \mbox{\hyperlink{class_game_state_a66b11afe355a9479f94aaf76576980bd}{Game\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_play_state_8hpp}{Play\+State.\+hpp}}\end{DoxyCompactItemize}
