@@ -6,7 +6,7 @@
 #include "GameState.hpp"
 #include "GameEngine.hpp"
 #include "Block.hpp"
-
+///State responsible for everything connected with playing a game: Player and Ball movement, Block collision and counting score
 class PlayState : public GameState {
     private:
     public:

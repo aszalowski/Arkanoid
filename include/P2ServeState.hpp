@@ -6,7 +6,7 @@
 #include "ServeState.hpp"
 #include "GameEngine.hpp"
 #include "Block.hpp"
-
+///Serve state after player2 loses life - reuses ServeState
 class P2ServeState : public ServeState
 {
 private:

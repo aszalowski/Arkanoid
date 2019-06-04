@@ -69,34 +69,230 @@ $(function() {
 <div class="title">ResourceMenager&lt; Resource &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manager for textures and fonts.  
+ <a href="class_resource_menager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_resource_menager_8hpp_source.html">ResourceMenager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c75062d799f0baa37cfa4bbbc9a5779"><td class="memItemLeft" align="right" valign="top"><a id="a1c75062d799f0baa37cfa4bbbc9a5779"></a>
-const std::shared_ptr&lt; Resource &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:af686b0f4b7f7167c88cac3586f4599c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_menager.html#af686b0f4b7f7167c88cac3586f4599c9">~ResourceMenager</a> ()</td></tr>
+<tr class="separator:af686b0f4b7f7167c88cac3586f4599c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c75062d799f0baa37cfa4bbbc9a5779"><td class="memItemLeft" align="right" valign="top">const std::shared_ptr&lt; Resource &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_menager.html#a1c75062d799f0baa37cfa4bbbc9a5779">get</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a1c75062d799f0baa37cfa4bbbc9a5779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if resource wasn't used before, kooks for the file in the directory, creates a shared pointed and returns it, if the resource was used returns it's shared pointer.  <a href="#a1c75062d799f0baa37cfa4bbbc9a5779">More...</a><br /></td></tr>
 <tr class="separator:a1c75062d799f0baa37cfa4bbbc9a5779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b5dd5677fcb6e948c23f9925d6a6418"><td class="memItemLeft" align="right" valign="top"><a id="a4b5dd5677fcb6e948c23f9925d6a6418"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteResource</b> (const std::shared_ptr&lt; Resource &gt; &amp;)</td></tr>
+<tr class="memitem:a4b5dd5677fcb6e948c23f9925d6a6418"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_menager.html#a4b5dd5677fcb6e948c23f9925d6a6418">deleteResource</a> (const std::shared_ptr&lt; Resource &gt; &amp;)</td></tr>
+<tr class="memdesc:a4b5dd5677fcb6e948c23f9925d6a6418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes resource.  <a href="#a4b5dd5677fcb6e948c23f9925d6a6418">More...</a><br /></td></tr>
 <tr class="separator:a4b5dd5677fcb6e948c23f9925d6a6418"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18a1e6c8e9ec427abefe13d44b84b2f2"><td class="memItemLeft" align="right" valign="top"><a id="a18a1e6c8e9ec427abefe13d44b84b2f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteResource</b> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:a18a1e6c8e9ec427abefe13d44b84b2f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_menager.html#a18a1e6c8e9ec427abefe13d44b84b2f2">deleteResource</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a18a1e6c8e9ec427abefe13d44b84b2f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes resource.  <a href="#a18a1e6c8e9ec427abefe13d44b84b2f2">More...</a><br /></td></tr>
 <tr class="separator:a18a1e6c8e9ec427abefe13d44b84b2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d170bac7d943759d3ccc608b6db7761"><td class="memItemLeft" align="right" valign="top"><a id="a0d170bac7d943759d3ccc608b6db7761"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addDir</b> (const std::string &amp;dir)</td></tr>
+<tr class="memitem:a0d170bac7d943759d3ccc608b6db7761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_menager.html#a0d170bac7d943759d3ccc608b6db7761">addDir</a> (const std::string &amp;dir)</td></tr>
+<tr class="memdesc:a0d170bac7d943759d3ccc608b6db7761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a directory, where looks for resources.  <a href="#a0d170bac7d943759d3ccc608b6db7761">More...</a><br /></td></tr>
 <tr class="separator:a0d170bac7d943759d3ccc608b6db7761"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a795728420523e598b095abded51019b4"><td class="memItemLeft" align="right" valign="top"><a id="a795728420523e598b095abded51019b4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeDir</b> (const std::string &amp;directory)</td></tr>
+<tr class="memitem:a795728420523e598b095abded51019b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_menager.html#a795728420523e598b095abded51019b4">removeDir</a> (const std::string &amp;directory)</td></tr>
+<tr class="memdesc:a795728420523e598b095abded51019b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a directory.  <a href="#a795728420523e598b095abded51019b4">More...</a><br /></td></tr>
 <tr class="separator:a795728420523e598b095abded51019b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a20929ebb0198262129dd109e85f8dbd8"><td class="memItemLeft" align="right" valign="top"><a id="a20929ebb0198262129dd109e85f8dbd8"></a>
-std::map&lt; std::string, std::shared_ptr&lt; Resource &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Resources</b></td></tr>
-<tr class="separator:a20929ebb0198262129dd109e85f8dbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab54aad0286011ff600278b888e5a134"><td class="memItemLeft" align="right" valign="top"><a id="aab54aad0286011ff600278b888e5a134"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dirs</b></td></tr>
-<tr class="separator:aab54aad0286011ff600278b888e5a134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec0eb338dd837126c8ba0b53b0ddbc5"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::shared_ptr&lt; Resource &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_menager.html#a2ec0eb338dd837126c8ba0b53b0ddbc5">Resources</a></td></tr>
+<tr class="memdesc:a2ec0eb338dd837126c8ba0b53b0ddbc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores pointers of resources.  <a href="#a2ec0eb338dd837126c8ba0b53b0ddbc5">More...</a><br /></td></tr>
+<tr class="separator:a2ec0eb338dd837126c8ba0b53b0ddbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc38a54fb434107185e954ed6f60c2e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resource_menager.html#a0dc38a54fb434107185e954ed6f60c2e">dirs</a></td></tr>
+<tr class="memdesc:a0dc38a54fb434107185e954ed6f60c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores names of the used directories.  <a href="#a0dc38a54fb434107185e954ed6f60c2e">More...</a><br /></td></tr>
+<tr class="separator:a0dc38a54fb434107185e954ed6f60c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class Resource&gt;<br />
+class ResourceMenager&lt; Resource &gt;</h3>
+
+<p>Manager for textures and fonts. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af686b0f4b7f7167c88cac3586f4599c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af686b0f4b7f7167c88cac3586f4599c9">&#9670;&nbsp;</a></span>~ResourceMenager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Resource&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_resource_menager.html">ResourceMenager</a>&lt; Resource &gt;::~<a class="el" href="class_resource_menager.html">ResourceMenager</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0d170bac7d943759d3ccc608b6db7761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d170bac7d943759d3ccc608b6db7761">&#9670;&nbsp;</a></span>addDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Resource&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_resource_menager.html">ResourceMenager</a>&lt; Resource &gt;::addDir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a directory, where looks for resources. </p>
+
+</div>
+</div>
+<a id="a4b5dd5677fcb6e948c23f9925d6a6418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b5dd5677fcb6e948c23f9925d6a6418">&#9670;&nbsp;</a></span>deleteResource() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Resource&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_resource_menager.html">ResourceMenager</a>&lt; Resource &gt;::deleteResource </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; Resource &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes resource. </p>
+
+</div>
+</div>
+<a id="a18a1e6c8e9ec427abefe13d44b84b2f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18a1e6c8e9ec427abefe13d44b84b2f2">&#9670;&nbsp;</a></span>deleteResource() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Resource&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_resource_menager.html">ResourceMenager</a>&lt; Resource &gt;::deleteResource </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes resource. </p>
+
+</div>
+</div>
+<a id="a1c75062d799f0baa37cfa4bbbc9a5779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c75062d799f0baa37cfa4bbbc9a5779">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Resource&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::shared_ptr&lt;Resource&gt; <a class="el" href="class_resource_menager.html">ResourceMenager</a>&lt; Resource &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if resource wasn't used before, kooks for the file in the directory, creates a shared pointed and returns it, if the resource was used returns it's shared pointer. </p>
+
+</div>
+</div>
+<a id="a795728420523e598b095abded51019b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795728420523e598b095abded51019b4">&#9670;&nbsp;</a></span>removeDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Resource&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_resource_menager.html">ResourceMenager</a>&lt; Resource &gt;::removeDir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>directory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a directory. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0dc38a54fb434107185e954ed6f60c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc38a54fb434107185e954ed6f60c2e">&#9670;&nbsp;</a></span>dirs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Resource&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; <a class="el" href="class_resource_menager.html">ResourceMenager</a>&lt; Resource &gt;::dirs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stores names of the used directories. </p>
+
+</div>
+</div>
+<a id="a2ec0eb338dd837126c8ba0b53b0ddbc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ec0eb338dd837126c8ba0b53b0ddbc5">&#9670;&nbsp;</a></span>Resources</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Resource&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::shared_ptr&lt;Resource&gt; &gt; <a class="el" href="class_resource_menager.html">ResourceMenager</a>&lt; Resource &gt;::Resources</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stores pointers of resources. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="_resource_menager_8hpp_source.html">ResourceMenager.hpp</a></li>
 </ul>

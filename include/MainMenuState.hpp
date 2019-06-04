@@ -3,7 +3,7 @@
 
 #include "BaseMenuState.hpp"
 #include "Buttons.hpp"
-
+///Main menu at the beggining of the game
 class MainMenuState : public BaseMenuState
 {
     public:

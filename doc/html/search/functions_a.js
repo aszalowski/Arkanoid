@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['render',['render',['../class_base_menu_state.html#a404076aa3e789fa75ba1bfe7752c1e18',1,'BaseMenuState::render()'],['../class_game_engine.html#a267bf9164ba09e32b7a24ba4afb527d4',1,'GameEngine::render()'],['../class_game_state.html#a0d56cd5355f59a87cf95e1c6d719f329',1,'GameState::render()'],['../class_hot_seat_play_state.html#a66bbc19d0a2046a3ff2d926669d0ae26',1,'HotSeatPlayState::render()'],['../class_p2_serve_state.html#acc6d131c7a5712a643b7f97c3bcdbd46',1,'P2ServeState::render()'],['../class_play_state.html#a186b8cb25c420e2ce54002bcb08d8bee',1,'PlayState::render()'],['../class_serve_state.html#a91cd889069e5b9f073ac33addeed2913',1,'ServeState::render()']]],
-  ['resetclock',['resetClock',['../class_game_engine.html#a0f906c0e3c093e66abf1d387767d2a24',1,'GameEngine']]],
-  ['resume',['resume',['../class_base_menu_state.html#a8b0bba27d448b83a1f8f4ceca8dde07e',1,'BaseMenuState::resume()'],['../class_game_state.html#a4a421c44f4dae6e9a4fbe10b6e8c47ac',1,'GameState::resume()'],['../class_hot_seat_play_state.html#a7acf9709fdb1527a321730c49783cb50',1,'HotSeatPlayState::resume()'],['../class_p2_serve_state.html#a46b9a456d44c6f22bf5bbdb62e71e490',1,'P2ServeState::resume()'],['../class_play_state.html#ad4dda6c0b72ce34bd9caaade8a5562b9',1,'PlayState::resume()'],['../class_serve_state.html#ae9a501a1f103b02685fdd4caac5685e5',1,'ServeState::resume()']]],
-  ['running',['running',['../class_game_engine.html#ab3f9945e3cb77c3ae0a7e0c91c22c19a',1,'GameEngine']]]
+  ['p2servestate',['P2ServeState',['../class_p2_serve_state.html#acccff2bfe7954976860ee348d745c3ee',1,'P2ServeState']]],
+  ['pause',['pause',['../class_base_menu_state.html#a3ac8e688220c609b467ca4ae4c6600d6',1,'BaseMenuState::pause()'],['../class_game_state.html#aafc908582760099891b37bb380ddd87a',1,'GameState::pause()'],['../class_hot_seat_play_state.html#af0e96c626d63f71e714bbf8119308751',1,'HotSeatPlayState::pause()'],['../class_p2_serve_state.html#aa72fcf3306cf089d1efc7122a8147139',1,'P2ServeState::pause()'],['../class_play_state.html#a5c135eed71fd8dbf30b75e577c28ad0d',1,'PlayState::pause()'],['../class_serve_state.html#ab3a85411b4cc260cfede50e3aa10573c',1,'ServeState::pause()']]],
+  ['pausestate',['PauseState',['../class_pause_state.html#ad136b9cd4e853606498c01aeeb6a9d26',1,'PauseState']]],
+  ['pixelperfecttest',['PixelPerfectTest',['../namespace_collision.html#a5514da2189b7230dd266ac6ada2fcc5b',1,'Collision']]],
+  ['player',['Player',['../class_player.html#aa1b5d40a7f5e26c7588b64ec515d7de7',1,'Player']]],
+  ['playstate',['PlayState',['../class_play_state.html#a4d5a25203cf9f78f64143328097fa8c4',1,'PlayState']]],
+  ['popstate',['popState',['../class_game_engine.html#a21d2ebf3778429727595a8b87893314f',1,'GameEngine']]],
+  ['prev',['prev',['../class_sprite_manager.html#a45d2b2613bb95d34ce8e0ad28e261ef1',1,'SpriteManager']]],
+  ['pushstate',['pushState',['../class_game_engine.html#a082e38033f8dc63b2d130a0cfd3fbdd9',1,'GameEngine']]]
 ];

@@ -6,13 +6,13 @@
 #include "GameState.hpp"
 #include "GameEngine.hpp"
 #include "Block.hpp"
-
+///Serve after player1 loses life
 class ServeState : public GameState
 {
 private:
 
 public:
-    void init(GameEngine *game);
+    void init(GameEngine *game); 
     void cleanup(GameEngine *game);
 
     void pause();

@@ -4,10 +4,7 @@
 #include <memory>
 
 class GameEngine;
-
-/**
- * Abstract class used than for all objects
- * */
+ ///Abstract class used for all objects
 class Object
 {
 public:

@@ -1,3 +1,11 @@
+/**
+ *
+ * \mainpage Arkanoid game with SFML Framework
+ *
+ * \section Flowchart
+ * \image html ArkanoidStateFlow.png
+ * 
+ */
 #ifndef GAMEENGINE_H
 #define GAMEENGINE_H
 

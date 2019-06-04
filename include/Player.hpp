@@ -14,7 +14,7 @@ struct Controls /// Controls for the player - movement and serve
     sf::Keyboard::Key left, right, start;
     Controls(sf::Keyboard::Key left, sf::Keyboard::Key right, sf::Keyboard::Key start) : left(left), right(right), start(start){};
 };
-
+/// Class of a paddle
 class Player : public Object
 {
 private:

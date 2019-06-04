@@ -9,11 +9,11 @@
 void PlayState::init(GameEngine *game)
 {
     std::cout << "PlayState::init()" << std::endl;
-    game->ball.setPosition(sf::Vector2f(300, 270));
-    game->ball.setSpeed(sf::Vector2f(0.2, -0.2));
+    game->ball.setPosition(sf::Vector2f(270, 290));
+    game->ball.setSpeed(sf::Vector2f(0.15, 0.15));
     game->p1.setPosition(sf::Vector2f(300, 320));
 
-    generateLevel(game);
+    LevelGenerator::generateLevel(game);
 }
 
 void PlayState::cleanup(GameEngine *game)
@@ -83,6 +83,7 @@ void PlayState::update(GameEngine *game)
                 i = game->blocks.erase(i);
             }
             (game->ball.whoHit == p1) ? game->p1 += 100 : game->p2 += 100;
+            std::cout<<game->p1.getScore();
         }
     }
 
@@ -126,6 +127,7 @@ void PlayState::update(GameEngine *game)
                 i = game->blocks.erase(i);
             }
             (game->ball.whoHit == p1) ? game->p1 += 100 : game->p2 += 100;
+            std::cout<<game->ball.whoHit;
         }
     }
 }
@@ -144,12 +146,12 @@ void PlayState::render(GameEngine *game)
         return;
     }
 
-    // sf::Text p1Life("Lifes left: " + std::to_string(game->p1.getHp()), font, 20);
-    // p1Life.setPosition(0, 0);
-    // sf::Text p1Points("Score: " + std::to_string(game->p1.getScore()), font, 20);
-    // p1Points.setPosition(500, 0);
-    // game->window.draw(p1Points);
-    // game->window.draw(p1Life);
+    sf::Text p1Life("Lifes left: " + std::to_string(game->p1.getHp()), font, 20);
+    p1Life.setPosition(0, game->getVirtualSize().y-p1Life.getLocalBounds().height-5);
+    sf::Text p1Points("Score: " + std::to_string(game->p1.getScore()), font, 20);
+    p1Points.setPosition(game->getVirtualSize().x-p1Points.getLocalBounds().width, game->getVirtualSize().y - p1Life.getLocalBounds().height - 5);
+    game->window.draw(p1Points);
+    game->window.draw(p1Life);
 
     game->ball.draw(game);
     game->p1.draw(game);

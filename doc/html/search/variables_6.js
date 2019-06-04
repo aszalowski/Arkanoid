@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['whohit',['whoHit',['../class_ball.html#aad64a181e6e7c8e028dddde82403c9e5',1,'Ball']]],
-  ['window',['window',['../class_game_engine.html#ac91a68b9e136eda3dc8cabcb46a5dbaa',1,'GameEngine']]]
+  ['gap',['gap',['../class_sprite_manager.html#a57bba66a27411c59651af826b50ec11d',1,'SpriteManager']]],
+  ['grey',['GREY',['../class_button.html#afc0927052e6f57f0cfc7521953421617',1,'Button']]]
 ];

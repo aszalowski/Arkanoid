@@ -6,7 +6,7 @@
 
 #include "BaseMenuState.hpp"
 #include "GameEngine.hpp"
-
+///Pause - accessible with Escape button
 class PauseState : public BaseMenuState {
     public:
         void init(GameEngine *game);

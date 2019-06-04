@@ -1,40 +1,103 @@
 \hypertarget{class_sprite_manager}{}\section{Sprite\+Manager Class Reference}
 \label{class_sprite_manager}\index{SpriteManager@{SpriteManager}}
+
+
+Manager used for easier modifying Sprites.  
+
+
+
+
+{\ttfamily \#include $<$Sprite\+Manager.\+hpp$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_sprite_manager_a6bc9f6b77d54099de6fcf84ec1e360bd}\label{class_sprite_manager_a6bc9f6b77d54099de6fcf84ec1e360bd}} 
-void {\bfseries init} (sf\+::\+Texture $\ast$texture, const sf\+::\+Int\+Rect \&initial\+Rect, const sf\+::\+Vector2f \&position, int gap=0)
+void \mbox{\hyperlink{class_sprite_manager_a6bc9f6b77d54099de6fcf84ec1e360bd}{init}} (sf\+::\+Texture $\ast$texture, const sf\+::\+Int\+Rect \&initial\+Rect, const sf\+::\+Vector2f \&position, int \mbox{\hyperlink{class_sprite_manager_a57bba66a27411c59651af826b50ec11d}{gap}}=0)
 \item 
-\mbox{\Hypertarget{class_sprite_manager_a9c0af555f22c9ea83a07ae3d1818db0e}\label{class_sprite_manager_a9c0af555f22c9ea83a07ae3d1818db0e}} 
-sf\+::\+Sprite $\ast$ {\bfseries get\+Sprite} ()
+sf\+::\+Sprite $\ast$ \mbox{\hyperlink{class_sprite_manager_a9c0af555f22c9ea83a07ae3d1818db0e}{get\+Sprite}} ()
 \item 
-\mbox{\Hypertarget{class_sprite_manager_af51994d0f3a5e847a8c55bb022f8b1e2}\label{class_sprite_manager_af51994d0f3a5e847a8c55bb022f8b1e2}} 
-sf\+::\+Int\+Rect {\bfseries get\+Texture\+Rect} ()
+sf\+::\+Int\+Rect \mbox{\hyperlink{class_sprite_manager_af51994d0f3a5e847a8c55bb022f8b1e2}{get\+Texture\+Rect}} ()
 \item 
-\mbox{\Hypertarget{class_sprite_manager_af4b1373fb34c1bf091e5023fe52c1bc0}\label{class_sprite_manager_af4b1373fb34c1bf091e5023fe52c1bc0}} 
-sf\+::\+Float\+Rect {\bfseries get\+Global\+Bounds} ()
+sf\+::\+Float\+Rect \mbox{\hyperlink{class_sprite_manager_af4b1373fb34c1bf091e5023fe52c1bc0}{get\+Global\+Bounds}} ()
 \item 
-\mbox{\Hypertarget{class_sprite_manager_a9ef427743db56baec20673d877a63717}\label{class_sprite_manager_a9ef427743db56baec20673d877a63717}} 
-void {\bfseries set\+Position} (const sf\+::\+Vector2f \&position)
+void \mbox{\hyperlink{class_sprite_manager_a9ef427743db56baec20673d877a63717}{set\+Position}} (const sf\+::\+Vector2f \&position)
 \item 
-\mbox{\Hypertarget{class_sprite_manager_acdcd181f96ed049db0bf445a71e4b6e2}\label{class_sprite_manager_acdcd181f96ed049db0bf445a71e4b6e2}} 
-void {\bfseries next} ()
+void \mbox{\hyperlink{class_sprite_manager_acdcd181f96ed049db0bf445a71e4b6e2}{next}} ()
 \item 
-\mbox{\Hypertarget{class_sprite_manager_a45d2b2613bb95d34ce8e0ad28e261ef1}\label{class_sprite_manager_a45d2b2613bb95d34ce8e0ad28e261ef1}} 
-void {\bfseries prev} ()
+void \mbox{\hyperlink{class_sprite_manager_a45d2b2613bb95d34ce8e0ad28e261ef1}{prev}} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_sprite_manager_aaa4c24e6db93bef8a28b38cb8de839c1}\label{class_sprite_manager_aaa4c24e6db93bef8a28b38cb8de839c1}} 
-sf\+::\+Sprite {\bfseries sprite}
+sf\+::\+Sprite \mbox{\hyperlink{class_sprite_manager_aaa4c24e6db93bef8a28b38cb8de839c1}{sprite}}
 \item 
-\mbox{\Hypertarget{class_sprite_manager_a57bba66a27411c59651af826b50ec11d}\label{class_sprite_manager_a57bba66a27411c59651af826b50ec11d}} 
-int {\bfseries gap}
+int \mbox{\hyperlink{class_sprite_manager_a57bba66a27411c59651af826b50ec11d}{gap}}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manager used for easier modifying Sprites. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sprite_manager_af4b1373fb34c1bf091e5023fe52c1bc0}\label{class_sprite_manager_af4b1373fb34c1bf091e5023fe52c1bc0}} 
+\index{SpriteManager@{SpriteManager}!getGlobalBounds@{getGlobalBounds}}
+\index{getGlobalBounds@{getGlobalBounds}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{getGlobalBounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect Sprite\+Manager\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_sprite_manager_a9c0af555f22c9ea83a07ae3d1818db0e}\label{class_sprite_manager_a9c0af555f22c9ea83a07ae3d1818db0e}} 
+\index{SpriteManager@{SpriteManager}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite$\ast$ Sprite\+Manager\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_sprite_manager_af51994d0f3a5e847a8c55bb022f8b1e2}\label{class_sprite_manager_af51994d0f3a5e847a8c55bb022f8b1e2}} 
+\index{SpriteManager@{SpriteManager}!getTextureRect@{getTextureRect}}
+\index{getTextureRect@{getTextureRect}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{getTextureRect()}{getTextureRect()}}
+{\footnotesize\ttfamily sf\+::\+Int\+Rect Sprite\+Manager\+::get\+Texture\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_sprite_manager_a6bc9f6b77d54099de6fcf84ec1e360bd}\label{class_sprite_manager_a6bc9f6b77d54099de6fcf84ec1e360bd}} 
+\index{SpriteManager@{SpriteManager}!init@{init}}
+\index{init@{init}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Sprite\+Manager\+::init (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{texture,  }\item[{const sf\+::\+Int\+Rect \&}]{initial\+Rect,  }\item[{const sf\+::\+Vector2f \&}]{position,  }\item[{int}]{gap = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_manager_acdcd181f96ed049db0bf445a71e4b6e2}\label{class_sprite_manager_acdcd181f96ed049db0bf445a71e4b6e2}} 
+\index{SpriteManager@{SpriteManager}!next@{next}}
+\index{next@{next}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily void Sprite\+Manager\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_manager_a45d2b2613bb95d34ce8e0ad28e261ef1}\label{class_sprite_manager_a45d2b2613bb95d34ce8e0ad28e261ef1}} 
+\index{SpriteManager@{SpriteManager}!prev@{prev}}
+\index{prev@{prev}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{prev()}{prev()}}
+{\footnotesize\ttfamily void Sprite\+Manager\+::prev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_manager_a9ef427743db56baec20673d877a63717}\label{class_sprite_manager_a9ef427743db56baec20673d877a63717}} 
+\index{SpriteManager@{SpriteManager}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Sprite\+Manager\+::set\+Position (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sprite_manager_a57bba66a27411c59651af826b50ec11d}\label{class_sprite_manager_a57bba66a27411c59651af826b50ec11d}} 
+\index{SpriteManager@{SpriteManager}!gap@{gap}}
+\index{gap@{gap}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{gap}{gap}}
+{\footnotesize\ttfamily int Sprite\+Manager\+::gap\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_sprite_manager_aaa4c24e6db93bef8a28b38cb8de839c1}\label{class_sprite_manager_aaa4c24e6db93bef8a28b38cb8de839c1}} 
+\index{SpriteManager@{SpriteManager}!sprite@{sprite}}
+\index{sprite@{sprite}!SpriteManager@{SpriteManager}}
+\subsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite Sprite\+Manager\+::sprite\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/Sprite\+Manager.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{_sprite_manager_8hpp}{Sprite\+Manager.\+hpp}}\end{DoxyCompactItemize}

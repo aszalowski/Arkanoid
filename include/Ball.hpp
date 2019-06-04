@@ -15,9 +15,7 @@ enum HitBy
     p1 = 1,
     p2 = 2
 };
-/** 
- * Ball class 
-*/
+///Class of ball
 class Ball : public Object 
 {
 private:

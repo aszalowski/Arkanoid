@@ -5,7 +5,7 @@
 #include "Buttons.hpp"
 #include "SpriteManager.hpp"
 
-
+///Menu state in single player
 class SingleMenuState : public BaseMenuState
 {
     public:

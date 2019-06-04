@@ -69,40 +69,259 @@ $(function() {
 <div class="title">SpriteManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manager used for easier modifying Sprites.  
+ <a href="class_sprite_manager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_sprite_manager_8hpp_source.html">SpriteManager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6bc9f6b77d54099de6fcf84ec1e360bd"><td class="memItemLeft" align="right" valign="top"><a id="a6bc9f6b77d54099de6fcf84ec1e360bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (sf::Texture *texture, const sf::IntRect &amp;initialRect, const sf::Vector2f &amp;position, int gap=0)</td></tr>
+<tr class="memitem:a6bc9f6b77d54099de6fcf84ec1e360bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#a6bc9f6b77d54099de6fcf84ec1e360bd">init</a> (sf::Texture *texture, const sf::IntRect &amp;initialRect, const sf::Vector2f &amp;position, int <a class="el" href="class_sprite_manager.html#a57bba66a27411c59651af826b50ec11d">gap</a>=0)</td></tr>
 <tr class="separator:a6bc9f6b77d54099de6fcf84ec1e360bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c0af555f22c9ea83a07ae3d1818db0e"><td class="memItemLeft" align="right" valign="top"><a id="a9c0af555f22c9ea83a07ae3d1818db0e"></a>
-sf::Sprite *&#160;</td><td class="memItemRight" valign="bottom"><b>getSprite</b> ()</td></tr>
+<tr class="memitem:a9c0af555f22c9ea83a07ae3d1818db0e"><td class="memItemLeft" align="right" valign="top">sf::Sprite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#a9c0af555f22c9ea83a07ae3d1818db0e">getSprite</a> ()</td></tr>
 <tr class="separator:a9c0af555f22c9ea83a07ae3d1818db0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af51994d0f3a5e847a8c55bb022f8b1e2"><td class="memItemLeft" align="right" valign="top"><a id="af51994d0f3a5e847a8c55bb022f8b1e2"></a>
-sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><b>getTextureRect</b> ()</td></tr>
+<tr class="memitem:af51994d0f3a5e847a8c55bb022f8b1e2"><td class="memItemLeft" align="right" valign="top">sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#af51994d0f3a5e847a8c55bb022f8b1e2">getTextureRect</a> ()</td></tr>
 <tr class="separator:af51994d0f3a5e847a8c55bb022f8b1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4b1373fb34c1bf091e5023fe52c1bc0"><td class="memItemLeft" align="right" valign="top"><a id="af4b1373fb34c1bf091e5023fe52c1bc0"></a>
-sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><b>getGlobalBounds</b> ()</td></tr>
+<tr class="memitem:af4b1373fb34c1bf091e5023fe52c1bc0"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#af4b1373fb34c1bf091e5023fe52c1bc0">getGlobalBounds</a> ()</td></tr>
 <tr class="separator:af4b1373fb34c1bf091e5023fe52c1bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ef427743db56baec20673d877a63717"><td class="memItemLeft" align="right" valign="top"><a id="a9ef427743db56baec20673d877a63717"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (const sf::Vector2f &amp;position)</td></tr>
+<tr class="memitem:a9ef427743db56baec20673d877a63717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#a9ef427743db56baec20673d877a63717">setPosition</a> (const sf::Vector2f &amp;position)</td></tr>
 <tr class="separator:a9ef427743db56baec20673d877a63717"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdcd181f96ed049db0bf445a71e4b6e2"><td class="memItemLeft" align="right" valign="top"><a id="acdcd181f96ed049db0bf445a71e4b6e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> ()</td></tr>
+<tr class="memitem:acdcd181f96ed049db0bf445a71e4b6e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#acdcd181f96ed049db0bf445a71e4b6e2">next</a> ()</td></tr>
 <tr class="separator:acdcd181f96ed049db0bf445a71e4b6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45d2b2613bb95d34ce8e0ad28e261ef1"><td class="memItemLeft" align="right" valign="top"><a id="a45d2b2613bb95d34ce8e0ad28e261ef1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>prev</b> ()</td></tr>
+<tr class="memitem:a45d2b2613bb95d34ce8e0ad28e261ef1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#a45d2b2613bb95d34ce8e0ad28e261ef1">prev</a> ()</td></tr>
 <tr class="separator:a45d2b2613bb95d34ce8e0ad28e261ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aaa4c24e6db93bef8a28b38cb8de839c1"><td class="memItemLeft" align="right" valign="top"><a id="aaa4c24e6db93bef8a28b38cb8de839c1"></a>
-sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><b>sprite</b></td></tr>
+<tr class="memitem:aaa4c24e6db93bef8a28b38cb8de839c1"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#aaa4c24e6db93bef8a28b38cb8de839c1">sprite</a></td></tr>
 <tr class="separator:aaa4c24e6db93bef8a28b38cb8de839c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57bba66a27411c59651af826b50ec11d"><td class="memItemLeft" align="right" valign="top"><a id="a57bba66a27411c59651af826b50ec11d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>gap</b></td></tr>
+<tr class="memitem:a57bba66a27411c59651af826b50ec11d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_manager.html#a57bba66a27411c59651af826b50ec11d">gap</a></td></tr>
 <tr class="separator:a57bba66a27411c59651af826b50ec11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manager used for easier modifying Sprites. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af4b1373fb34c1bf091e5023fe52c1bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b1373fb34c1bf091e5023fe52c1bc0">&#9670;&nbsp;</a></span>getGlobalBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::FloatRect SpriteManager::getGlobalBounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c0af555f22c9ea83a07ae3d1818db0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0af555f22c9ea83a07ae3d1818db0e">&#9670;&nbsp;</a></span>getSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sprite* SpriteManager::getSprite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af51994d0f3a5e847a8c55bb022f8b1e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af51994d0f3a5e847a8c55bb022f8b1e2">&#9670;&nbsp;</a></span>getTextureRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::IntRect SpriteManager::getTextureRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bc9f6b77d54099de6fcf84ec1e360bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc9f6b77d54099de6fcf84ec1e360bd">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteManager::init </td>
+          <td>(</td>
+          <td class="paramtype">sf::Texture *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::IntRect &amp;&#160;</td>
+          <td class="paramname"><em>initialRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>gap</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdcd181f96ed049db0bf445a71e4b6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcd181f96ed049db0bf445a71e4b6e2">&#9670;&nbsp;</a></span>next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteManager::next </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45d2b2613bb95d34ce8e0ad28e261ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d2b2613bb95d34ce8e0ad28e261ef1">&#9670;&nbsp;</a></span>prev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteManager::prev </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ef427743db56baec20673d877a63717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef427743db56baec20673d877a63717">&#9670;&nbsp;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpriteManager::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a57bba66a27411c59651af826b50ec11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57bba66a27411c59651af826b50ec11d">&#9670;&nbsp;</a></span>gap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SpriteManager::gap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa4c24e6db93bef8a28b38cb8de839c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4c24e6db93bef8a28b38cb8de839c1">&#9670;&nbsp;</a></span>sprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sprite SpriteManager::sprite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="_sprite_manager_8hpp_source.html">SpriteManager.hpp</a></li>
 </ul>

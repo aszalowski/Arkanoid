@@ -1,4 +1,22 @@
 var searchData=
 [
-  ['init',['init',['../class_base_menu_state.html#ae29d522c56a4582ce79e113426421741',1,'BaseMenuState::init()'],['../class_game_state.html#a10b6e6bb31591c70d08ffcee5f29fa81',1,'GameState::init()'],['../class_hot_seat_menu_state.html#a29beb4656c180d0cfc3b8ca20ae2d172',1,'HotSeatMenuState::init()'],['../class_hot_seat_play_state.html#a2d1a6b35aac53c988e7b036d89794e70',1,'HotSeatPlayState::init()'],['../class_main_menu_state.html#a83efff7f63145d55d1937e76970d2a25',1,'MainMenuState::init()'],['../class_p2_serve_state.html#a7f6cbb73e0d08949e3df08b97ba089f5',1,'P2ServeState::init()'],['../class_pause_state.html#a1e3378e3a16fc37c87c12f854d86005b',1,'PauseState::init()'],['../class_play_state.html#ae5761f09579d0f1800253764f2d68218',1,'PlayState::init()'],['../class_serve_state.html#ab39cdbf8c6fe8bbcf67d29033c3e2c15',1,'ServeState::init()'],['../class_single_menu_state.html#a9494d848c97fe4d406f122f3d97bc38d',1,'SingleMenuState::init()']]]
+  ['gameengine',['GameEngine',['../class_game_engine.html',1,'GameEngine'],['../class_game_engine.html#a5365f65c15fa45ab2f6e4e661f6fbd5f',1,'GameEngine::GameEngine()']]],
+  ['gameengine_2ehpp',['GameEngine.hpp',['../_game_engine_8hpp.html',1,'']]],
+  ['gamestate',['GameState',['../class_game_state.html',1,'GameState'],['../class_game_state.html#a4fa0a2bf50315c4a35a3890a0adcee5c',1,'GameState::GameState()']]],
+  ['gamestate_2ehpp',['GameState.hpp',['../_game_state_8hpp.html',1,'']]],
+  ['gap',['gap',['../class_sprite_manager.html#a57bba66a27411c59651af826b50ec11d',1,'SpriteManager']]],
+  ['generatelevel',['generateLevel',['../namespace_level_generator.html#a58091b227ed84d1ed1aba4b2874fbcb6',1,'LevelGenerator']]],
+  ['get',['get',['../class_resource_menager.html#a1c75062d799f0baa37cfa4bbbc9a5779',1,'ResourceMenager']]],
+  ['getelapsedtime',['getElapsedTime',['../class_game_engine.html#a83d4cc180c4ad2c7db5224ce840140e1',1,'GameEngine']]],
+  ['getglobalbounds',['getGlobalBounds',['../class_button.html#ab9d2e98e4940309543a9c94509f99437',1,'Button::getGlobalBounds()'],['../class_sprite_manager.html#af4b1373fb34c1bf091e5023fe52c1bc0',1,'SpriteManager::getGlobalBounds()']]],
+  ['gethp',['getHp',['../class_block.html#a01788216d95ab7230287cb0d58a19c34',1,'Block::getHp()'],['../class_player.html#ad9329ace9778fed6665610d53842f37a',1,'Player::getHp()']]],
+  ['getmovestep',['getMoveStep',['../class_player.html#afb255210e4ca1d463c18b4a5aa26a1e0',1,'Player']]],
+  ['getposition',['getPosition',['../class_ball.html#a672da3b511f6b30fde82a63927fe8174',1,'Ball::getPosition()'],['../class_block.html#ae7621aaed284804fc898174207eb1587',1,'Block::getPosition()'],['../class_button.html#a01ff4aace35c7d0c4d8b35eda290378f',1,'Button::getPosition()'],['../class_object.html#a3fd6370b8cfc53e5e41d09704726c2d4',1,'Object::getPosition()'],['../class_player.html#a6599dac14c1f2ac94e9160c99376333e',1,'Player::getPosition()']]],
+  ['getscore',['getScore',['../class_player.html#a7ecb56acd6bf6d77bbc3ff7f3d8cf7d8',1,'Player::getScore()'],['../class_player.html#a5e084d1d883eeade8a73df72cdd855be',1,'Player::getScore() const']]],
+  ['getscreenratio',['getScreenRatio',['../class_game_engine.html#a6328d97829e7f0a79a5672c5dd040592',1,'GameEngine']]],
+  ['getspeed',['getSpeed',['../class_ball.html#a9986943aa6685d80f65d441dd68c2e69',1,'Ball']]],
+  ['getsprite',['getSprite',['../class_ball.html#a2f85e93bd6650f5c5cbf4a0dbd961ca4',1,'Ball::getSprite()'],['../class_block.html#a40e27a756a586c9784d4023163bf92ef',1,'Block::getSprite()'],['../class_player.html#aa84e6c6cc5f2f263b9ff9841286d8c42',1,'Player::getSprite()'],['../class_sprite_manager.html#a9c0af555f22c9ea83a07ae3d1818db0e',1,'SpriteManager::getSprite()']]],
+  ['gettexturerect',['getTextureRect',['../class_sprite_manager.html#af51994d0f3a5e847a8c55bb022f8b1e2',1,'SpriteManager']]],
+  ['getvirtualsize',['getVirtualSize',['../class_game_engine.html#a77d8443f4919f8eca96acfb40e6b64bd',1,'GameEngine']]],
+  ['grey',['GREY',['../class_button.html#afc0927052e6f57f0cfc7521953421617',1,'Button']]]
 ];

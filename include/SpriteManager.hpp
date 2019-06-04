@@ -2,7 +2,7 @@
 #define __SPRITEMANAGER_HPP__
 
 #include <SFML/Graphics.hpp>
-
+///Manager used for easier modifying Sprites
 class SpriteManager
 {
     public:

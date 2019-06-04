@@ -5,7 +5,7 @@
 
 #include "GameEngine.hpp"
 
-class GameState
+class GameState /// Abstract class - single state of the game
 {
 public:
     virtual void init(GameEngine *game) = 0;    ///< Initializes GameState

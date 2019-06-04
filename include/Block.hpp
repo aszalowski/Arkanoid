@@ -9,7 +9,7 @@
 #include "Collision.hpp"
 
 class GameEngine;
-
+///Class of block - destroyable object in the PlayState
 class Block : public Object
 {
 private:

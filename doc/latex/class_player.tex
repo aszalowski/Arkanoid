@@ -1,5 +1,14 @@
 \hypertarget{class_player}{}\section{Player Class Reference}
 \label{class_player}\index{Player@{Player}}
+
+
+Class of a paddle.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+hpp$>$}
+
 Inheritance diagram for Player\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,83 +18,247 @@ Inheritance diagram for Player\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_player_aa1b5d40a7f5e26c7588b64ec515d7de7}\label{class_player_aa1b5d40a7f5e26c7588b64ec515d7de7}} 
-{\bfseries Player} (int index, sf\+::\+Keyboard\+::\+Key left, sf\+::\+Keyboard\+::\+Key right, sf\+::\+Keyboard\+::\+Key start)
+\mbox{\hyperlink{class_player_aa1b5d40a7f5e26c7588b64ec515d7de7}{Player}} (int \mbox{\hyperlink{class_player_a1d1f9fee5f774351292af1d0cfa7d65c}{index}}, sf\+::\+Keyboard\+::\+Key left, sf\+::\+Keyboard\+::\+Key right, sf\+::\+Keyboard\+::\+Key start)
 \item 
-\mbox{\Hypertarget{class_player_a6599dac14c1f2ac94e9160c99376333e}\label{class_player_a6599dac14c1f2ac94e9160c99376333e}} 
-const sf\+::\+Vector2f {\bfseries get\+Position} () const
+\mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player}} ()
 \item 
-\mbox{\Hypertarget{class_player_a9f37a6ecb0abbea3eed1348266135879}\label{class_player_a9f37a6ecb0abbea3eed1348266135879}} 
-void {\bfseries set\+Position} (const sf\+::\+Vector2f \&)
+const sf\+::\+Vector2f \mbox{\hyperlink{class_player_a6599dac14c1f2ac94e9160c99376333e}{get\+Position}} () const
 \item 
-\mbox{\Hypertarget{class_player_ab9820af1d231f97e0499b70ed6b34196}\label{class_player_ab9820af1d231f97e0499b70ed6b34196}} 
-void {\bfseries set\+Controls} (sf\+::\+Keyboard\+::\+Key, sf\+::\+Keyboard\+::\+Key, sf\+::\+Keyboard\+::\+Key)
+void \mbox{\hyperlink{class_player_a9f37a6ecb0abbea3eed1348266135879}{set\+Position}} (const sf\+::\+Vector2f \&)
 \item 
-\mbox{\Hypertarget{class_player_a7f5f3ce419bc062ab59b6f689c24a5a6}\label{class_player_a7f5f3ce419bc062ab59b6f689c24a5a6}} 
-void {\bfseries set\+Texture} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$)
+void \mbox{\hyperlink{class_player_ab9820af1d231f97e0499b70ed6b34196}{set\+Controls}} (sf\+::\+Keyboard\+::\+Key, sf\+::\+Keyboard\+::\+Key, sf\+::\+Keyboard\+::\+Key)
 \item 
-\mbox{\Hypertarget{class_player_a7d0ef1fb581ee3cc89f85c50c9c2c9ad}\label{class_player_a7d0ef1fb581ee3cc89f85c50c9c2c9ad}} 
-void {\bfseries set\+Texture} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$, std\+::string, sf\+::\+Int\+Rect)
+void \mbox{\hyperlink{class_player_a7f5f3ce419bc062ab59b6f689c24a5a6}{set\+Texture}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$)
 \item 
-\mbox{\Hypertarget{class_player_a8053d861a3d9d0f91fd7e35a38e7ce14}\label{class_player_a8053d861a3d9d0f91fd7e35a38e7ce14}} 
-void {\bfseries set\+Score} (const uint \&new\+Score)
+void \mbox{\hyperlink{class_player_a7d0ef1fb581ee3cc89f85c50c9c2c9ad}{set\+Texture}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$, std\+::string, sf\+::\+Int\+Rect)
 \item 
-\mbox{\Hypertarget{class_player_a7ecb56acd6bf6d77bbc3ff7f3d8cf7d8}\label{class_player_a7ecb56acd6bf6d77bbc3ff7f3d8cf7d8}} 
-uint {\bfseries get\+Score} ()
+void \mbox{\hyperlink{class_player_a8053d861a3d9d0f91fd7e35a38e7ce14}{set\+Score}} (const uint \&new\+Score)
 \item 
-\mbox{\Hypertarget{class_player_ad9329ace9778fed6665610d53842f37a}\label{class_player_ad9329ace9778fed6665610d53842f37a}} 
-uint {\bfseries get\+Hp} ()
+uint \mbox{\hyperlink{class_player_a7ecb56acd6bf6d77bbc3ff7f3d8cf7d8}{get\+Score}} ()
 \item 
-\mbox{\Hypertarget{class_player_aa84e6c6cc5f2f263b9ff9841286d8c42}\label{class_player_aa84e6c6cc5f2f263b9ff9841286d8c42}} 
-const sf\+::\+Sprite \& {\bfseries get\+Sprite} () const
+uint \mbox{\hyperlink{class_player_ad9329ace9778fed6665610d53842f37a}{get\+Hp}} ()
 \item 
-\mbox{\Hypertarget{class_player_af61ca52f651c2be22d1606a031d919eb}\label{class_player_af61ca52f651c2be22d1606a031d919eb}} 
-sf\+::\+Sprite \& {\bfseries modify\+Sprite} ()
+const sf\+::\+Sprite \& \mbox{\hyperlink{class_player_aa84e6c6cc5f2f263b9ff9841286d8c42}{get\+Sprite}} () const
 \item 
-\mbox{\Hypertarget{class_player_a5e084d1d883eeade8a73df72cdd855be}\label{class_player_a5e084d1d883eeade8a73df72cdd855be}} 
-const uint {\bfseries get\+Score} () const
+sf\+::\+Sprite \& \mbox{\hyperlink{class_player_af61ca52f651c2be22d1606a031d919eb}{modify\+Sprite}} ()
 \item 
-\mbox{\Hypertarget{class_player_afb255210e4ca1d463c18b4a5aa26a1e0}\label{class_player_afb255210e4ca1d463c18b4a5aa26a1e0}} 
-const float {\bfseries get\+Move\+Step} () const
+const uint \mbox{\hyperlink{class_player_a5e084d1d883eeade8a73df72cdd855be}{get\+Score}} () const
 \item 
-\mbox{\Hypertarget{class_player_a658ca673f68b8ba14f888b313f2f8fd3}\label{class_player_a658ca673f68b8ba14f888b313f2f8fd3}} 
-void {\bfseries set\+Move\+Step} (float \&new\+Step)
+const float \mbox{\hyperlink{class_player_afb255210e4ca1d463c18b4a5aa26a1e0}{get\+Move\+Step}} () const
 \item 
-\mbox{\Hypertarget{class_player_a234802f1731a329b697fde399a20d0ad}\label{class_player_a234802f1731a329b697fde399a20d0ad}} 
+void \mbox{\hyperlink{class_player_a658ca673f68b8ba14f888b313f2f8fd3}{set\+Move\+Step}} (float \&new\+Step)
+\item 
 void \mbox{\hyperlink{class_player_a234802f1731a329b697fde399a20d0ad}{operator+=}} (uint points)
 \begin{DoxyCompactList}\small\item\em Adds score. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_ac56de355f4f7079ddc994ea16f05cda2}\label{class_player_ac56de355f4f7079ddc994ea16f05cda2}} 
 \mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_player_ac56de355f4f7079ddc994ea16f05cda2}{operator-\/-\/}} (int)
 \begin{DoxyCompactList}\small\item\em Descreses health points. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_player_aef0d42bebee03ea367cc38d07d614536}\label{class_player_aef0d42bebee03ea367cc38d07d614536}} 
-void {\bfseries move} (int side, sf\+::\+Vector2u, uint)
+void \mbox{\hyperlink{class_player_aef0d42bebee03ea367cc38d07d614536}{move}} (int side, sf\+::\+Vector2u, uint)
 \item 
-\mbox{\Hypertarget{class_player_aaa0642fde01a4db5e9ee95693805ecda}\label{class_player_aaa0642fde01a4db5e9ee95693805ecda}} 
 void \mbox{\hyperlink{class_player_aaa0642fde01a4db5e9ee95693805ecda}{draw}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game) const
 \begin{DoxyCompactList}\small\item\em Drawing object on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_player_a1d1f9fee5f774351292af1d0cfa7d65c}\label{class_player_a1d1f9fee5f774351292af1d0cfa7d65c}} 
-int {\bfseries index}
+int \mbox{\hyperlink{class_player_a1d1f9fee5f774351292af1d0cfa7d65c}{index}}
 \item 
-\mbox{\Hypertarget{class_player_a2baad6b9a274417a7374baf11d5f723d}\label{class_player_a2baad6b9a274417a7374baf11d5f723d}} 
-int {\bfseries hp} = 3
+int \mbox{\hyperlink{class_player_a2baad6b9a274417a7374baf11d5f723d}{hp}} = 3
 \item 
-\mbox{\Hypertarget{class_player_ab8b3c0ffbde70b09f2ad4d230478f33b}\label{class_player_ab8b3c0ffbde70b09f2ad4d230478f33b}} 
-uint {\bfseries score} = 0
+uint \mbox{\hyperlink{class_player_ab8b3c0ffbde70b09f2ad4d230478f33b}{score}} = 0
 \item 
-\mbox{\Hypertarget{class_player_a13625a09fdc72185e82ff5f6894049af}\label{class_player_a13625a09fdc72185e82ff5f6894049af}} 
-\mbox{\hyperlink{struct_controls}{Controls}} {\bfseries controls}
+\mbox{\hyperlink{struct_controls}{Controls}} \mbox{\hyperlink{class_player_a13625a09fdc72185e82ff5f6894049af}{controls}}
 \item 
-\mbox{\Hypertarget{class_player_a19bc8731e5e84613a2ae7c4b5134dfab}\label{class_player_a19bc8731e5e84613a2ae7c4b5134dfab}} 
-sf\+::\+Sprite {\bfseries sprite}
+sf\+::\+Sprite \mbox{\hyperlink{class_player_a19bc8731e5e84613a2ae7c4b5134dfab}{sprite}}
 \item 
-\mbox{\Hypertarget{class_player_aca3b0c23e14b372078c31cdb7906032c}\label{class_player_aca3b0c23e14b372078c31cdb7906032c}} 
-float {\bfseries move\+Step} = 0.\+5
+float \mbox{\hyperlink{class_player_aca3b0c23e14b372078c31cdb7906032c}{move\+Step}} = 0.\+5
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class of a paddle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_aa1b5d40a7f5e26c7588b64ec515d7de7}\label{class_player_aa1b5d40a7f5e26c7588b64ec515d7de7}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{sf\+::\+Keyboard\+::\+Key}]{left,  }\item[{sf\+::\+Keyboard\+::\+Key}]{right,  }\item[{sf\+::\+Keyboard\+::\+Key}]{start }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}} 
+\index{Player@{Player}!````~Player@{$\sim$Player}}
+\index{````~Player@{$\sim$Player}!Player@{Player}}
+\subsubsection{\texorpdfstring{$\sim$Player()}{~Player()}}
+{\footnotesize\ttfamily Player\+::$\sim$\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_aaa0642fde01a4db5e9ee95693805ecda}\label{class_player_aaa0642fde01a4db5e9ee95693805ecda}} 
+\index{Player@{Player}!draw@{draw}}
+\index{draw@{draw}!Player@{Player}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Player\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Drawing object on the screen. 
+
+
+
+Implements \mbox{\hyperlink{class_object_af9862406dcd271bd45580737df468af4}{Object}}.
+
+\mbox{\Hypertarget{class_player_ad9329ace9778fed6665610d53842f37a}\label{class_player_ad9329ace9778fed6665610d53842f37a}} 
+\index{Player@{Player}!getHp@{getHp}}
+\index{getHp@{getHp}!Player@{Player}}
+\subsubsection{\texorpdfstring{getHp()}{getHp()}}
+{\footnotesize\ttfamily uint Player\+::get\+Hp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_afb255210e4ca1d463c18b4a5aa26a1e0}\label{class_player_afb255210e4ca1d463c18b4a5aa26a1e0}} 
+\index{Player@{Player}!getMoveStep@{getMoveStep}}
+\index{getMoveStep@{getMoveStep}!Player@{Player}}
+\subsubsection{\texorpdfstring{getMoveStep()}{getMoveStep()}}
+{\footnotesize\ttfamily const float Player\+::get\+Move\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_a6599dac14c1f2ac94e9160c99376333e}\label{class_player_a6599dac14c1f2ac94e9160c99376333e}} 
+\index{Player@{Player}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Player@{Player}}
+\subsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f Player\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_object_a3fd6370b8cfc53e5e41d09704726c2d4}{Object}}.
+
+\mbox{\Hypertarget{class_player_a7ecb56acd6bf6d77bbc3ff7f3d8cf7d8}\label{class_player_a7ecb56acd6bf6d77bbc3ff7f3d8cf7d8}} 
+\index{Player@{Player}!getScore@{getScore}}
+\index{getScore@{getScore}!Player@{Player}}
+\subsubsection{\texorpdfstring{getScore()}{getScore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint Player\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_a5e084d1d883eeade8a73df72cdd855be}\label{class_player_a5e084d1d883eeade8a73df72cdd855be}} 
+\index{Player@{Player}!getScore@{getScore}}
+\index{getScore@{getScore}!Player@{Player}}
+\subsubsection{\texorpdfstring{getScore()}{getScore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const uint Player\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_aa84e6c6cc5f2f263b9ff9841286d8c42}\label{class_player_aa84e6c6cc5f2f263b9ff9841286d8c42}} 
+\index{Player@{Player}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!Player@{Player}}
+\subsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily const sf\+::\+Sprite\& Player\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_af61ca52f651c2be22d1606a031d919eb}\label{class_player_af61ca52f651c2be22d1606a031d919eb}} 
+\index{Player@{Player}!modifySprite@{modifySprite}}
+\index{modifySprite@{modifySprite}!Player@{Player}}
+\subsubsection{\texorpdfstring{modifySprite()}{modifySprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite\& Player\+::modify\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_aef0d42bebee03ea367cc38d07d614536}\label{class_player_aef0d42bebee03ea367cc38d07d614536}} 
+\index{Player@{Player}!move@{move}}
+\index{move@{move}!Player@{Player}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Player\+::move (\begin{DoxyParamCaption}\item[{int}]{side,  }\item[{sf\+::\+Vector2u}]{,  }\item[{uint}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a234802f1731a329b697fde399a20d0ad}\label{class_player_a234802f1731a329b697fde399a20d0ad}} 
+\index{Player@{Player}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Player@{Player}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily void Player\+::operator+= (\begin{DoxyParamCaption}\item[{uint}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds score. 
+
+\mbox{\Hypertarget{class_player_ac56de355f4f7079ddc994ea16f05cda2}\label{class_player_ac56de355f4f7079ddc994ea16f05cda2}} 
+\index{Player@{Player}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Player@{Player}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} Player\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Descreses health points. 
+
+\mbox{\Hypertarget{class_player_ab9820af1d231f97e0499b70ed6b34196}\label{class_player_ab9820af1d231f97e0499b70ed6b34196}} 
+\index{Player@{Player}!setControls@{setControls}}
+\index{setControls@{setControls}!Player@{Player}}
+\subsubsection{\texorpdfstring{setControls()}{setControls()}}
+{\footnotesize\ttfamily void Player\+::set\+Controls (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{,  }\item[{sf\+::\+Keyboard\+::\+Key}]{,  }\item[{sf\+::\+Keyboard\+::\+Key}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a658ca673f68b8ba14f888b313f2f8fd3}\label{class_player_a658ca673f68b8ba14f888b313f2f8fd3}} 
+\index{Player@{Player}!setMoveStep@{setMoveStep}}
+\index{setMoveStep@{setMoveStep}!Player@{Player}}
+\subsubsection{\texorpdfstring{setMoveStep()}{setMoveStep()}}
+{\footnotesize\ttfamily void Player\+::set\+Move\+Step (\begin{DoxyParamCaption}\item[{float \&}]{new\+Step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_a9f37a6ecb0abbea3eed1348266135879}\label{class_player_a9f37a6ecb0abbea3eed1348266135879}} 
+\index{Player@{Player}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Player@{Player}}
+\subsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Player\+::set\+Position (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_object_ac5c796bfa75dedf6d3bfc74685b2b77d}{Object}}.
+
+\mbox{\Hypertarget{class_player_a8053d861a3d9d0f91fd7e35a38e7ce14}\label{class_player_a8053d861a3d9d0f91fd7e35a38e7ce14}} 
+\index{Player@{Player}!setScore@{setScore}}
+\index{setScore@{setScore}!Player@{Player}}
+\subsubsection{\texorpdfstring{setScore()}{setScore()}}
+{\footnotesize\ttfamily void Player\+::set\+Score (\begin{DoxyParamCaption}\item[{const uint \&}]{new\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_a7f5f3ce419bc062ab59b6f689c24a5a6}\label{class_player_a7f5f3ce419bc062ab59b6f689c24a5a6}} 
+\index{Player@{Player}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Player@{Player}}
+\subsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+::set\+Texture (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a7d0ef1fb581ee3cc89f85c50c9c2c9ad}\label{class_player_a7d0ef1fb581ee3cc89f85c50c9c2c9ad}} 
+\index{Player@{Player}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Player@{Player}}
+\subsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+::set\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$}]{,  }\item[{std\+::string}]{,  }\item[{sf\+::\+Int\+Rect}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_a13625a09fdc72185e82ff5f6894049af}\label{class_player_a13625a09fdc72185e82ff5f6894049af}} 
+\index{Player@{Player}!controls@{controls}}
+\index{controls@{controls}!Player@{Player}}
+\subsubsection{\texorpdfstring{controls}{controls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_controls}{Controls}} Player\+::controls\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a2baad6b9a274417a7374baf11d5f723d}\label{class_player_a2baad6b9a274417a7374baf11d5f723d}} 
+\index{Player@{Player}!hp@{hp}}
+\index{hp@{hp}!Player@{Player}}
+\subsubsection{\texorpdfstring{hp}{hp}}
+{\footnotesize\ttfamily int Player\+::hp = 3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a1d1f9fee5f774351292af1d0cfa7d65c}\label{class_player_a1d1f9fee5f774351292af1d0cfa7d65c}} 
+\index{Player@{Player}!index@{index}}
+\index{index@{index}!Player@{Player}}
+\subsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily int Player\+::index\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_aca3b0c23e14b372078c31cdb7906032c}\label{class_player_aca3b0c23e14b372078c31cdb7906032c}} 
+\index{Player@{Player}!moveStep@{moveStep}}
+\index{moveStep@{moveStep}!Player@{Player}}
+\subsubsection{\texorpdfstring{moveStep}{moveStep}}
+{\footnotesize\ttfamily float Player\+::move\+Step = 0.\+5\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_ab8b3c0ffbde70b09f2ad4d230478f33b}\label{class_player_ab8b3c0ffbde70b09f2ad4d230478f33b}} 
+\index{Player@{Player}!score@{score}}
+\index{score@{score}!Player@{Player}}
+\subsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily uint Player\+::score = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_a19bc8731e5e84613a2ae7c4b5134dfab}\label{class_player_a19bc8731e5e84613a2ae7c4b5134dfab}} 
+\index{Player@{Player}!sprite@{sprite}}
+\index{sprite@{sprite}!Player@{Player}}
+\subsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite Player\+::sprite\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/Player.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{_player_8hpp}{Player.\+hpp}}\end{DoxyCompactItemize}
