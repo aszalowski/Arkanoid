@@ -1,10 +1,4 @@
 var searchData=
 [
-  ['_7eball',['~Ball',['../class_ball.html#a20f2f6ac0bf648f406a8e12e63429fcd',1,'Ball']]],
-  ['_7ebasemenustate',['~BaseMenuState',['../class_base_menu_state.html#ae6c9f9087edfc4d738a1f42a6c77d170',1,'BaseMenuState']]],
-  ['_7eblock',['~Block',['../class_block.html#a19d1bd0e1cef6a865ed2745a2e648405',1,'Block']]],
-  ['_7egameengine',['~GameEngine',['../class_game_engine.html#a8e59d8341ef9d2dcc62eee1437e37f14',1,'GameEngine']]],
-  ['_7eobject',['~Object',['../class_object.html#aa3e791419d84c4c346ef9499513b8e00',1,'Object']]],
-  ['_7eplayer',['~Player',['../class_player.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]],
-  ['_7eresourcemenager',['~ResourceMenager',['../class_resource_menager.html#af686b0f4b7f7167c88cac3586f4599c9',1,'ResourceMenager']]]
+  ['update',['update',['../class_base_menu_state.html#abfc8c5d2c7c3811443fc79a107a5936e',1,'BaseMenuState::update()'],['../class_game_engine.html#ae03241b464040b659b6a91f27920e8c3',1,'GameEngine::update()'],['../class_game_state.html#a66b11afe355a9479f94aaf76576980bd',1,'GameState::update()'],['../class_hot_seat_play_state.html#a63baf261e84e10203286fc82082cccdd',1,'HotSeatPlayState::update()'],['../class_p2_serve_state.html#a1f0ddd25c72c4e9033418a32f5389e22',1,'P2ServeState::update()'],['../class_play_state.html#ad784c6b3e75c68505df30d51ebce4523',1,'PlayState::update()'],['../class_serve_state.html#ac227c95e6d1ed3f3d1fc01c4035db847',1,'ServeState::update()']]]
 ];

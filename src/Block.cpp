@@ -24,3 +24,9 @@ void Block::setTexture(GameEngine *game, std::string name, sf::IntRect rect)
     setTexture(game->textureMenager.get(name));
     sprite.setTextureRect(rect);
 }
+
+Block Block::operator--(){
+    this->hp--;
+    sprite.setTextureRect(sf::IntRect(8, 8 + 20 * (hp - 1), 32, 16));
+    return *this;
+}

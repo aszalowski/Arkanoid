@@ -81,11 +81,12 @@ Inheritance diagram for BaseMenuState:</div>
  <div class="center">
   <img src="class_base_menu_state.png" usemap="#BaseMenuState_map" alt=""/>
   <map id="BaseMenuState_map" name="BaseMenuState_map">
-<area href="class_game_state.html" title="Abstract class - single state of the game." alt="GameState" shape="rect" coords="189,0,305,24"/>
-<area href="class_hot_seat_menu_state.html" title="Menu state in the HotSeat mode." alt="HotSeatMenuState" shape="rect" coords="0,112,116,136"/>
-<area href="class_main_menu_state.html" title="Main menu at the beggining of the game." alt="MainMenuState" shape="rect" coords="126,112,242,136"/>
-<area href="class_pause_state.html" title="Pause - accessible with Escape button." alt="PauseState" shape="rect" coords="252,112,368,136"/>
-<area href="class_single_menu_state.html" title="Menu state in single player." alt="SingleMenuState" shape="rect" coords="378,112,494,136"/>
+<area href="class_game_state.html" title="Abstract class - single state of the game." alt="GameState" shape="rect" coords="252,0,368,24"/>
+<area href="class_end_game_state.html" alt="EndGameState" shape="rect" coords="0,112,116,136"/>
+<area href="class_hot_seat_menu_state.html" title="Menu state in the HotSeat mode." alt="HotSeatMenuState" shape="rect" coords="126,112,242,136"/>
+<area href="class_main_menu_state.html" title="Main menu at the beggining of the game." alt="MainMenuState" shape="rect" coords="252,112,368,136"/>
+<area href="class_pause_state.html" title="Pause - accessible with Escape button." alt="PauseState" shape="rect" coords="378,112,494,136"/>
+<area href="class_single_menu_state.html" title="Menu state in single player." alt="SingleMenuState" shape="rect" coords="504,112,620,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -126,8 +127,8 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ab63cc442453d06b70372d627ceaf8a8e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_button.html">Button</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_menu_state.html#ab63cc442453d06b70372d627ceaf8a8e">buttons</a></td></tr>
 <tr class="separator:ab63cc442453d06b70372d627ceaf8a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59278b3c16e953a01ad350b179024778"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Drawable * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_menu_state.html#a59278b3c16e953a01ad350b179024778">objects</a></td></tr>
-<tr class="separator:a59278b3c16e953a01ad350b179024778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada76393153459237e15591fb244ab5ff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Drawable * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_menu_state.html#ada76393153459237e15591fb244ab5ff">objects</a></td></tr>
+<tr class="separator:ada76393153459237e15591fb244ab5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2759c3ca4cfd0f34175846e295e0f4e9"><td class="memItemLeft" align="right" valign="top">sf::Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_menu_state.html#a2759c3ca4cfd0f34175846e295e0f4e9">font</a></td></tr>
 <tr class="separator:a2759c3ca4cfd0f34175846e295e0f4e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -296,7 +297,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_game_state.html#a10b6e6bb31591c70d08ffcee5f29fa81">GameState</a>.</p>
 
-<p>Reimplemented in <a class="el" href="class_hot_seat_menu_state.html#a29beb4656c180d0cfc3b8ca20ae2d172">HotSeatMenuState</a>, <a class="el" href="class_pause_state.html#a1e3378e3a16fc37c87c12f854d86005b">PauseState</a>, <a class="el" href="class_single_menu_state.html#a9494d848c97fe4d406f122f3d97bc38d">SingleMenuState</a>, and <a class="el" href="class_main_menu_state.html#a83efff7f63145d55d1937e76970d2a25">MainMenuState</a>.</p>
+<p>Reimplemented in <a class="el" href="class_pause_state.html#a1e3378e3a16fc37c87c12f854d86005b">PauseState</a>, <a class="el" href="class_hot_seat_menu_state.html#a29beb4656c180d0cfc3b8ca20ae2d172">HotSeatMenuState</a>, <a class="el" href="class_single_menu_state.html#a9494d848c97fe4d406f122f3d97bc38d">SingleMenuState</a>, <a class="el" href="class_end_game_state.html#ac3abeb54305351ce65b66d519ca3e0c1">EndGameState</a>, and <a class="el" href="class_main_menu_state.html#a83efff7f63145d55d1937e76970d2a25">MainMenuState</a>.</p>
 
 </div>
 </div>
@@ -485,8 +486,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a59278b3c16e953a01ad350b179024778"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59278b3c16e953a01ad350b179024778">&#9670;&nbsp;</a></span>objects</h2>
+<a id="ada76393153459237e15591fb244ab5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada76393153459237e15591fb244ab5ff">&#9670;&nbsp;</a></span>objects</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,7 +496,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;sf::Drawable*&gt; BaseMenuState::objects</td>
+          <td class="memname">std::vector&lt;sf::Drawable *&gt; BaseMenuState::objects</td>
         </tr>
       </table>
   </td>

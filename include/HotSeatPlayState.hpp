@@ -8,7 +8,6 @@
 ///Play state for 2 players - uses PlayState
 class HotSeatPlayState : public PlayState
 {
-private:
 public:
     void init(GameEngine *game);
     void cleanup(GameEngine *game);
@@ -28,6 +27,11 @@ public:
 
 protected:
     HotSeatPlayState() {}
+
+    private:
+        sf::Font* font;
+        std::vector<sf::Sprite> hearts;
+        sf::Text score;
 };
 
 #endif

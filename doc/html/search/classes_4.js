@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mainmenustate',['MainMenuState',['../class_main_menu_state.html',1,'']]]
+  ['hotseatmenustate',['HotSeatMenuState',['../class_hot_seat_menu_state.html',1,'']]],
+  ['hotseatplaystate',['HotSeatPlayState',['../class_hot_seat_play_state.html',1,'']]]
 ];

@@ -27,6 +27,8 @@ public:
         return &P2ServeStateInstance;
     }
 
+    bool isTransparent(){ return true; }
+
 protected:
     P2ServeState() {}
 };

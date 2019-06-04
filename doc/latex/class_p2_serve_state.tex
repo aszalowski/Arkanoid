@@ -31,7 +31,9 @@ void \mbox{\hyperlink{class_p2_serve_state_af7634dd3bdfca0279b5c9abc6632b2e4}{ha
 void \mbox{\hyperlink{class_p2_serve_state_a1f0ddd25c72c4e9033418a32f5389e22}{update}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Updates objects used in the \mbox{\hyperlink{class_game_state}{Game\+State}} -\/ positions, textures. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_p2_serve_state_acc6d131c7a5712a643b7f97c3bcdbd46}{render}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
-\begin{DoxyCompactList}\small\item\em Draws objects into the single frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Draws objects into the single frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p2_serve_state_a60e2072a070c980f8c9b9365a83041fd}{is\+Transparent}} ()
+\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -104,6 +106,16 @@ Implements \mbox{\hyperlink{class_game_state_a10b6e6bb31591c70d08ffcee5f29fa81}{
 \index{instance@{instance}!P2ServeState@{P2ServeState}}
 \subsubsection{\texorpdfstring{instance()}{instance()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{class_p2_serve_state}{P2\+Serve\+State}}$\ast$ P2\+Serve\+State\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_p2_serve_state_a60e2072a070c980f8c9b9365a83041fd}\label{class_p2_serve_state_a60e2072a070c980f8c9b9365a83041fd}} 
+\index{P2ServeState@{P2ServeState}!isTransparent@{isTransparent}}
+\index{isTransparent@{isTransparent}!P2ServeState@{P2ServeState}}
+\subsubsection{\texorpdfstring{isTransparent()}{isTransparent()}}
+{\footnotesize\ttfamily bool P2\+Serve\+State\+::is\+Transparent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_state_af75d6db30190901ed70704d18804fac7}{Game\+State}}.
 
 \mbox{\Hypertarget{class_p2_serve_state_aa72fcf3306cf089d1efc7122a8147139}\label{class_p2_serve_state_aa72fcf3306cf089d1efc7122a8147139}} 
 \index{P2ServeState@{P2ServeState}!pause@{pause}}

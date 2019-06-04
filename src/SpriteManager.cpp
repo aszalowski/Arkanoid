@@ -8,6 +8,7 @@ void SpriteManager::init(sf::Texture* texture, const sf::IntRect& initialRect, c
     sprite.setTexture(*texture);
     sprite.setTextureRect(initialRect);
     sprite.setPosition(position);
+    sprite.setScale(sf::Vector2f(1, 1));
 
 }
 

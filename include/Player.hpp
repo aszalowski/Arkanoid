@@ -36,6 +36,7 @@ public:
     void setScore(const uint &newScore) { score = newScore; }
     uint getScore() { return score; }
     uint getHp() { return hp; }
+    void setHp(int newHp) { hp = newHp; }
     const sf::Sprite &getSprite() const { return sprite; }
     sf::Sprite &modifySprite() { return sprite; }
     const uint getScore() const { return score; }
@@ -47,6 +48,8 @@ public:
     void move(int side, sf::Vector2u, uint);
 
     void draw(GameEngine *game) const;
+
+    bool active = false;
 };
 
 #endif

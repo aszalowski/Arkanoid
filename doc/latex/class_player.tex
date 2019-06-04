@@ -38,6 +38,8 @@ uint \mbox{\hyperlink{class_player_a7ecb56acd6bf6d77bbc3ff7f3d8cf7d8}{get\+Score
 \item 
 uint \mbox{\hyperlink{class_player_ad9329ace9778fed6665610d53842f37a}{get\+Hp}} ()
 \item 
+void \mbox{\hyperlink{class_player_ad2543da08ed26f833dafdb9711b3ce98}{set\+Hp}} (int new\+Hp)
+\item 
 const sf\+::\+Sprite \& \mbox{\hyperlink{class_player_aa84e6c6cc5f2f263b9ff9841286d8c42}{get\+Sprite}} () const
 \item 
 sf\+::\+Sprite \& \mbox{\hyperlink{class_player_af61ca52f651c2be22d1606a031d919eb}{modify\+Sprite}} ()
@@ -56,6 +58,11 @@ void \mbox{\hyperlink{class_player_aef0d42bebee03ea367cc38d07d614536}{move}} (in
 \item 
 void \mbox{\hyperlink{class_player_aaa0642fde01a4db5e9ee95693805ecda}{draw}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game) const
 \begin{DoxyCompactList}\small\item\em Drawing object on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_player_a983d905fd90661bd69b40d8a1259e156}{active}} = false
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -184,6 +191,12 @@ Descreses health points.
 \subsubsection{\texorpdfstring{setControls()}{setControls()}}
 {\footnotesize\ttfamily void Player\+::set\+Controls (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{,  }\item[{sf\+::\+Keyboard\+::\+Key}]{,  }\item[{sf\+::\+Keyboard\+::\+Key}]{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_player_ad2543da08ed26f833dafdb9711b3ce98}\label{class_player_ad2543da08ed26f833dafdb9711b3ce98}} 
+\index{Player@{Player}!setHp@{setHp}}
+\index{setHp@{setHp}!Player@{Player}}
+\subsubsection{\texorpdfstring{setHp()}{setHp()}}
+{\footnotesize\ttfamily void Player\+::set\+Hp (\begin{DoxyParamCaption}\item[{int}]{new\+Hp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{class_player_a658ca673f68b8ba14f888b313f2f8fd3}\label{class_player_a658ca673f68b8ba14f888b313f2f8fd3}} 
 \index{Player@{Player}!setMoveStep@{setMoveStep}}
 \index{setMoveStep@{setMoveStep}!Player@{Player}}
@@ -221,6 +234,12 @@ Implements \mbox{\hyperlink{class_object_ac5c796bfa75dedf6d3bfc74685b2b77d}{Obje
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_a983d905fd90661bd69b40d8a1259e156}\label{class_player_a983d905fd90661bd69b40d8a1259e156}} 
+\index{Player@{Player}!active@{active}}
+\index{active@{active}!Player@{Player}}
+\subsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily bool Player\+::active = false}
+
 \mbox{\Hypertarget{class_player_a13625a09fdc72185e82ff5f6894049af}\label{class_player_a13625a09fdc72185e82ff5f6894049af}} 
 \index{Player@{Player}!controls@{controls}}
 \index{controls@{controls}!Player@{Player}}

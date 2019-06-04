@@ -31,7 +31,9 @@ void \mbox{\hyperlink{class_serve_state_a8f372bdf6b72e8d4ae9eaa1b45a4d844}{handl
 void \mbox{\hyperlink{class_serve_state_ac227c95e6d1ed3f3d1fc01c4035db847}{update}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Updates objects used in the \mbox{\hyperlink{class_game_state}{Game\+State}} -\/ positions, textures. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_serve_state_a91cd889069e5b9f073ac33addeed2913}{render}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$)
-\begin{DoxyCompactList}\small\item\em Draws objects into the single frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Draws objects into the single frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_serve_state_aad809c6fa11b502fa20403dc62b6601a}{is\+Transparent}} ()
+\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,6 +43,15 @@ static \mbox{\hyperlink{class_serve_state}{Serve\+State}} $\ast$ \mbox{\hyperlin
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_serve_state_a4c147afd3a49deed30013aaad7052383}{Serve\+State}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Font $\ast$ \mbox{\hyperlink{class_serve_state_ae82617584b22ac05ab6991e3a8fe3c55}{font}}
+\item 
+sf\+::\+Text \mbox{\hyperlink{class_serve_state_a914184b17c9c3b7cc3c6b584173cefde}{score}}
+\item 
+std\+::vector$<$ sf\+::\+Sprite $>$ \mbox{\hyperlink{class_serve_state_aa3ee7e1197bb8e6eab60c04bf8454092}{hearts}}
 \end{DoxyCompactItemize}
 
 
@@ -105,6 +116,16 @@ Implements \mbox{\hyperlink{class_game_state_a10b6e6bb31591c70d08ffcee5f29fa81}{
 \subsubsection{\texorpdfstring{instance()}{instance()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{class_serve_state}{Serve\+State}}$\ast$ Serve\+State\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+\mbox{\Hypertarget{class_serve_state_aad809c6fa11b502fa20403dc62b6601a}\label{class_serve_state_aad809c6fa11b502fa20403dc62b6601a}} 
+\index{ServeState@{ServeState}!isTransparent@{isTransparent}}
+\index{isTransparent@{isTransparent}!ServeState@{ServeState}}
+\subsubsection{\texorpdfstring{isTransparent()}{isTransparent()}}
+{\footnotesize\ttfamily bool Serve\+State\+::is\+Transparent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_game_state_af75d6db30190901ed70704d18804fac7}{Game\+State}}.
+
 \mbox{\Hypertarget{class_serve_state_ab3a85411b4cc260cfede50e3aa10573c}\label{class_serve_state_ab3a85411b4cc260cfede50e3aa10573c}} 
 \index{ServeState@{ServeState}!pause@{pause}}
 \index{pause@{pause}!ServeState@{ServeState}}
@@ -160,6 +181,27 @@ Updates objects used in the \mbox{\hyperlink{class_game_state}{Game\+State}} -\/
 
 
 Implements \mbox{\hyperlink{class_game_state_a66b11afe355a9479f94aaf76576980bd}{Game\+State}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_serve_state_ae82617584b22ac05ab6991e3a8fe3c55}\label{class_serve_state_ae82617584b22ac05ab6991e3a8fe3c55}} 
+\index{ServeState@{ServeState}!font@{font}}
+\index{font@{font}!ServeState@{ServeState}}
+\subsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font$\ast$ Serve\+State\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_serve_state_aa3ee7e1197bb8e6eab60c04bf8454092}\label{class_serve_state_aa3ee7e1197bb8e6eab60c04bf8454092}} 
+\index{ServeState@{ServeState}!hearts@{hearts}}
+\index{hearts@{hearts}!ServeState@{ServeState}}
+\subsubsection{\texorpdfstring{hearts}{hearts}}
+{\footnotesize\ttfamily std\+::vector$<$sf\+::\+Sprite$>$ Serve\+State\+::hearts\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_serve_state_a914184b17c9c3b7cc3c6b584173cefde}\label{class_serve_state_a914184b17c9c3b7cc3c6b584173cefde}} 
+\index{ServeState@{ServeState}!score@{score}}
+\index{score@{score}!ServeState@{ServeState}}
+\subsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily sf\+::\+Text Serve\+State\+::score\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

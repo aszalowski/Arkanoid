@@ -80,15 +80,16 @@ Inheritance diagram for GameState:</div>
  <div class="center">
   <img src="class_game_state.png" usemap="#GameState_map" alt=""/>
   <map id="GameState_map" name="GameState_map">
-<area href="class_base_menu_state.html" title="Class of all menus." alt="BaseMenuState" shape="rect" coords="189,56,305,80"/>
-<area href="class_play_state.html" title="State responsible for everything connected with playing a game: Player and Ball movement,..." alt="PlayState" shape="rect" coords="504,56,620,80"/>
-<area href="class_serve_state.html" title="Serve after player1 loses life." alt="ServeState" shape="rect" coords="630,56,746,80"/>
-<area href="class_hot_seat_menu_state.html" title="Menu state in the HotSeat mode." alt="HotSeatMenuState" shape="rect" coords="0,112,116,136"/>
-<area href="class_main_menu_state.html" title="Main menu at the beggining of the game." alt="MainMenuState" shape="rect" coords="126,112,242,136"/>
-<area href="class_pause_state.html" title="Pause - accessible with Escape button." alt="PauseState" shape="rect" coords="252,112,368,136"/>
-<area href="class_single_menu_state.html" title="Menu state in single player." alt="SingleMenuState" shape="rect" coords="378,112,494,136"/>
-<area href="class_hot_seat_play_state.html" title="Play state for 2 players - uses PlayState." alt="HotSeatPlayState" shape="rect" coords="504,112,620,136"/>
-<area href="class_p2_serve_state.html" title="Serve state after player2 loses life - reuses ServeState." alt="P2ServeState" shape="rect" coords="630,112,746,136"/>
+<area href="class_base_menu_state.html" title="Class of all menus." alt="BaseMenuState" shape="rect" coords="252,56,368,80"/>
+<area href="class_play_state.html" title="State responsible for everything connected with playing a game: Player and Ball movement,..." alt="PlayState" shape="rect" coords="630,56,746,80"/>
+<area href="class_serve_state.html" title="Serve after player1 loses life." alt="ServeState" shape="rect" coords="756,56,872,80"/>
+<area href="class_end_game_state.html" alt="EndGameState" shape="rect" coords="0,112,116,136"/>
+<area href="class_hot_seat_menu_state.html" title="Menu state in the HotSeat mode." alt="HotSeatMenuState" shape="rect" coords="126,112,242,136"/>
+<area href="class_main_menu_state.html" title="Main menu at the beggining of the game." alt="MainMenuState" shape="rect" coords="252,112,368,136"/>
+<area href="class_pause_state.html" title="Pause - accessible with Escape button." alt="PauseState" shape="rect" coords="378,112,494,136"/>
+<area href="class_single_menu_state.html" title="Menu state in single player." alt="SingleMenuState" shape="rect" coords="504,112,620,136"/>
+<area href="class_hot_seat_play_state.html" title="Play state for 2 players - uses PlayState." alt="HotSeatPlayState" shape="rect" coords="630,112,746,136"/>
+<area href="class_p2_serve_state.html" title="Serve state after player2 loses life - reuses ServeState." alt="P2ServeState" shape="rect" coords="756,112,872,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -222,7 +223,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Clean-ups after <a class="el" href="class_game_state.html" title="Abstract class - single state of the game.">GameState</a>. </p>
 
-<p>Implemented in <a class="el" href="class_base_menu_state.html#a6ca2a29b45a0c2d6d2cbbb6ee67d38ac">BaseMenuState</a>, <a class="el" href="class_serve_state.html#a3516119feb2bf386b3686867da412328">ServeState</a>, <a class="el" href="class_p2_serve_state.html#ab5cbfaef01142275fcb6aa2947c9e1b6">P2ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#ae9ca450fc070526a0ee329002e4308f2">HotSeatPlayState</a>, <a class="el" href="class_play_state.html#a047657388db62dc5a80b12147b0294b2">PlayState</a>, <a class="el" href="class_hot_seat_menu_state.html#ada87b1a00943777a31b8b24ddf347350">HotSeatMenuState</a>, and <a class="el" href="class_single_menu_state.html#a61fdbb1a47f269d9f99f99ef9312624f">SingleMenuState</a>.</p>
+<p>Implemented in <a class="el" href="class_base_menu_state.html#a6ca2a29b45a0c2d6d2cbbb6ee67d38ac">BaseMenuState</a>, <a class="el" href="class_p2_serve_state.html#ab5cbfaef01142275fcb6aa2947c9e1b6">P2ServeState</a>, <a class="el" href="class_serve_state.html#a3516119feb2bf386b3686867da412328">ServeState</a>, <a class="el" href="class_hot_seat_menu_state.html#ada87b1a00943777a31b8b24ddf347350">HotSeatMenuState</a>, <a class="el" href="class_hot_seat_play_state.html#ae9ca450fc070526a0ee329002e4308f2">HotSeatPlayState</a>, <a class="el" href="class_play_state.html#a047657388db62dc5a80b12147b0294b2">PlayState</a>, and <a class="el" href="class_single_menu_state.html#a61fdbb1a47f269d9f99f99ef9312624f">SingleMenuState</a>.</p>
 
 </div>
 </div>
@@ -262,7 +263,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Handle events like key presses or closing the window. </p>
 
-<p>Implemented in <a class="el" href="class_base_menu_state.html#af593c53bcd111bd210b933ddb360f509">BaseMenuState</a>, <a class="el" href="class_serve_state.html#a8f372bdf6b72e8d4ae9eaa1b45a4d844">ServeState</a>, <a class="el" href="class_p2_serve_state.html#af7634dd3bdfca0279b5c9abc6632b2e4">P2ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a92606c5f4b8106b4fec1482a75be3c8d">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#acdb47d9367dac45893eb9c9a45390385">PlayState</a>.</p>
+<p>Implemented in <a class="el" href="class_base_menu_state.html#af593c53bcd111bd210b933ddb360f509">BaseMenuState</a>, <a class="el" href="class_p2_serve_state.html#af7634dd3bdfca0279b5c9abc6632b2e4">P2ServeState</a>, <a class="el" href="class_serve_state.html#a8f372bdf6b72e8d4ae9eaa1b45a4d844">ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a92606c5f4b8106b4fec1482a75be3c8d">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#acdb47d9367dac45893eb9c9a45390385">PlayState</a>.</p>
 
 </div>
 </div>
@@ -292,7 +293,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Initializes <a class="el" href="class_game_state.html" title="Abstract class - single state of the game.">GameState</a>. </p>
 
-<p>Implemented in <a class="el" href="class_base_menu_state.html#ae29d522c56a4582ce79e113426421741">BaseMenuState</a>, <a class="el" href="class_serve_state.html#ab39cdbf8c6fe8bbcf67d29033c3e2c15">ServeState</a>, <a class="el" href="class_p2_serve_state.html#a7f6cbb73e0d08949e3df08b97ba089f5">P2ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a2d1a6b35aac53c988e7b036d89794e70">HotSeatPlayState</a>, <a class="el" href="class_play_state.html#ae5761f09579d0f1800253764f2d68218">PlayState</a>, <a class="el" href="class_hot_seat_menu_state.html#a29beb4656c180d0cfc3b8ca20ae2d172">HotSeatMenuState</a>, <a class="el" href="class_pause_state.html#a1e3378e3a16fc37c87c12f854d86005b">PauseState</a>, <a class="el" href="class_single_menu_state.html#a9494d848c97fe4d406f122f3d97bc38d">SingleMenuState</a>, and <a class="el" href="class_main_menu_state.html#a83efff7f63145d55d1937e76970d2a25">MainMenuState</a>.</p>
+<p>Implemented in <a class="el" href="class_base_menu_state.html#ae29d522c56a4582ce79e113426421741">BaseMenuState</a>, <a class="el" href="class_p2_serve_state.html#a7f6cbb73e0d08949e3df08b97ba089f5">P2ServeState</a>, <a class="el" href="class_pause_state.html#a1e3378e3a16fc37c87c12f854d86005b">PauseState</a>, <a class="el" href="class_serve_state.html#ab39cdbf8c6fe8bbcf67d29033c3e2c15">ServeState</a>, <a class="el" href="class_hot_seat_menu_state.html#a29beb4656c180d0cfc3b8ca20ae2d172">HotSeatMenuState</a>, <a class="el" href="class_hot_seat_play_state.html#a2d1a6b35aac53c988e7b036d89794e70">HotSeatPlayState</a>, <a class="el" href="class_play_state.html#ae5761f09579d0f1800253764f2d68218">PlayState</a>, <a class="el" href="class_single_menu_state.html#a9494d848c97fe4d406f122f3d97bc38d">SingleMenuState</a>, <a class="el" href="class_end_game_state.html#ac3abeb54305351ce65b66d519ca3e0c1">EndGameState</a>, and <a class="el" href="class_main_menu_state.html#a83efff7f63145d55d1937e76970d2a25">MainMenuState</a>.</p>
 
 </div>
 </div>
@@ -319,7 +320,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_pause_state.html#a1d8e1f454ead5881c3ad396798eb4ac1">PauseState</a>.</p>
+<p>Reimplemented in <a class="el" href="class_p2_serve_state.html#a60e2072a070c980f8c9b9365a83041fd">P2ServeState</a>, <a class="el" href="class_serve_state.html#aad809c6fa11b502fa20403dc62b6601a">ServeState</a>, <a class="el" href="class_pause_state.html#a1d8e1f454ead5881c3ad396798eb4ac1">PauseState</a>, and <a class="el" href="class_end_game_state.html#a0cafb4ddc794cdbde37e1624ef02bbf9">EndGameState</a>.</p>
 
 </div>
 </div>
@@ -348,7 +349,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Pauses <a class="el" href="class_game_state.html" title="Abstract class - single state of the game.">GameState</a>. </p>
 
-<p>Implemented in <a class="el" href="class_base_menu_state.html#a3ac8e688220c609b467ca4ae4c6600d6">BaseMenuState</a>, <a class="el" href="class_serve_state.html#ab3a85411b4cc260cfede50e3aa10573c">ServeState</a>, <a class="el" href="class_p2_serve_state.html#aa72fcf3306cf089d1efc7122a8147139">P2ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#af0e96c626d63f71e714bbf8119308751">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#a5c135eed71fd8dbf30b75e577c28ad0d">PlayState</a>.</p>
+<p>Implemented in <a class="el" href="class_base_menu_state.html#a3ac8e688220c609b467ca4ae4c6600d6">BaseMenuState</a>, <a class="el" href="class_p2_serve_state.html#aa72fcf3306cf089d1efc7122a8147139">P2ServeState</a>, <a class="el" href="class_serve_state.html#ab3a85411b4cc260cfede50e3aa10573c">ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#af0e96c626d63f71e714bbf8119308751">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#a5c135eed71fd8dbf30b75e577c28ad0d">PlayState</a>.</p>
 
 </div>
 </div>
@@ -378,7 +379,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Draws objects into the single frame. </p>
 
-<p>Implemented in <a class="el" href="class_base_menu_state.html#a404076aa3e789fa75ba1bfe7752c1e18">BaseMenuState</a>, <a class="el" href="class_serve_state.html#a91cd889069e5b9f073ac33addeed2913">ServeState</a>, <a class="el" href="class_p2_serve_state.html#acc6d131c7a5712a643b7f97c3bcdbd46">P2ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a66bbc19d0a2046a3ff2d926669d0ae26">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#a186b8cb25c420e2ce54002bcb08d8bee">PlayState</a>.</p>
+<p>Implemented in <a class="el" href="class_base_menu_state.html#a404076aa3e789fa75ba1bfe7752c1e18">BaseMenuState</a>, <a class="el" href="class_p2_serve_state.html#acc6d131c7a5712a643b7f97c3bcdbd46">P2ServeState</a>, <a class="el" href="class_serve_state.html#a91cd889069e5b9f073ac33addeed2913">ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a66bbc19d0a2046a3ff2d926669d0ae26">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#a186b8cb25c420e2ce54002bcb08d8bee">PlayState</a>.</p>
 
 </div>
 </div>
@@ -407,7 +408,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Resumes <a class="el" href="class_game_state.html" title="Abstract class - single state of the game.">GameState</a>. </p>
 
-<p>Implemented in <a class="el" href="class_base_menu_state.html#a8b0bba27d448b83a1f8f4ceca8dde07e">BaseMenuState</a>, <a class="el" href="class_serve_state.html#ae9a501a1f103b02685fdd4caac5685e5">ServeState</a>, <a class="el" href="class_p2_serve_state.html#a46b9a456d44c6f22bf5bbdb62e71e490">P2ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a7acf9709fdb1527a321730c49783cb50">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#ad4dda6c0b72ce34bd9caaade8a5562b9">PlayState</a>.</p>
+<p>Implemented in <a class="el" href="class_base_menu_state.html#a8b0bba27d448b83a1f8f4ceca8dde07e">BaseMenuState</a>, <a class="el" href="class_p2_serve_state.html#a46b9a456d44c6f22bf5bbdb62e71e490">P2ServeState</a>, <a class="el" href="class_serve_state.html#ae9a501a1f103b02685fdd4caac5685e5">ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a7acf9709fdb1527a321730c49783cb50">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#ad4dda6c0b72ce34bd9caaade8a5562b9">PlayState</a>.</p>
 
 </div>
 </div>
@@ -437,7 +438,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Updates objects used in the <a class="el" href="class_game_state.html" title="Abstract class - single state of the game.">GameState</a> - positions, textures. </p>
 
-<p>Implemented in <a class="el" href="class_base_menu_state.html#abfc8c5d2c7c3811443fc79a107a5936e">BaseMenuState</a>, <a class="el" href="class_serve_state.html#ac227c95e6d1ed3f3d1fc01c4035db847">ServeState</a>, <a class="el" href="class_p2_serve_state.html#a1f0ddd25c72c4e9033418a32f5389e22">P2ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a63baf261e84e10203286fc82082cccdd">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#ad784c6b3e75c68505df30d51ebce4523">PlayState</a>.</p>
+<p>Implemented in <a class="el" href="class_base_menu_state.html#abfc8c5d2c7c3811443fc79a107a5936e">BaseMenuState</a>, <a class="el" href="class_p2_serve_state.html#a1f0ddd25c72c4e9033418a32f5389e22">P2ServeState</a>, <a class="el" href="class_serve_state.html#ac227c95e6d1ed3f3d1fc01c4035db847">ServeState</a>, <a class="el" href="class_hot_seat_play_state.html#a63baf261e84e10203286fc82082cccdd">HotSeatPlayState</a>, and <a class="el" href="class_play_state.html#ad784c6b3e75c68505df30d51ebce4523">PlayState</a>.</p>
 
 </div>
 </div>

@@ -65,6 +65,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_serve_state-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ServeState Class Reference</div>  </div>
@@ -109,9 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91cd889069e5b9f073ac33addeed2913"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serve_state.html#a91cd889069e5b9f073ac33addeed2913">render</a> (<a class="el" href="class_game_engine.html">GameEngine</a> *)</td></tr>
 <tr class="memdesc:a91cd889069e5b9f073ac33addeed2913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws objects into the single frame.  <a href="#a91cd889069e5b9f073ac33addeed2913">More...</a><br /></td></tr>
 <tr class="separator:a91cd889069e5b9f073ac33addeed2913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad809c6fa11b502fa20403dc62b6601a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serve_state.html#aad809c6fa11b502fa20403dc62b6601a">isTransparent</a> ()</td></tr>
+<tr class="separator:aad809c6fa11b502fa20403dc62b6601a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_game_state"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game_state')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_game_state.html">GameState</a></td></tr>
-<tr class="memitem:af75d6db30190901ed70704d18804fac7 inherit pub_methods_class_game_state"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#af75d6db30190901ed70704d18804fac7">isTransparent</a> ()</td></tr>
-<tr class="separator:af75d6db30190901ed70704d18804fac7 inherit pub_methods_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f4ffcaa495af37ba423627e3f961fdb inherit pub_methods_class_game_state"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a5f4ffcaa495af37ba423627e3f961fdb">changeState</a> (<a class="el" href="class_game_engine.html">GameEngine</a> *game, <a class="el" href="class_game_state.html">GameState</a> *state)</td></tr>
 <tr class="separator:a5f4ffcaa495af37ba423627e3f961fdb inherit pub_methods_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -127,6 +128,15 @@ Protected Member Functions</h2></td></tr>
 <tr class="inherit_header pro_methods_class_game_state"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_game_state')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_game_state.html">GameState</a></td></tr>
 <tr class="memitem:a4fa0a2bf50315c4a35a3890a0adcee5c inherit pro_methods_class_game_state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a4fa0a2bf50315c4a35a3890a0adcee5c">GameState</a> ()</td></tr>
 <tr class="separator:a4fa0a2bf50315c4a35a3890a0adcee5c inherit pro_methods_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae82617584b22ac05ab6991e3a8fe3c55"><td class="memItemLeft" align="right" valign="top">sf::Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serve_state.html#ae82617584b22ac05ab6991e3a8fe3c55">font</a></td></tr>
+<tr class="separator:ae82617584b22ac05ab6991e3a8fe3c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914184b17c9c3b7cc3c6b584173cefde"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serve_state.html#a914184b17c9c3b7cc3c6b584173cefde">score</a></td></tr>
+<tr class="separator:a914184b17c9c3b7cc3c6b584173cefde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3ee7e1197bb8e6eab60c04bf8454092"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Sprite &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_serve_state.html#aa3ee7e1197bb8e6eab60c04bf8454092">hearts</a></td></tr>
+<tr class="separator:aa3ee7e1197bb8e6eab60c04bf8454092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Serve after player1 loses life. </p>
@@ -282,6 +292,33 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aad809c6fa11b502fa20403dc62b6601a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad809c6fa11b502fa20403dc62b6601a">&#9670;&nbsp;</a></span>isTransparent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ServeState::isTransparent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_game_state.html#af75d6db30190901ed70704d18804fac7">GameState</a>.</p>
+
+</div>
+</div>
 <a id="ab3a85411b4cc260cfede50e3aa10573c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3a85411b4cc260cfede50e3aa10573c">&#9670;&nbsp;</a></span>pause()</h2>
 
@@ -397,6 +434,73 @@ Protected Member Functions</h2></td></tr>
 <p>Updates objects used in the <a class="el" href="class_game_state.html" title="Abstract class - single state of the game.">GameState</a> - positions, textures. </p>
 
 <p>Implements <a class="el" href="class_game_state.html#a66b11afe355a9479f94aaf76576980bd">GameState</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae82617584b22ac05ab6991e3a8fe3c55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae82617584b22ac05ab6991e3a8fe3c55">&#9670;&nbsp;</a></span>font</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Font* ServeState::font</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3ee7e1197bb8e6eab60c04bf8454092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3ee7e1197bb8e6eab60c04bf8454092">&#9670;&nbsp;</a></span>hearts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;sf::Sprite&gt; ServeState::hearts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a914184b17c9c3b7cc3c6b584173cefde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a914184b17c9c3b7cc3c6b584173cefde">&#9670;&nbsp;</a></span>score</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text ServeState::score</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

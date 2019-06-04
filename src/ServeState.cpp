@@ -26,7 +26,6 @@ void ServeState::resume()
 
 void ServeState::handleEvents(GameEngine *game, sf::Event event)
 {
-    std::cout << "ServeState::handleEvents()" << std::endl;
     if(event.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         game->pushState(PauseState::instance());
 
@@ -34,7 +33,6 @@ void ServeState::handleEvents(GameEngine *game, sf::Event event)
 
 void ServeState::update(GameEngine *game)
 {
-    std::cout << "ServeState::update()" << std::endl;
     uint lastFrameTime = game->getElapsedTime();
     sf::Vector2u virtualSize = game->getVirtualSize();
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
@@ -71,12 +69,4 @@ void ServeState::update(GameEngine *game)
 
 void ServeState::render(GameEngine *game)
 {
-    std::cout << "ServeState::render()" << std::endl;
-    for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
-    {
-        i->draw(game);
-    }
-    game->ball.draw(game);
-    game->p1.draw(game);
-    game->p2.draw(game);
 }

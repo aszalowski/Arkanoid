@@ -65,6 +65,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_play_state-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PlayState Class Reference</div>  </div>
@@ -127,6 +128,15 @@ Protected Member Functions</h2></td></tr>
 <tr class="inherit_header pro_methods_class_game_state"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_game_state')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_game_state.html">GameState</a></td></tr>
 <tr class="memitem:a4fa0a2bf50315c4a35a3890a0adcee5c inherit pro_methods_class_game_state"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a4fa0a2bf50315c4a35a3890a0adcee5c">GameState</a> ()</td></tr>
 <tr class="separator:a4fa0a2bf50315c4a35a3890a0adcee5c inherit pro_methods_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a72f2eb472360c9a4e197c56ab9eaa5bb"><td class="memItemLeft" align="right" valign="top">sf::Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_play_state.html#a72f2eb472360c9a4e197c56ab9eaa5bb">font</a></td></tr>
+<tr class="separator:a72f2eb472360c9a4e197c56ab9eaa5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7650bd53de2203e1d9364b9dc09bcf31"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_play_state.html#a7650bd53de2203e1d9364b9dc09bcf31">score</a></td></tr>
+<tr class="separator:a7650bd53de2203e1d9364b9dc09bcf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3180d954e9ee3b6b0ada1f69e39dcd2e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Sprite &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_play_state.html#a3180d954e9ee3b6b0ada1f69e39dcd2e">hearts</a></td></tr>
+<tr class="separator:a3180d954e9ee3b6b0ada1f69e39dcd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>State responsible for everything connected with playing a game: <a class="el" href="class_player.html" title="Class of a paddle.">Player</a> and <a class="el" href="class_ball.html" title="Class of ball.">Ball</a> movement, <a class="el" href="class_block.html" title="Class of block - destroyable object in the PlayState.">Block</a> collision and counting score. </p>
@@ -397,6 +407,73 @@ Protected Member Functions</h2></td></tr>
 <p>Updates objects used in the <a class="el" href="class_game_state.html" title="Abstract class - single state of the game.">GameState</a> - positions, textures. </p>
 
 <p>Implements <a class="el" href="class_game_state.html#a66b11afe355a9479f94aaf76576980bd">GameState</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a72f2eb472360c9a4e197c56ab9eaa5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f2eb472360c9a4e197c56ab9eaa5bb">&#9670;&nbsp;</a></span>font</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Font* PlayState::font</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3180d954e9ee3b6b0ada1f69e39dcd2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3180d954e9ee3b6b0ada1f69e39dcd2e">&#9670;&nbsp;</a></span>hearts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;sf::Sprite&gt; PlayState::hearts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7650bd53de2203e1d9364b9dc09bcf31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7650bd53de2203e1d9364b9dc09bcf31">&#9670;&nbsp;</a></span>score</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text PlayState::score</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
