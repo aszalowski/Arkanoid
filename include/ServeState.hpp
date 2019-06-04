@@ -9,27 +9,32 @@
 
 class ServeState : public GameState
 {
-private:
+    public:
+        void init(GameEngine *game);
+        void cleanup(GameEngine *game);
 
-public:
-    void init(GameEngine *game);
-    void cleanup(GameEngine *game);
+        void pause();
+        void resume();
 
-    void pause();
-    void resume();
+        void handleEvents(GameEngine *, sf::Event);
+        void update(GameEngine *);
+        void render(GameEngine *);
 
-    void handleEvents(GameEngine *, sf::Event);
-    void update(GameEngine *);
-    void render(GameEngine *);
+        static ServeState *instance()
+        {
+            static ServeState ServeStateInstance;
+            return &ServeStateInstance;
+        }
 
-    static ServeState *instance()
-    {
-        static ServeState ServeStateInstance;
-        return &ServeStateInstance;
-    }
+        bool isTransparent(){ return true; }
 
-protected:
-    ServeState() {}
+    protected:
+        ServeState() {}
+
+    private:
+        sf::Font* font;
+        sf::Text score;
+        std::vector<sf::Sprite> hearts;
 };
 
 #endif // __SERVESTATE_HPP__

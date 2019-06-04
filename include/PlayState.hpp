@@ -8,7 +8,6 @@
 #include "Block.hpp"
 
 class PlayState : public GameState {
-    private:
     public:
         void init(GameEngine *game);
         void cleanup(GameEngine *game);
@@ -27,6 +26,10 @@ class PlayState : public GameState {
     
     protected:
         PlayState(){}
+    private:
+        sf::Font* font;
+        sf::Text score;
+        std::vector<sf::Sprite> hearts;
 
 };
 

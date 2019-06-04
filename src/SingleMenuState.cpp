@@ -11,7 +11,7 @@ void SingleMenuState::init(GameEngine* game)
 
     const uint GAP = 15;
 
-    skinChooser.init(game->textureMenager.get("paddle_skins.png").get(), sf::IntRect(0, 0, 32, 16), sf::Vector2f(0, 0));
+    skinChooser.init(game->textureMenager.get("paddle_skins.png").get(), sf::IntRect(0, 0, 64, 16), sf::Vector2f(0, 0), 4);
     skinChooser.getSprite()->scale(sf::Vector2f(3, 3));
     skinChooser.setPosition(sf::Vector2f(game->getVirtualSize().x/2.0 - skinChooser.getGlobalBounds().width/2.0, 80));
 
@@ -53,5 +53,5 @@ void SingleMenuState::cleanup(GameEngine* game)
     game->ball.setTexture(game->textureMenager.get("ball_skins.png"));
     game->ball.modifySprite().setTextureRect(ballChooser.getTextureRect());
 
-
+    BaseMenuState::cleanup(game);
 }

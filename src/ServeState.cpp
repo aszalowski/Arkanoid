@@ -72,11 +72,4 @@ void ServeState::update(GameEngine *game)
 void ServeState::render(GameEngine *game)
 {
     std::cout << "ServeState::render()" << std::endl;
-    for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
-    {
-        i->draw(game);
-    }
-    game->ball.draw(game);
-    game->p1.draw(game);
-    game->p2.draw(game);
 }

@@ -9,22 +9,18 @@
 void P2ServeState::init(GameEngine *game)
 {
     std::cout << "P2ServeState::init()" << std::endl;
-    ServeState::init(game);
 }
 
 void P2ServeState::cleanup(GameEngine *game)
 {
-    ServeState::cleanup(game);
 }
 
 void P2ServeState::pause()
 {
-    ServeState::pause();
 }
 
 void P2ServeState::resume()
 {
-    ServeState::resume();
 }
 
 void P2ServeState::handleEvents(GameEngine *game, sf::Event event)
@@ -73,6 +69,4 @@ void P2ServeState::update(GameEngine *game)
 void P2ServeState::render(GameEngine *game)
 {
     std::cout << "P2ServeState::render()" << std::endl;
-    game->p2.draw(game);
-    ServeState::render(game);
 }

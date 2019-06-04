@@ -11,11 +11,11 @@ void HotSeatMenuState::init(GameEngine* game)
 
     const uint GAP = 15;
 
-    P1skinChooser.init(game->textureMenager.get("paddle_skins.png").get(), sf::IntRect(0, 0, 32, 16), sf::Vector2f(0, 0));
+    P1skinChooser.init(game->textureMenager.get("paddle_skins.png").get(), sf::IntRect(0, 0, 64, 16), sf::Vector2f(0, 0), 4);
     P1skinChooser.getSprite()->scale(sf::Vector2f(3, 3));
     P1skinChooser.setPosition(sf::Vector2f(game->getVirtualSize().x/2.0 - P1skinChooser.getGlobalBounds().width/2.0, 80));
 
-    P2skinChooser.init(game->textureMenager.get("paddle_skins.png").get(), sf::IntRect(0, 0, 32, 16), sf::Vector2f(0, 0));
+    P2skinChooser.init(game->textureMenager.get("paddle_skins.png").get(), sf::IntRect(0, 0, 64, 16), sf::Vector2f(0, 0), 4);
     P2skinChooser.getSprite()->scale(sf::Vector2f(3, 3));
     P2skinChooser.setPosition(sf::Vector2f(game->getVirtualSize().x/2.0 - P2skinChooser.getGlobalBounds().width/2.0, 160));
 

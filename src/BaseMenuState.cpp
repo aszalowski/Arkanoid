@@ -7,15 +7,11 @@
 
 #include "../include/Buttons.hpp"
 
-// void BaseMenuState::init(GameEngine *game)
-// {
-//     std::cout << "BaseMenuState::init()" << std::endl;
-
-// }
 
 void BaseMenuState::cleanup(GameEngine *game)
 {
     buttons.clear();
+    objects.clear();
 }
 
 void BaseMenuState::pause()
