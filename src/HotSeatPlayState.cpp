@@ -17,7 +17,7 @@ void HotSeatPlayState::init(GameEngine *game)
     font = game->fontMenager.get("pixel.ttf").get();
     const_cast<sf::Texture&>(font->getTexture(20)).setSmooth(false);
 
-    for(uint i = 0; i < game->p1.getHp(); i++){
+    for(uint i = 0; i < game->p2.getHp(); i++){
         sf::Sprite newHeart(*game->textureMenager.get("breakout_pieces.png").get(), sf::IntRect(120, 135, 10, 8));
         newHeart.scale(sf::Vector2f(2, 2));
         newHeart.setPosition(sf::Vector2f(game->getVirtualSize().x - (i+1)*newHeart.getGlobalBounds().width - i*5, 3));
@@ -26,7 +26,7 @@ void HotSeatPlayState::init(GameEngine *game)
     score.setFont(*font);
     score.setCharacterSize(20);
     score.setString("Points: 0");
-    score.setPosition(0, 5);
+    score.setPosition(0, 0);
 
 
 
@@ -36,6 +36,7 @@ void HotSeatPlayState::init(GameEngine *game)
 
 void HotSeatPlayState::cleanup(GameEngine *game)
 {
+    hearts.clear();
 }
 
 void HotSeatPlayState::pause()
@@ -48,14 +49,12 @@ void HotSeatPlayState::resume()
 
 void HotSeatPlayState::handleEvents(GameEngine *game, sf::Event event)
 {
-    std::cout << "HotSeat::handleEvents()" << std::endl;
 
     PlayState::handleEvents(game, event);
 }
 
 void HotSeatPlayState::update(GameEngine *game)
 {
-    std::cout << "HotSeat::update()" << std::endl;
 
     if(game->p2.getHp() == 0)
         game->pushState(EndGameState::instance());
@@ -82,6 +81,9 @@ void HotSeatPlayState::update(GameEngine *game)
         game->ball *= sf::Vector2f(1, -1);
         game->ball.moveY(game->getElapsedTime());
     }
+
+    score.setString("Points: " + std::to_string(game->p2.getScore()));
+
     PlayState::update(game);
 }
 

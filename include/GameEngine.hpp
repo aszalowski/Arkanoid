@@ -25,7 +25,7 @@ class GameEngine ///Stores crucial game parts: Player, Ball, Block, GameState, W
 {
 public:
 	GameEngine(int virtualWidth, int virtualHeight, int width, int height, std::string title, std::string iconPath, int frameLimit, bool vsync);
-	~GameEngine() { std::cout << "GameEngine destructor" << std::endl; };
+	~GameEngine();
 
 	void changeState(GameState *state); ///< Changes GameState, destructing old GameState
 	void pushState(GameState *state);   ///< Quick change of GameState, easy to go back to the old one

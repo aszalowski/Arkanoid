@@ -36,6 +36,8 @@ void PlayState::init(GameEngine *game)
 
 void PlayState::cleanup(GameEngine *game)
 {
+    game->blocks.clear();
+    hearts.clear();
 }
 
 void PlayState::pause()
@@ -87,24 +89,25 @@ void PlayState::update(GameEngine *game)
         game->ball.moveX(game->getElapsedTime());
     }
 
-    for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
+    for (std::list<Block>::iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
     {
         if (game->ball.objectHit(i->getSprite()))
         {
             game->ball *= sf::Vector2f(-1, 1);
             game->ball.moveX(game->getElapsedTime());
             uint hp = i->getHp();
-            if (hp == 1)
-                i = game->blocks.erase(i);
-            else
-            {
-                sf::Vector2f pos = i->getPosition();
-                Block a(--hp, game->textureMenager.get("breakout_pieces.png"), pos);
-                game->blocks.push_back(a);
+            std::cout<< "here" << std::endl;
+            if (hp == 1){
+                std::cout<< "hp == 1" << std::endl;
                 i = game->blocks.erase(i);
             }
+            else
+            {
+                std::cout<< "hp != 1" << std::endl;
+                --(*i);
+            }
+            std::cout<< "after" << std::endl;
             (game->ball.whoHit == p1) ? game->p1 += 100 : game->p2 += 100;
-            std::cout<<game->p1.getScore();
         }
     }
 
@@ -119,6 +122,7 @@ void PlayState::update(GameEngine *game)
             //TODO: Add life check and gameover
             game->ball.setPosition(sf::Vector2f(game->p1.getPosition().x + (game->p1.getSprite().getTextureRect().width - game->ball.getSprite().getTextureRect().width) / 2, game->p1.getPosition().y - game->ball.getSprite().getTextureRect().height));
             game->pushState(ServeState::instance());
+            return;
         }
     }
 
@@ -134,24 +138,25 @@ void PlayState::update(GameEngine *game)
         game->ball.moveY(game->getElapsedTime());
     }
 
-    for (std::list<Block>::const_iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
+    for (std::list<Block>::iterator i = game->blocks.begin(); i != game->blocks.end(); ++i)
     {
         if (game->ball.objectHit(i->getSprite()))
         {
             game->ball *= sf::Vector2f(1, -1);
             game->ball.moveY(game->getElapsedTime());
             uint hp = i->getHp();
-            if (hp == 1)
-                i = game->blocks.erase(i);
-            else
-            {
-                sf::Vector2f pos = i->getPosition();
-                Block a(--hp, game->textureMenager.get("breakout_pieces.png"), pos);
-                game->blocks.push_back(a);
+            std::cout<< "here" << std::endl;
+            if (hp == 1){
+                std::cout<< "hp == 1" << std::endl;
                 i = game->blocks.erase(i);
             }
+            else
+            {
+                std::cout<< "hp != 1" << std::endl;
+                --(*i);
+            }
+            std::cout<< "after" << std::endl;
             (game->ball.whoHit == p1) ? game->p1 += 100 : game->p2 += 100;
-            std::cout<<game->ball.whoHit;
             score.setString("Points: " + std::to_string(game->p1.getScore()));
         }
     }

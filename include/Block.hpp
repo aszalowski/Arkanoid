@@ -28,6 +28,7 @@ public:
     sf::Sprite &modifySprite() { return sprite; }
     void setTexture(const std::shared_ptr<sf::Texture>); ///< Setting texture with a shared pointer from ResourceManager
     void setTexture(GameEngine *, std::string, sf::IntRect); 
+    Block operator--();
     ~Block() {} 
 };
 

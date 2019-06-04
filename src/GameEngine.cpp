@@ -35,6 +35,12 @@ p2(2, sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
     
 }
 
+GameEngine::~GameEngine()
+{ 
+    for(auto state : states) state->cleanup(this); 
+    states.clear();
+}
+
 
 void GameEngine::changeState(GameState* state){
     
