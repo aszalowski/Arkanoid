@@ -104,9 +104,14 @@ void GameEngine::update(){
 void GameEngine::render(){
 
     window.clear();
-    if(states.back()->isTransparent())
-        if(states.size() > 1)
+    if(states.back()->isTransparent()){
+        if(states.size() > 1){
+            if(states.size() > 2 && states.end()[-2]->isTransparent())
+                states.end()[-3]->render(this);
             states.end()[-2]->render(this);
+        }
+
+    }
     //Delegate rendering to the current state
     states.back()->render(this);
     window.display();
