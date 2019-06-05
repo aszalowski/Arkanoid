@@ -1,6 +1,6 @@
 /**
  *
- * \mainpage Arkanoid game with SFML Framework
+ * \mainpage Arkanoid game with a HotSeat option using SFML Framework
  * Authors: Maciej Dmowski, Adam Szałowski
  * \section Flowchart
  * \image html ArkanoidStateFlow.png
