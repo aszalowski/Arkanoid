@@ -1,7 +1,7 @@
 /**
  *
  * \mainpage Arkanoid game with SFML Framework
- *
+ * Authors: Maciej Dmowski, Adam Szałowski
  * \section Flowchart
  * \image html ArkanoidStateFlow.png
  * 

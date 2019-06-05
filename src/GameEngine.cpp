@@ -10,7 +10,7 @@ p2(2, sf::Keyboard::Left, sf::Keyboard::Right, sf::Keyboard::Slash)
 {
     std::cout << "GameEngine constructor" << std::endl;
     // Create and setup the main window
-    this->window.create(sf::VideoMode(virtualWidth, virtualHeight), title); //TODO move to init list
+    this->window.create(sf::VideoMode(virtualWidth, virtualHeight), title, sf::Style::Close); //TODO move to init list
     this->window.setFramerateLimit(frameLimit);
     this->window.setVerticalSyncEnabled(vsync);
     this->virtualSize = sf::Vector2u(virtualWidth, virtualHeight);

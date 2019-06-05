@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['value',['value',['../class_catch_1_1_detail_1_1_is_stream_insertable.html#a42818b09ae5851126a70ee263769e309',1,'Catch::Detail::IsStreamInsertable::value()'],['../struct_catch_1_1is__range.html#afaec39e819c3956829cbbd00feba11be',1,'Catch::is_range::value()']]],
-  ['virtualsize',['virtualSize',['../class_game_engine.html#a57b84b09b731bc5664a22f0e517de4dc',1,'GameEngine']]]
+  ['whohit',['whoHit',['../class_ball.html#aad64a181e6e7c8e028dddde82403c9e5',1,'Ball']]],
+  ['window',['window',['../class_game_engine.html#ac91a68b9e136eda3dc8cabcb46a5dbaa',1,'GameEngine']]]
 ];
