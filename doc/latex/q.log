@@ -1,0 +1,13 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdftex 2019.6.4)  5 JUN 2019 14:07
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**help
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/q.tex File ignored
+)
+! Emergency stop.
+<*> help
+        
+*** (job aborted, no legal \end found)
+
+!  ==> Fatal error occurred, no output PDF file produced!

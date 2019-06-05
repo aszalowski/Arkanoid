@@ -4,13 +4,13 @@
 #include <SFML/Graphics.hpp>
 
 #include "BaseMenuState.hpp"
-
+///State after winning or loosing a game
 class EndGameState : public BaseMenuState
 {
     public:
         void init(GameEngine *game);
 
-        bool isTransparent(){ return true; }
+        bool isTransparent(){ return true; } ///< Checks if transparent
 
         static EndGameState* instance()
         {
@@ -19,7 +19,7 @@ class EndGameState : public BaseMenuState
         }
 
     private:
-        sf::Text title;
+        sf::Text title; ///< Text who wins/looses
 
     protected:
         EndGameState(){}

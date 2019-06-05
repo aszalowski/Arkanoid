@@ -2,6 +2,11 @@
 \label{class_end_game_state}\index{EndGameState@{EndGameState}}
 
 
+State after winning or loosing a game.  
+
+
+
+
 {\ttfamily \#include $<$End\+Game\+State.\+hpp$>$}
 
 Inheritance diagram for End\+Game\+State\+:\begin{figure}[H]
@@ -16,7 +21,7 @@ Inheritance diagram for End\+Game\+State\+:\begin{figure}[H]
 void \mbox{\hyperlink{class_end_game_state_ac3abeb54305351ce65b66d519ca3e0c1}{init}} (\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$game)
 \begin{DoxyCompactList}\small\item\em Initializes \mbox{\hyperlink{class_game_state}{Game\+State}}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_end_game_state_a0cafb4ddc794cdbde37e1624ef02bbf9}{is\+Transparent}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if transparent. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,9 +36,12 @@ static \mbox{\hyperlink{class_end_game_state}{End\+Game\+State}} $\ast$ \mbox{\h
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Text \mbox{\hyperlink{class_end_game_state_a987fea680922932c1ae2de74d859649d}{title}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Text who wins/looses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+State after winning or loosing a game. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_end_game_state_ae8a250f57fa5e2498782d6e78b095d00}\label{class_end_game_state_ae8a250f57fa5e2498782d6e78b095d00}} 
@@ -73,6 +81,10 @@ Reimplemented from \mbox{\hyperlink{class_base_menu_state_ae29d522c56a4582ce79e1
 
 
 
+Checks if transparent. 
+
+
+
 Reimplemented from \mbox{\hyperlink{class_game_state_af75d6db30190901ed70704d18804fac7}{Game\+State}}.
 
 
@@ -83,6 +95,10 @@ Reimplemented from \mbox{\hyperlink{class_game_state_af75d6db30190901ed70704d188
 \index{title@{title}!EndGameState@{EndGameState}}
 \subsubsection{\texorpdfstring{title}{title}}
 {\footnotesize\ttfamily sf\+::\+Text End\+Game\+State\+::title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Text who wins/looses. 
 
 
 

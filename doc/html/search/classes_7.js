@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['p2servestate',['P2ServeState',['../class_p2_serve_state.html',1,'']]],
-  ['pausestate',['PauseState',['../class_pause_state.html',1,'']]],
-  ['player',['Player',['../class_player.html',1,'']]],
-  ['playstate',['PlayState',['../class_play_state.html',1,'']]]
+  ['hotseatmenustate',['HotSeatMenuState',['../class_hot_seat_menu_state.html',1,'']]],
+  ['hotseatplaystate',['HotSeatPlayState',['../class_hot_seat_play_state.html',1,'']]]
 ];
