@@ -17,8 +17,14 @@ $(TARGET_DIR)/%.o : $(SOURCE_DIR)/%.cpp
 	$(CC) -c -o $@ $< $(FLAGS) 
 
 debug: FLAGS += -g -DDEBUG
+debug: OBJECTS := $(filter-out bin/unitTests.o, $(OBJECTS))
 debug: $(HEADERS) $(SOURCES) $(OBJECTS)
 	$(CC) -o game $(OBJECTS) $(FLAGS) $(SFML_FLAGS)
+
+test: FLAGS += -g -DDEBUG
+test: OBJECTS := $(filter-out bin/main.o, $(OBJECTS))
+test: $(HEADERS) $(SOURCES) $(OBJECTS)
+	$(CC) -o utest $(OBJECTS) $(FLAGS) $(SFML_FLAGS)
 
 release: $(HEADERS) $(SOURCES) $(OBJECTS)
 	$(CC) -o game $(OBJECTS) $(FLAGS) $(SFML_FLAGS)
@@ -26,4 +32,4 @@ release: $(HEADERS) $(SOURCES) $(OBJECTS)
 .PHONY: clean
 
 clean:
-	rm -f $(TARGET_DIR)/*.o test
+	rm -f $(TARGET_DIR)/*.o game 
