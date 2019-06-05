@@ -12,6 +12,7 @@ void HotSeatPlayState::init(GameEngine *game)
     std::cout << "HotSeat::init()" << std::endl;
     game->p2.setPosition(sf::Vector2f(100, 20));
     game->p2.setHp(3);
+    game->p2.setScore(0);
     game->p2.active = true;
 
     font = game->fontMenager.get("pixel.ttf").get();
@@ -36,7 +37,9 @@ void HotSeatPlayState::init(GameEngine *game)
 
 void HotSeatPlayState::cleanup(GameEngine *game)
 {
+    PlayState::cleanup(game);
     hearts.clear();
+    game->p2.active = false;
 }
 
 void HotSeatPlayState::pause()

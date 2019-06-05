@@ -16,9 +16,10 @@ void PlayState::init(GameEngine *game)
 
 
     game->ball.setPosition(sf::Vector2f(300, 270));
-    game->ball.setSpeed(sf::Vector2f(0.2, -0.2));
+    game->ball.setSpeed(sf::Vector2f(0.2, 0.2));
     game->p1.setPosition(sf::Vector2f(300, 320));
     game->p1.setHp(3);
+    game->p1.setScore(0);
 
     for(uint i = 0; i < game->p1.getHp(); i++){
         sf::Sprite newHeart(*game->textureMenager.get("breakout_pieces.png").get(), sf::IntRect(120, 135, 10, 8));
