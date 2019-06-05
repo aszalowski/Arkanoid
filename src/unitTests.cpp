@@ -87,31 +87,41 @@ TEST_CASE("Testing class Player")
 
 TEST_CASE("Testing Ball class")
 {
-    Ball testBall;
-    sf::Vector2f position(34, 453), speed(0.35, -0.12), changeSpeed(-2, 1.5);
-    std::shared_ptr<sf::Texture> texture = testGame.textureMenager.get("ball.png");
-    sf::IntRect textureRect(0, 0, 20, 20);
-    uint time = 10;
+    SECTION("Getters and Setters")
+    {
+        Ball testBall;
+        sf::Vector2f position(34, 453), speed(0.35, -0.12);
+        std::shared_ptr<sf::Texture> texture = testGame.textureMenager.get("ball.png");
+        sf::IntRect textureRect(0, 0, 20, 20);
 
-    testBall.setPosition(position);
-    testBall.setSpeed(speed);
-    testBall.setTexture(&testGame, "ball.png", textureRect);
+        testBall.setPosition(position);
+        testBall.setSpeed(speed);
+        testBall.setTexture(&testGame, "ball.png", textureRect);
 
-    REQUIRE(testBall.getPosition() == position);
-    REQUIRE(testBall.getSpeed() == speed);
-    REQUIRE(testBall.getSprite().getTexture() == texture.get());
-    REQUIRE(testBall.modifySprite().getTextureRect() == textureRect);
+        REQUIRE(testBall.getPosition() == position);
+        REQUIRE(testBall.getSpeed() == speed);
+        REQUIRE(testBall.getSprite().getTexture() == texture.get());
+        REQUIRE(testBall.modifySprite().getTextureRect() == textureRect);
+    }
+    SECTION("Movement")
+    {
+        Ball testBall;
+        sf::Vector2f position(34, 453), speed(0.35, -0.12), changeSpeed(-2, 1.5);
+        uint time = 10;
 
-    testBall.moveX(time);
-    sf::Vector2f newPosition((position.x + (time * speed.x)), position.y);
-    REQUIRE(testBall.getPosition() == newPosition);
+        testBall.setPosition(position);
+        testBall.setSpeed(speed);
 
-    testBall.moveY(time);
-    newPosition = sf::Vector2f(newPosition.x, newPosition.y + time * speed.y);
-    REQUIRE(testBall.getPosition() == newPosition);
+        testBall.moveX(time);
+        sf::Vector2f newPosition((position.x + (time * speed.x)), position.y);
+        REQUIRE(testBall.getPosition() == newPosition);
 
-    testBall *= changeSpeed;
-    REQUIRE(testBall.getSpeed().x == speed.x * changeSpeed.x);
-    REQUIRE(testBall.getSpeed().y == speed.y * changeSpeed.y);
+        testBall.moveY(time);
+        newPosition = sf::Vector2f(newPosition.x, newPosition.y + time * speed.y);
+        REQUIRE(testBall.getPosition() == newPosition);
+
+        testBall *= changeSpeed;
+        REQUIRE(testBall.getSpeed().x == speed.x * changeSpeed.x);
+        REQUIRE(testBall.getSpeed().y == speed.y * changeSpeed.y);
+    }
 }
-
